@@ -18,12 +18,10 @@
         init();
 
         function readCSV() {
-            // http get request to read CSV file content
             $http.get('sample.csv').success(processData);
         };
 
         function processData(allText) {
-            // split content based on new line
             var allTextLines = allText.split(/\r\n|\n/);
             var headers = allTextLines[0].split(',');
             var lines = [];

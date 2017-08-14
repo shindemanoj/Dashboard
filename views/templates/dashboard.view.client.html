@@ -7,15 +7,11 @@
 
     <div id="divID">
         <table class="table">
-            <thead>
-                <th>Name</th>
-                <th>Description</th>
-                <th>warning?</th>
-                <th>Description</th>
-                <th>warning?</th>
+            <thead ng-repeat="x in model.data" ng-if="$index == 0">
+                <th ng-repeat="y in x">{{ y }}</th>
             </thead>
             <tbody>
-            <tr ng-repeat="x in model.data">
+            <tr ng-repeat="x in model.data" ng-if="$index > 0">
                 <td ng-repeat="y in x">{{ y }}</td>
             </tr>
             </tbody>

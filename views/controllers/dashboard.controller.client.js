@@ -6,7 +6,7 @@
         .module('Dashboard')
         .controller('DashController', dashController);
 
-    function dashController($http) {
+    function dashController($http, fCsv) {
         var model = this;
 
         model.readCSV = readCSV;
@@ -22,6 +22,7 @@
         };
 
         function processData(allText) {
+            model.jsondata = fCsv.toJson(allText);
             var allTextLines = allText.split(/\r\n|\n/);
             var headers = allTextLines[0].split(',');
             var lines = [];

@@ -18,7 +18,7 @@
         init();
 
         function readCSV() {
-            $http.get('sample.csv').success(processData);
+            $http.get('errorReport210717.csv').success(processData);
         };
 
         function processData(allText) {

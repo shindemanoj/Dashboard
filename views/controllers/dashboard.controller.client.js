@@ -22,7 +22,7 @@
         };
 
         function processData(allText) {
-            model.jsondata = fCsv.toJson(allText);
+            model.jsondata = fCsv.toJson($.trim(allText.replace(/[\r]+/g,' ')));
             var allTextLines = allText.split(/\r\n|\n/);
             var headers = allTextLines[0].split(',');
             var lines = [];

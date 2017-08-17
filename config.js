@@ -12,13 +12,18 @@
 
         $routeProvider
 
-            .when("/dashboard", {
-                templateUrl: "views/templates/dashboard.view.client.html",
-                controller: "DashController",
+            .when("/overview", {
+                templateUrl: "views/templates/overview.view.client.html",
+                controller: "OverviewController",
+                controllerAs: "model"
+            })
+            .when("/charts", {
+                templateUrl: "views/templates/charts.view.client.html",
+                controller: "ChartsController",
                 controllerAs: "model"
             })
             .otherwise({
-                redirectTo: "/dashboard"
+                redirectTo: "/overview"
             });
     }
 })();

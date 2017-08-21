@@ -3,5 +3,5 @@
  */
 (function () {
     angular
-        .module("Dashboard", ["ngRoute", 'fCsv']);
+        .module('Dashboard', ['ngRoute', 'fCsv', 'nvd3']);
 })();

@@ -1,0 +1,51 @@
+{{model.jsondata}}
+<div class="content-wrapper py-3">
+    <div class="container-fluid">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-table"></i>
+                Error Data Table
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered" width="100%" id="dataTable" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Version</th>
+                            <th>Hostname (IP)</th>
+                            <th>Error Type</th>
+                            <th>Error Date</th>
+                            <th>Defect Id</th>
+                            <th>Screenshot</th>
+                            <th>Last Reboot</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Version</th>
+                            <th>Hostname (IP)</th>
+                            <th>Error Type</th>
+                            <th>Error Date</th>
+                            <th>Defect Id</th>
+                            <th>Screenshot</th>
+                            <th>Last Reboot</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr ng-repeat="x in model.jsondata">
+                                <td>{{ x["Version"] }}</td>
+                                <td>{{ x["Hostname (IP)"] }}</td>
+                                <td>{{ x["Error Type"] }}</td>
+                                <td>{{ x["Error Date"] | date:'medium'}}</td>
+                                <td>{{ x["Defect Id"] }}</td>
+                                <td ng-if="x['Screenshot'] != 'NA'"><a href="#"> {{ x["Screenshot"] }}</a></td>
+                                <td ng-if="x['Screenshot'] == 'NA'">{{ x["Screenshot"] }}</td>
+                                <td>{{ x["Last Reboot"] | date:'medium'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

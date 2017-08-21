@@ -13,12 +13,12 @@
         $routeProvider
 
             .when("/overview", {
-                templateUrl: "views/templates/overview.view.client.html",
+                templateUrl: "views/pages/templates/overview.view.client.html",
                 controller: "OverviewController",
                 controllerAs: "model"
             })
             .when("/charts", {
-                templateUrl: "views/templates/charts.view.client.html",
+                templateUrl: "views/pages/templates/charts.view.client.html",
                 controller: "ChartsController",
                 controllerAs: "model"
             })

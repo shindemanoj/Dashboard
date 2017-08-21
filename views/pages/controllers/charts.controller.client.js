@@ -15,15 +15,14 @@
                 cleanData(model.jsondata);
             }
             else{
-                $http.get('errorReport210717.csv').success(processData)
+                $http.get('errorReport210717.csv').success(processData);
             }
         }
         init();
 
         function processData(allText) {
             var jsonStr = fCsv.toJson(allText);
-            $rootScope.jsondata = JSON.parse(jsonStr);
-            model.jsondata = $rootScope.jsondata;
+            model.jsondata = JSON.parse(jsonStr);
             cleanData(model.jsondata);
         };
 
@@ -42,6 +41,7 @@
                 jsonArr[i]["Last Reboot"] = new Date(jsonArr[i]["Last Reboot"]);
             }
             model.jsondata = jsonArr;
+            $rootScope.jsondata = jsonArr;
         }
     }
 })();

@@ -4,38 +4,14 @@
 (function () {
     angular
         .module('Dashboard')
-        .controller('OverviewController', overviewController);
+        .controller('LineGraphController', lineGraphController);
 
-    function overviewController($http, fCsv, $rootScope, $scope) {
-        var model = this;
+    function lineGraphController($rootScope, $scope) {
+        var model = this
 
-        model.processData = processData;
-        model.cleanData = cleanData;
+        model.computeGraphData = computeGraphData;
 
         function init(){
-            $http.get('errorReport210717.csv').success(processData)
-                .then(function(response) {
-                    createLineGraph();
-                });
-        }
-        init();
-
-        function processData(allText) {
-            var jsonStr = fCsv.toJson(allText);
-            model.jsondata = JSON.parse(jsonStr);
-            cleanData(model.jsondata);
-        }
-
-        function cleanData(jsonArr){
-            for(var i=0; i < jsonArr.length; i++){
-                jsonArr[i]["Error Date"] = new Date(jsonArr[i]["Error Date"]);
-                jsonArr[i]["Last Reboot"] = new Date(jsonArr[i]["Last Reboot"]);
-            }
-            model.jsondata = jsonArr;
-            $rootScope.jsondata = jsonArr;
-        }
-
-        function createLineGraph() {
             $scope.options = {
                 chart: {
                     type: 'discreteBarChart',
@@ -50,14 +26,14 @@
                     y: function(d){return d.value + (1e-10);},
                     showValues: true,
                     valueFormat: function(d){
-                        return d3.format(',.0f')(d);
+                        return d3.format(',.4f')(d);
                     },
                     duration: 500,
                     xAxis: {
-                        axisLabel: 'Date'
+                        axisLabel: 'X Axis'
                     },
                     yAxis: {
-                        axisLabel: 'Number of Crashes',
+                        axisLabel: 'Y Axis',
                         axisLabelDistance: -10
                     }
                 }
@@ -65,9 +41,10 @@
 
             $scope.data = computeGraphData();
         }
+        init();
 
         function computeGraphData() {
-           jsonArray = $rootScope.jsondata;
+            jsonArray = $rootScope.jsondata;
             var crashData = {};
             for (var i = 0; i < jsonArray.length; i++) {
                 var date = jsonArray[i]['Error Date'].toDateString();
@@ -85,6 +62,7 @@
                 crashValues.push({"label" : dateKey , "value" : crashData[dateKey]});
             }
 
+            //Line chart data should be sent as an array of series objects.
             return [
                 {
                     key: "Crashes by Day",

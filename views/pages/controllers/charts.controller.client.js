@@ -3,11 +3,14 @@
         .module('Dashboard')
         .controller('ChartsController', chartsController);
 
-    function chartsController($http, fCsv, $rootScope) {
+    function chartsController($http, fCsv, $rootScope, NgTableParams) {
         var model = this;
 
         model.processData = processData;
         model.cleanData = cleanData;
+
+        var data = [{name: "Moroni", age: 50}, {name: "Moroni", age: 50}];
+        model.tableParams = new NgTableParams({}, { dataset: data});
 
         function init(){
             if($rootScope.jsondata){

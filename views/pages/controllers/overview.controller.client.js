@@ -212,6 +212,10 @@
             knownCrashCount = totalCrashCount - unknownCrashCount;
             knownCrashPer = (knownCrashCount / totalCrashCount) * 100;
             unknownCrashPer = (unknownCrashCount / totalCrashCount) * 100;
+
+            model.totalCrashCount = totalCrashCount;
+            model.knownCrashCount = knownCrashCount;
+            model.unknownCrashCount = unknownCrashCount;
             return [
                 {
                     key: "Known %",

@@ -1,4 +1,11 @@
-{{model.crashData}}
+<table ng-table="model.tableParams" class="table" show-filter="true">
+    <tr ng-repeat="user in $data">
+        <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+            {{user.name}}</td>
+        <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
+            {{user.age}}</td>
+    </tr>
+</table>
 <div class="content-wrapper py-3">
     <div class="container-fluid">
         <div class="card mb-3">
@@ -8,10 +15,10 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered datatable" width="100%" id="dataTable" cellspacing="0"
-                           ui-jq="dataTable" ui-options="dataTableOpt">
+                    <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
                         <thead>
                         <tr>
+                            <th>#</th>
                             <th>Version</th>
                             <th>Hostname (IP)</th>
                             <th>Error Type</th>
@@ -23,6 +30,7 @@
                         </thead>
                         <tfoot>
                         <tr>
+                            <th>#</th>
                             <th>Version</th>
                             <th>Hostname (IP)</th>
                             <th>Error Type</th>
@@ -34,6 +42,7 @@
                         </tfoot>
                         <tbody>
                             <tr ng-repeat="x in model.jsondata">
+                                <td>{{$index+1}}</td>
                                 <td>{{ x["Version"] }}</td>
                                 <td>{{ x["Hostname (IP)"] }}</td>
                                 <td>{{ x["Error Type"] }}</td>

@@ -203,29 +203,18 @@
                 }
             }
 
-            defectValues = []; totalCrashCount = 0;
+            defectValues = []; totalCrashCount = jsonArray.length;
             for(var defectId in defectCountData){
-                totalCrashCount += defectCountData[defectId];
-                defectValues.push({key : defectId , y : defectCountData[defectId]});
+                defectValues.push({key : defectId , y : (defectCountData[defectId]/totalCrashCount) * 100});
             }
             unknownCrashCount = defectCountData["Unknown"];
             knownCrashCount = totalCrashCount - unknownCrashCount;
-            knownCrashPer = (knownCrashCount / totalCrashCount) * 100;
             unknownCrashPer = (unknownCrashCount / totalCrashCount) * 100;
 
             model.totalCrashCount = totalCrashCount;
             model.knownCrashCount = knownCrashCount;
             model.unknownCrashCount = unknownCrashCount;
-            return [
-                {
-                    key: "Known %",
-                    y: knownCrashPer
-                },
-                {
-                    key: "Unknown %",
-                    y: unknownCrashPer
-                }
-            ];
+            return defectValues;
         }
     }
 })();

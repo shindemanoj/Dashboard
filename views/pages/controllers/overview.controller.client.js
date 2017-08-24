@@ -6,7 +6,7 @@
         .module('Dashboard')
         .controller('OverviewController', overviewController);
 
-    function overviewController($http, fCsv, $rootScope, $scope) {
+    function overviewController($http, fCsv, $scope) {
         var model = this;
 
         model.processData = processData;
@@ -30,20 +30,28 @@
 
         function cleanData(jsonArr){
             for(var i=0; i < jsonArr.length; i++){
+                jsonArr[i]["hostname"] = jsonArr[i]["Hostname (IP)"];
+                delete jsonArr[i]["Hostname (IP)"];
+                jsonArr[i]["errorType"] = jsonArr[i]["Error Type"];
+                delete jsonArr[i]["Error Type"];
+                jsonArr[i]["errorDate"] = jsonArr[i]["Error Date"];
+                delete jsonArr[i]["Error Date"];
+                jsonArr[i]["lastReboot"] = jsonArr[i]["Last Reboot"];
+                delete jsonArr[i]["Last Reboot"];
+
                 if(jsonArr[i].Comments.includes("Unknown")){
-                    jsonArr[i]["Defect Id"] = "Unknown";
+                    jsonArr[i]["defectId"] = "Unknown";
                     jsonArr[i]["Screenshot"] = "NA";
                 }
                 else {
                     var commentArr = jsonArr[i].Comments.split(" ");
-                    jsonArr[i]["Defect Id"] = "CR " + commentArr[commentArr.length-1];
+                    jsonArr[i]["defectId"] = "CR " + commentArr[commentArr.length-1];
                     jsonArr[i]["Screenshot"] = commentArr[1];
                 }
-                jsonArr[i]["Error Date"] = new Date(jsonArr[i]["Error Date"]);
-                jsonArr[i]["Last Reboot"] = new Date(jsonArr[i]["Last Reboot"]);
+                jsonArr[i]["errorDate"] = new Date(jsonArr[i]["errorDate"]);
+                jsonArr[i]["lastReboot"] = new Date(jsonArr[i]["lastReboot"]);
             }
             model.jsondata = jsonArr;
-            $rootScope.jsondata = jsonArr;
         }
 
         function createLineGraph() {
@@ -78,7 +86,7 @@
         }
 
         function computeGraphData() {
-           jsonArray = $rootScope.jsondata;
+           jsonArray = model.jsondata;
             //Comparer Function
             function GetSortOrder(prop) {
                 return function(a, b) {
@@ -90,11 +98,11 @@
                     return 0;
                 }
             }
-            jsonArray.sort(GetSortOrder("Error Date"));
+            jsonArray.sort(GetSortOrder("errorDate"));
 
             var crashData = {};
             for (var i = 0; i < jsonArray.length; i++) {
-                var date = jsonArray[i]['Error Date'].toDateString();
+                var date = jsonArray[i]['errorDate'].toDateString();
                 if (date in crashData) {
                     var count = crashData[date];
                     crashData[date] = count + 1;
@@ -143,10 +151,10 @@
         }
 
         function computeCrashCountData() {
-            jsonArray = $rootScope.jsondata;
+            jsonArray = model.jsondata;
             var errorTypeCountData = {};
             for (var i = 0; i < jsonArray.length; i++) {
-                var errorType = jsonArray[i]['Error Type'];
+                var errorType = jsonArray[i]['errorType'];
                 if (errorType in errorTypeCountData) {
                     var count = errorTypeCountData[errorType];
                     errorTypeCountData[errorType] = count + 1;
@@ -193,7 +201,7 @@
         function computeCrashPerData() {
             var defectCountData = {};
             for (var i = 0; i < jsonArray.length; i++) {
-                var defectId = jsonArray[i]['Defect Id'];
+                var defectId = jsonArray[i]['defectId'];
                 if (defectId in defectCountData) {
                     var count = defectCountData[defectId];
                     defectCountData[defectId] = count + 1;

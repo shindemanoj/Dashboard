@@ -213,7 +213,7 @@
 
             defectValues = []; totalCrashCount = jsonArray.length;
             for(var defectId in defectCountData){
-                defectValues.push({key : defectId , y : (defectCountData[defectId]/totalCrashCount) * 100});
+                defectValues.push({key : defectId + " (%)" , y : (defectCountData[defectId]/totalCrashCount) * 100});
             }
             unknownCrashCount = defectCountData["Unknown"];
             knownCrashCount = totalCrashCount - unknownCrashCount;

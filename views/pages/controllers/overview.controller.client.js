@@ -57,26 +57,33 @@
         function createLineGraph() {
             $scope.lineGraph = {
                 chart: {
-                    type: 'discreteBarChart',
+                    type: 'lineChart',
                     height: 450,
                     margin : {
                         top: 20,
                         right: 20,
-                        bottom: 50,
+                        bottom: 40,
                         left: 55
                     },
-                    x: function(d){return d.label;},
-                    y: function(d){return d.value + (1e-10);},
-                    showValues: true,
-                    valueFormat: function(d){
-                        return d3.format(',.0f')(d);
+                    x: function(d){ return d.x; },
+                    y: function(d){ return d.y; },
+                    useInteractiveGuideline: true,
+                    dispatch: {
+                        stateChange: function(e){ console.log("stateChange"); },
+                        changeState: function(e){ console.log("changeState"); },
+                        tooltipShow: function(e){ console.log("tooltipShow"); },
+                        tooltipHide: function(e){ console.log("tooltipHide"); }
                     },
-                    duration: 500,
                     xAxis: {
-                        axisLabel: 'Date'
+                        axisLabel: 'Date',
+                        tickFormat: function(d) {
+                            return d3.time.format('%m/%d/%y')(new Date(d))
+                        },
+                        showMaxMin: true,
+                        staggerLabels: true
                     },
                     yAxis: {
-                        axisLabel: 'Number of Crashes',
+                        axisLabel: 'Number Of Crashes',
                         axisLabelDistance: -10
                     }
                 }
@@ -114,13 +121,15 @@
 
             crashValues = [];
             for(var dateKey in crashData){
-                crashValues.push({"label" : dateKey , "value" : crashData[dateKey]});
+                crashValues.push({x : new Date(dateKey).getTime() , y : crashData[dateKey]});
             }
 
+            //Line chart data should be sent as an array of series objects.
             return [
                 {
-                    key: "Crashes by Day",
-                    values: crashValues
+                    values: crashValues,      //values - represents the array of {x,y} data points
+                    key: 'Crashes', //key  - the name of the series.
+                    color: '#ff7f0e',  //color - optional: choose your own line color.
                 }
             ];
         }

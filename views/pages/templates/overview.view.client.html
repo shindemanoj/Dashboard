@@ -1,7 +1,7 @@
 <div class="content-wrapper py-3">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-7">
+            <div class="col-4">
                 <div class="card mb-3">
                     <div class="card-header">
                         <i class="fa fa-fw fa-dashboard"></i>
@@ -13,17 +13,6 @@
                     <p>&nbsp;&nbsp;<b>Unknown Errors:&nbsp;</b>{{model.unknownCrashCount}}</p>
                 </div>
             </div>
-            <div class="col-5">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fa fa-pie-chart"></i>
-                        Error Type Pie Chart
-                    </div>
-                    <nvd3 options="pieChart1" data="pieChartData1"></nvd3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-8">
                 <div class="card mb-3">
                     <div class="card-header">
@@ -33,7 +22,18 @@
                     <nvd3 options="lineGraph" data="lineGraphData" class="with-3d-shadow with-transitions"></nvd3>
                 </div>
             </div>
-            <div class="col-4">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fa fa-pie-chart"></i>
+                        Error Type Pie Chart
+                    </div>
+                    <nvd3 options="pieChart1" data="pieChartData1"></nvd3>
+                </div>
+            </div>
+            <div class="col-6">
                 <div class="card mb-3">
                     <div class="card-header">
                         <i class="fa fa-pie-chart"></i>

@@ -19,6 +19,7 @@
                     createLineGraph();
                     createCrashCountPieChart();
                     createCrashPerPieChart();
+                    findFailureRate();
                 });
         }
         init();
@@ -249,6 +250,19 @@
             model.knownCrashCount = knownCrashCount;
             model.unknownCrashCount = unknownCrashCount;
             return defectValues;
+        }
+
+        function findFailureRate() {
+            var analyserHostnames = [];
+            for (var i = 0; i < jsonArray.length; i++) {
+                var hostname = jsonArray[i]['hostname'];
+                if (jQuery.inArray(hostname, analyserHostnames) === -1) {
+                    analyserHostnames.push(hostname);
+                }
+            }
+            model.analyserCount = analyserHostnames.length;
+            model.failureRate = (model.totalCrashCount / (model.analyserCount * 30));
+            model.failureRate = model.failureRate.toFixed(2)
         }
     }
 })();

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/overview.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/overview.view.client.html" />
     </list>
@@ -49,8 +46,8 @@
       <file leaf-file-name="overview.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/templates/overview.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="125" lean-forward="false" selection-start-line="14" selection-start-column="125" selection-end-line="14" selection-end-column="125" />
+            <state relative-caret-position="221">
+              <caret line="13" column="82" lean-forward="false" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -59,8 +56,8 @@
       <file leaf-file-name="overview.controller.client.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+            <state relative-caret-position="265">
+              <caret line="263" column="84" lean-forward="false" selection-start-line="263" selection-start-column="84" selection-end-line="263" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -129,8 +126,8 @@
         <option value="$PROJECT_DIR$/views/pages/templates/charts.view.client.html" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
         <option value="$PROJECT_DIR$/views/pages/templates/overview.view.client.html" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
       </list>
     </option>
   </component>
@@ -383,12 +380,12 @@
       <workItem from="1503071625325" duration="9677000" />
       <workItem from="1503328554460" duration="13669000" />
       <workItem from="1503424627657" duration="11983000" />
-      <workItem from="1504888646870" duration="8819000" />
+      <workItem from="1504888646870" duration="11319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80833000" />
+    <option name="totallyTimeSpent" value="83333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -758,14 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/templates/charts.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -774,18 +763,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/templates/overview.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="125" lean-forward="false" selection-start-line="14" selection-start-column="125" selection-end-line="14" selection-end-column="125" />
+        <state relative-caret-position="221">
+          <caret line="13" column="82" lean-forward="false" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        <state relative-caret-position="265">
+          <caret line="263" column="84" lean-forward="false" selection-start-line="263" selection-start-column="84" selection-end-line="263" selection-end-column="84" />
           <folding />
         </state>
       </provider>

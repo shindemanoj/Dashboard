@@ -11,6 +11,7 @@
 
         model.processData = processData;
         model.cleanData = cleanData;
+        model.exportData = exportData;
 
         function init(){
             $http.get('errorReport210717.csv').success(processData)
@@ -21,6 +22,21 @@
                 });
         }
         init();
+
+        function exportData(){
+            html2canvas(document.getElementById('exportthis'), {
+                onrendered: function (canvas) {
+                    var data = canvas.toDataURL();
+                    var docDefinition = {
+                        content: [{
+                            image: data,
+                            width: 500,
+                        }]
+                    };
+                    pdfMake.createPdf(docDefinition).download("StressTestReport.pdf");
+                }
+            });
+        }
 
         function processData(allText) {
             var jsonStr = fCsv.toJson(allText);

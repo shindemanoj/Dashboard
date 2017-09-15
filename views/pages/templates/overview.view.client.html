@@ -4,7 +4,6 @@
     </button>
     <a class="navbar-brand" href="#">Dashboard</a>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <select class="selectpicker" data-style="btn-primary" ng-model="selectedName" ng-options="x for x in names"></select>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#">Overview</a>
@@ -24,7 +23,9 @@
         <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
         <!--</form>-->
     </div>
+    <select class="form-control pull-right" style="width:auto;" ng-model="selectedName" ng-options="x for x in names"></select>
 </nav>
+
 <div id="exportthis" class="content-wrapper py-3">
     <div class="container-fluid">
         <div class="row">
@@ -33,6 +34,8 @@
                     <div class="card-header">
                         <i class="fa fa-fw fa-dashboard"></i>
                         Summary
+                        <button class="btn btn-primary pull-right" ng-click="model.exportData()">
+                            <i class="fa fa-save"></i> Save as PDF</button>
                     </div>
                     <ul class="list-group">
                         <li class="list-group-item"><b>Failure Rate:&nbsp;</b>{{model.failureRate}}%</li>
@@ -41,29 +44,8 @@
                         <li class="list-group-item"><b>Unknown Errors:&nbsp;</b>{{model.unknownCrashCount}}</li>
                     </ul>
                 </div>
-                <button class="btn btn-primary" ng-click="model.exportData()"><i class="fa fa-save"></i> Save as PDF</button>
             </div>
             <div class="col-7">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fa fa-pie-chart"></i>
-                        Error Type Pie Chart
-                    </div>
-                    <nvd3 options="pieChart1" data="pieChartData1"></nvd3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-7">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fa fa-pie-chart"></i>
-                        Known Unknown Defect Percentage
-                    </div>
-                    <nvd3 options="pieChart2" data="pieChartData2"></nvd3>
-                </div>
-            </div>
-            <div class="col-5">
                 <div class="card mb-3">
                     <div class="card-header">
                         <i class="fa fa-fw fa-dashboard"></i>
@@ -114,6 +96,26 @@
                 Number of Crashes per Day
             </div>
             <nvd3 options="lineGraph" data="lineGraphData" class="with-3d-shadow with-transitions"></nvd3>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fa fa-pie-chart"></i>
+                        Known Unknown Defect Percentage
+                    </div>
+                    <nvd3 options="pieChart2" data="pieChartData2"></nvd3>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fa fa-pie-chart"></i>
+                        Error Type Pie Chart
+                    </div>
+                    <nvd3 options="pieChart1" data="pieChartData1"></nvd3>
+                </div>
+            </div>
         </div>
 </div>
 </div>

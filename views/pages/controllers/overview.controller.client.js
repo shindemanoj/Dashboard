@@ -12,8 +12,11 @@
         model.processData = processData;
         model.cleanData = cleanData;
         model.exportData = exportData;
-
         function init(){
+            $scope.names = ["GEM5K", "GEM4K", "GWP"];
+            if($scope.selectedName == undefined){
+                $scope.selectedName = "GEM5K";
+            }
             $http.get('errorReport210717.csv').success(processData)
                 .then(function(response) {
                     createLineGraph();
@@ -261,7 +264,7 @@
                 }
             }
             model.analyserCount = analyserHostnames.length;
-            model.failureRate = (model.totalCrashCount / (model.analyserCount * 30));
+            model.failureRate = (model.totalCrashCount / (model.analyserCount * 30))*100;
             model.failureRate = model.failureRate.toFixed(2)
         }
     }

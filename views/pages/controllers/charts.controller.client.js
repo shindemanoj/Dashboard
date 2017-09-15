@@ -14,6 +14,10 @@
         $scope.searchTable   = '';     // set the default search/filter term
 
         function init(){
+            $scope.names = ["GEM5K", "GEM4K", "GWP"];
+            if($scope.selectedName == undefined){
+                $scope.selectedName = "GEM5K";
+            }
             $http.get('errorReport210717.csv').success(processData)
                 .then(function(response) {
                     $scope.tableData = model.jsondata;

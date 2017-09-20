@@ -23,83 +23,26 @@
             ng-change="model.updateReportData()" ng-options="x for x in names">
     </select>
 </nav>
-<div class="table-responsive">
-    <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+<div class="container-fluid">
+    <div class="table-responsive">
+        <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+            <thead style="font-weight:bold;">
+            <tr>
+                <td>
+                    Report Name
+                </td>
+                <td>
+                    Date
+                </td>
+            </tr>
+            </thead>
 
-        <thead>
-        <tr>
-            <td>
-                <a href="" ng-click="sortType = 'Id'; sortReverse = !sortReverse">
-                    #
-                    <span ng-show="sortType == 'Id' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'Id' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </td>
-            <td>
-                <a href="" ng-click="sortType = 'Version'; sortReverse = !sortReverse">
-                    Version
-                    <span ng-show="sortType == 'Version' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'Version' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </td>
-            <td>
-                <a href="" ng-click="sortType = 'hostname'; sortReverse = !sortReverse">
-                    Hostname (IP)
-                    <span ng-show="sortType == 'hostname' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'hostname' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </td>
-            <td>
-                <a href="" ng-click="sortType = 'errorType'; sortReverse = !sortReverse">
-                    Error Type
-                    <span ng-show="sortType == 'errorType' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'errorType' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </td>
-            <td>
-                <a href="" ng-click="sortType = 'errorDate'; sortReverse = !sortReverse">
-                    Error Date
-                    <span ng-show="sortType == 'errorDate' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'errorDate' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </td>
-            <td>
-                <a href="" ng-click="sortType = 'defectId'; sortReverse = !sortReverse">
-                    Defect Id
-                    <span ng-show="sortType == 'defectId' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'defectId' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </td>
-            <td>
-                <a href="" ng-click="sortType = 'Screenshot'; sortReverse = !sortReverse">
-                    Screenshot
-                    <span ng-show="sortType == 'Screenshot' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'Screenshot' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </td>
-            <td>
-                <a href="" ng-click="sortType = 'lastReboot'; sortReverse = !sortReverse">
-                    Last Reboot
-                    <span ng-show="sortType == 'lastReboot' && !sortReverse" class="fa fa-caret-down"></span>
-                    <span ng-show="sortType == 'lastReboot' && sortReverse" class="fa fa-caret-up"></span>
-                </a>
-            </td>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr ng-repeat="data in tableData | orderBy:sortType:sortReverse | filter:searchTable">
-            <td>{{$index+1}}</td>
-            <td>{{ data.Version }}</td>
-            <td>{{ data.hostname }}</td>
-            <td>{{ data.errorType }}</td>
-            <td>{{ data.errorDate | date:'medium'}}</td>
-            <td>{{ data.defectId }}</td>
-            <td ng-if="data['Screenshot'] != 'NA'"><a href="#"> {{ data["Screenshot"] }}</a></td>
-            <td ng-if="data['Screenshot'] == 'NA'">{{ data["Screenshot"] }}</td>
-            <td>{{ data.lastReboot | date:'medium'}}</td>
-        </tr>
-        </tbody>
-    </table>
+            <tbody>
+            <tr ng-repeat="data in model.reports">
+                <td>StressTestReport</td>
+                <td>{{ data.dateCreated | date:'medium'}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-{{model.reports}}

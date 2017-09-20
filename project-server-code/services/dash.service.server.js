@@ -1,8 +1,8 @@
-module.exports = function (app,userModel) {
+module.exports = function (app,dashModel) {
 
 
     app.get("/api/user", findUser);
-    app.get("/api/user/:userId", findUserByUserId);
+    app.get("/api/dashboard/:instType", findReports);
     app.put("/api/user/:userId", updateUser);
     app.delete("/api/user/:userId", deleteUser);
     app.post("/api/dashboard", saveReport);
@@ -10,7 +10,7 @@ module.exports = function (app,userModel) {
 
 
     function findAllUsers(req, res) {
-        userModel
+        dashModel
             .findAllUsers()
             .then(function (users) {
                 res.json(users);
@@ -21,7 +21,7 @@ module.exports = function (app,userModel) {
 
     function deleteUser(req, res) {
         var userId = req.params.userId;
-        userModel
+        dashModel
             .deleteUser(userId)
             .then(function (response) {
                 res.sendStatus(200);
@@ -32,11 +32,8 @@ module.exports = function (app,userModel) {
 
 
     function saveReport(req, res) {
-        var newReport = {
-            reportData: req.body,
-            dateCreated: Date.now()
-        };
-        userModel
+        var newReport = req.body;
+        dashModel
             .saveFile(newReport)
             .then(function (report) {
                 res.json(report);
@@ -49,12 +46,12 @@ module.exports = function (app,userModel) {
     function updateUser(req, res) {
         var userId = req.params['userId'];
         var newUser = req.body;
-        userModel
+        dashModel
             .updateUser(userId, newUser)
             .then(function (response) {
                 if (response.nModified === 1) {
                     // Update was successful
-                    userModel
+                    dashModel
                         .findUserById(userId)
                         .then(function (response) {
                             res.json(response);
@@ -70,12 +67,12 @@ module.exports = function (app,userModel) {
             });
     }
 
-    function findUserByUserId(req, res) {
-        var userId = req.params.userId;
-        userModel
-            .findUserById(userId)
-            .then(function (user) {
-                res.json(user);
+    function findReports(req, res) {
+        var instType = req.params.instType;
+        dashModel
+            .findReports(instType)
+            .then(function (reports) {
+                res.json(reports);
             }, function (err) {
                 res.sendStatus(500).send(err);
             });
@@ -94,7 +91,7 @@ module.exports = function (app,userModel) {
 
     function findUserByUsername(req, res) {
         var username = req.query.username;
-        userModel
+        dashModel
             .findUserbyUsername(username)
             .then(function (user) {
                 if (user != null) {
@@ -111,7 +108,7 @@ module.exports = function (app,userModel) {
     function findUserByCredentials(req, res) {
         var username = req.query['username'];
         var password = req.query['password'];
-        userModel
+        dashModel
             .findUserByCredentials(username, password)
             .then(function (response) {
                 if (response.length != 0) {

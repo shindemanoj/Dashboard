@@ -6,7 +6,7 @@
 
     var api = {
         "saveFile": saveReport,
-        "findUserById":findUserById,
+        "findReports":findReports,
         "findUserbyUsername":findUserbyUsername,
         "findUserByCredentials":findUserByCredentials,
         "deleteUser":deleteUser,
@@ -34,8 +34,8 @@
     function saveReport(report) {
         return DashboardModel.create(report);
     }
-    function findUserById(userId) {
-        return DashboardModel.findById(userId);
+    function findReports(instType) {
+        return DashboardModel.find({instType:instType});
     }
     function findUserbyUsername(username) {
         return DashboardModel.findOne({"username":username});

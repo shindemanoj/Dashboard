@@ -22,6 +22,16 @@
                 controller: "ChartsController",
                 controllerAs: "model"
             })
+            .when("/downloads", {
+                templateUrl: "views/pages/templates/downloads.view.client.html",
+                controller: "DownloadsController",
+                controllerAs: "model"
+            })
+            .when("/help", {
+                templateUrl: "views/pages/templates/help.view.client.html",
+                controller: "HelpController",
+                controllerAs: "model"
+            })
             .otherwise({
                 redirectTo: "/overview"
             });

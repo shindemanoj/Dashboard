@@ -3,23 +3,52 @@
         .module("Dashboard")
         .factory('DashboardService', dashboardService);
 
-    function dashboardService($http) {
+    function dashboardService($http, fCsv) {
 
         var api = {
-            "addComment": addComment,
-            // "deleteUser": deleteUser,
-            //"updateUser": updateUser,
-            // "findEventByCredentials": findEventByCredentials,
-            // "findEventById": findEventById,
-            // "findEventByUsername": findEventByUsername,
-            "getConfiguration": getConfiguration,
-            "findCommentsById": findCommentsById
-            // "findEventsByZip":findEventsByZip,
-            // "findNearByZipCodes": findNearByZipCodes,
-            // addParticipant: addParticipant
+            getLatestReport: getLatestReport,
+            getConfiguration: getConfiguration,
+            getReleaseVersion: getReleaseVersion,
+            getSaveReport: getSaveReport,
+            processData: processData,
+            getAllReports: getAllReports
         };
         return api;
 
+        function getAllReports(instType) {
+            return $http.get('/api/dashboard/'+instType);
+        }
+        function getSaveReport(report) {
+            return $http.post('/api/dashboard', report);
+        }
+
+        function processData(allText) {
+            var jsonStr = fCsv.toJson(allText);
+            var jsonArr = JSON.parse(jsonStr);
+            for(var i=0; i < jsonArr.length; i++){
+                jsonArr[i]["hostname"] = jsonArr[i]["Hostname (IP)"];
+                delete jsonArr[i]["Hostname (IP)"];
+                jsonArr[i]["errorType"] = jsonArr[i]["Error Type"];
+                delete jsonArr[i]["Error Type"];
+                jsonArr[i]["errorDate"] = jsonArr[i]["Error Date"];
+                delete jsonArr[i]["Error Date"];
+                jsonArr[i]["lastReboot"] = jsonArr[i]["Last Reboot"];
+                delete jsonArr[i]["Last Reboot"];
+
+                if(jsonArr[i].Comments.includes("Unknown")){
+                    jsonArr[i]["defectId"] = "Unknown";
+                    jsonArr[i]["Screenshot"] = "NA";
+                }
+                else {
+                    var commentArr = jsonArr[i].Comments.split(" ");
+                    jsonArr[i]["defectId"] = "CR " + commentArr[commentArr.length-1];
+                    jsonArr[i]["Screenshot"] = commentArr[1];
+                }
+                jsonArr[i]["errorDate"] = new Date(jsonArr[i]["errorDate"]);
+                jsonArr[i]["lastReboot"] = new Date(jsonArr[i]["lastReboot"]);
+            }
+            return jsonArr;
+        }
         function getConfiguration(instType){
             var url = "";
             if(instType === 'GEM5K')
@@ -30,40 +59,11 @@
                 url = "GWP.properties";
             return $http.get(url);
         }
-        function findCommentsById(eventId) {
-            return $http.get("/api/comment/"+eventId);
+        function getReleaseVersion() {
+            return $http.get('ReleaseVersion');
         }
-        function addComment(user, eventId) {
-            return $http.post("/api/comment/"+eventId, user);
+        function getLatestReport() {
+            return $http.get('errorReport210717.csv');
         }
-
-        // function findEventByUsername(username) {
-        //     return $http.get("/api/user?username="+username);
-        // }
-        //
-        // function findEventByCredentials(username, password) {
-        //     return $http.get("/api/user?username="+username+"&password="+password);
-        // }
-        //
-        // // function updateUser(userId, newUser) {
-        // //     return $http.put("/api/user/"+userId, newUser);
-        // // }
-        //
-        // function findEventById(uid) {
-        //     return $http.get("/api/user/"+uid);
-        // }
-        // function findNearByZipCodes(zipcode){
-        //     var key = "js-rqggQX3IUkKVa0ZHDqFQjkn6iUqtNcofCEwtBzcvUWr5XrMARrrbMOh4JIxxVVMx";
-        //     var format = "json";
-        //     var units = "mile";
-        //     var distance = "1";
-        //     var urlBase = "https://www.zipcodeapi.com/rest/<api_key>/radius.<format>/<zip_code>/<distance>/<units>";
-        //
-        //     var url = urlBase.replace("<api_key>", key).replace("<format>", format).replace("<zip_code>", zipcode).replace("<distance>", distance).replace("<units>", units);
-        //     return $http.get(url);
-        // }
-
-
-
     }
 })();

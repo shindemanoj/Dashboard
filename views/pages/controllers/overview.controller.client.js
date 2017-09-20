@@ -6,11 +6,8 @@
         .module('Dashboard')
         .controller('OverviewController', overviewController);
 
-    function overviewController($http, fCsv, $scope, DashboardService, InstrumentDataService) {
+    function overviewController($scope, DashboardService, InstrumentDataService) {
         var model = this;
-
-        model.processData = processData;
-        model.cleanData = cleanData;
         model.exportData = exportData;
         model.updateReportData = updateReportData;
 
@@ -20,29 +17,36 @@
             $scope.selectedInst.instType = 'GEM5K';
         }
         function init(){
+
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
                 .success(function (response) {
                     model.config = response;
                 })
-            $http.get('ReleaseVersion').success(function (releaseVerData) {
-                releaseVerArr = releaseVerData.trim().split("\n");
-                buildData = {};
-                for(i in releaseVerArr){
-                    dataArr = releaseVerArr[i].split("=");
-                    buildData[dataArr[0]] = dataArr[1];
-                }
-                model.releaseVer = buildData;
-                console.log(buildData);
-            });
-            $http.get('errorReport210717.csv').success(processData)
-                .then(function(response) {
+
+            DashboardService
+                .getReleaseVersion()
+                .success(function (releaseVerData) {
+                    releaseVerArr = releaseVerData.trim().split("\n");
+                    buildData = {};
+                    for(i in releaseVerArr){
+                        dataArr = releaseVerArr[i].split("=");
+                        buildData[dataArr[0]] = dataArr[1];
+                    }
+                    model.releaseVer = buildData;
+                    console.log(buildData);
+                })
+
+            DashboardService
+                .getLatestReport()
+                .success(function (response) {
+                    model.jsonReport = DashboardService.processData(response);
                     createLineGraph();
                     createCrashCountPieChart();
                     createCrashPerPieChart();
                     findFailureRate();
                     saveReport();
-                });
+                })
         }
         init();
 
@@ -54,9 +58,15 @@
                 })
         }
         function saveReport(){
-            // $http.post('/api/dashboard', model.jsondata).success(function (response) {
-            //     console.log(response.reportData);
-            // });
+            var newReport = {
+              reportData:model.jsonReport,
+              instType: "GWP"
+            };
+            // DashboardService
+            //     .getSaveReport(newReport)
+            //     .success(function (response) {
+            //         console.log(response);
+            //     })
         }
 
         function exportData(){
@@ -72,38 +82,6 @@
                     pdfMake.createPdf(docDefinition).download("StressTestReport.pdf");
                 }
             });
-        }
-
-        function processData(allText) {
-            var jsonStr = fCsv.toJson(allText);
-            model.jsondata = JSON.parse(jsonStr);
-            cleanData(model.jsondata);
-        }
-
-        function cleanData(jsonArr){
-            for(var i=0; i < jsonArr.length; i++){
-                jsonArr[i]["hostname"] = jsonArr[i]["Hostname (IP)"];
-                delete jsonArr[i]["Hostname (IP)"];
-                jsonArr[i]["errorType"] = jsonArr[i]["Error Type"];
-                delete jsonArr[i]["Error Type"];
-                jsonArr[i]["errorDate"] = jsonArr[i]["Error Date"];
-                delete jsonArr[i]["Error Date"];
-                jsonArr[i]["lastReboot"] = jsonArr[i]["Last Reboot"];
-                delete jsonArr[i]["Last Reboot"];
-
-                if(jsonArr[i].Comments.includes("Unknown")){
-                    jsonArr[i]["defectId"] = "Unknown";
-                    jsonArr[i]["Screenshot"] = "NA";
-                }
-                else {
-                    var commentArr = jsonArr[i].Comments.split(" ");
-                    jsonArr[i]["defectId"] = "CR " + commentArr[commentArr.length-1];
-                    jsonArr[i]["Screenshot"] = commentArr[1];
-                }
-                jsonArr[i]["errorDate"] = new Date(jsonArr[i]["errorDate"]);
-                jsonArr[i]["lastReboot"] = new Date(jsonArr[i]["lastReboot"]);
-            }
-            model.jsondata = jsonArr;
         }
 
         function createLineGraph() {
@@ -145,7 +123,7 @@
         }
 
         function computeGraphData() {
-           jsonArray = model.jsondata;
+           jsonArray = model.jsonReport;
             //Comparer Function
             function GetSortOrder(prop) {
                 return function(a, b) {
@@ -212,7 +190,7 @@
         }
 
         function computeCrashCountData() {
-            jsonArray = model.jsondata;
+            jsonArray = model.jsonReport;
             var errorTypeCountData = {};
             for (var i = 0; i < jsonArray.length; i++) {
                 var errorType = jsonArray[i]['errorType'];

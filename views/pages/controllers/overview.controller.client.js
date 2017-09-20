@@ -6,26 +6,58 @@
         .module('Dashboard')
         .controller('OverviewController', overviewController);
 
-    function overviewController($http, fCsv, $scope) {
+    function overviewController($http, fCsv, $scope, DashboardService, InstrumentDataService) {
         var model = this;
 
         model.processData = processData;
         model.cleanData = cleanData;
         model.exportData = exportData;
+        model.updateReportData = updateReportData;
+
+        $scope.names = ["GEM5K", "GEM4K", "GWP"];
+        $scope.selectedInst = InstrumentDataService;
+        if($scope.selectedInst.instType === ""){
+            $scope.selectedInst.instType = 'GEM5K';
+        }
         function init(){
-            $scope.names = ["GEM5K", "GEM4K", "GWP"];
-            if($scope.selectedName == undefined){
-                $scope.selectedName = "GEM5K";
-            }
+            DashboardService
+                .getConfiguration($scope.selectedInst.instType)
+                .success(function (response) {
+                    model.config = response;
+                })
+            $http.get('ReleaseVersion').success(function (releaseVerData) {
+                releaseVerArr = releaseVerData.trim().split("\n");
+                buildData = {};
+                for(i in releaseVerArr){
+                    dataArr = releaseVerArr[i].split("=");
+                    buildData[dataArr[0]] = dataArr[1];
+                }
+                model.releaseVer = buildData;
+                console.log(buildData);
+            });
             $http.get('errorReport210717.csv').success(processData)
                 .then(function(response) {
                     createLineGraph();
                     createCrashCountPieChart();
                     createCrashPerPieChart();
                     findFailureRate();
+                    saveReport();
                 });
         }
         init();
+
+        function updateReportData() {
+            DashboardService
+                .getConfiguration($scope.selectedInst.instType)
+                .success(function (response) {
+                    model.config = response;
+                })
+        }
+        function saveReport(){
+            // $http.post('/api/dashboard', model.jsondata).success(function (response) {
+            //     console.log(response.reportData);
+            // });
+        }
 
         function exportData(){
             html2canvas(document.getElementById('exportthis'), {

@@ -1,0 +1,31 @@
+<div class="card-header">
+    <i class="fa fa-fw fa-dashboard"></i>
+    Stress Test Configuration
+</div>
+<ul>
+    <li><b>{{model.config.Count}} GEM5000’s</b></li>
+    <ul ng-repeat="data in model.config.ConfigInfo">
+        <li>{{data}}</li>
+    </ul>
+</ul>
+<ul>
+    <li><b>Network Up/Down Scripts</b></li>
+    <ul ng-repeat="data in model.config.NetworkScripts">
+        <li>{{data}}</li>
+    </ul>
+</ul>
+<ul>
+    <li><b>Sampling rate</b></li>
+    <ul>
+        <li>{{model.config.SamplingRate}}</li>
+    </ul>
+</ul>
+<ul>
+    <li><b>Run Time:</b>&nbsp;{{model.config.RunTime}}</li>
+</ul>
+<ul>
+    <li><b>GWP Server</b></li>
+    <ul ng-repeat="data in model.config.GWPConfig">
+        <li>{{data}}</li>
+    </ul>
+</ul>

@@ -17,6 +17,11 @@
                 controller: "OverviewController",
                 controllerAs: "model"
             })
+            .when("/graphs", {
+                templateUrl: "views/pages/templates/graphs.view.client.html",
+                controller: "GraphsController",
+                controllerAs: "model"
+            })
             .when("/charts", {
                 templateUrl: "views/pages/templates/charts.view.client.html",
                 controller: "ChartsController",

@@ -1,0 +1,73 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Overview</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#/graphs">Graphs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/charts">Charts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/downloads">Downloads</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/help">Help</a>
+            </li>
+        </ul>
+    </div>
+    <select class="form-control pull-right" style="width:auto;" ng-model="selectedInst.instType"
+            ng-change="model.updateReportData()" ng-options="x for x in names">
+    </select>
+</nav>
+
+<div class="content-wrapper py-3">
+    <div class="container-fluid">
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-bar-chart"></i>
+                Number of Crashes per Day
+            </div>
+            <nvd3 options="lineGraph" data="lineGraphData" class="with-3d-shadow with-transitions"></nvd3>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fa fa-pie-chart"></i>
+                        Known Unknown Defect Percentage
+                    </div>
+                    <nvd3 options="pieChart2" data="pieChartData2"></nvd3>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fa fa-pie-chart"></i>
+                        Error Type Pie Chart
+                    </div>
+                    <nvd3 options="pieChart1" data="pieChartData1"></nvd3>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fa fa-bar-chart"></i>
+                Failure Rate Trend
+                <div class="pull-right">
+                    Old Reports Count: &nbsp;
+                    <select class="form-control pull-right" style="width:auto;" ng-model="model.selOldReportCount"
+                            ng-change="model.updateFailureRateGraph()" ng-options="x for x in model.oldReportCount">
+                    </select>
+                </div>
+            </div>
+            <nvd3 options="failureRateGraph" data="failureRateGraphData" class="with-3d-shadow with-transitions"></nvd3>
+        </div>
+</div>
+</div>

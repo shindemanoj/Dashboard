@@ -9,6 +9,9 @@
                 <a class="nav-link" href="#">Overview</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="#/graphs">Graphs</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#/charts">Charts</a>
             </li>
             <li class="nav-item">
@@ -29,7 +32,10 @@
             <thead style="font-weight:bold;">
             <tr>
                 <td>
-                    Report Name
+                    Build Number
+                </td>
+                <td>
+                    Name of the Report
                 </td>
                 <td>
                     Date
@@ -39,6 +45,7 @@
 
             <tbody>
             <tr ng-repeat="data in model.reports">
+                <td>{{data.releaseData.Release}}&nbsp;{{data.releaseData.Build}}</td>
                 <td><a href="" ng-click="model.exportToCSV(data.reportData, 'Error Report')">ErrorReport &nbsp; {{$index+1}}</a></td>
                 <td>{{ data.dateCreated | date:'medium'}}</td>
             </tr>

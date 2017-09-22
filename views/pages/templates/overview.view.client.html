@@ -9,6 +9,9 @@
                 <a class="nav-link active" href="#">Overview</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="#/graphs">Graphs</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#/charts">Charts</a>
             </li>
             <li class="nav-item">
@@ -26,77 +29,18 @@
 
 <div id="exportthis" class="content-wrapper py-3">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-7" ng-switch="selectedInst.instType">
-                <div class="card mb-3" ng-switch-when = "GEM5K">
-                    <ng-include src="'views/pages/templates/config/show-GEM5K-config.view.client.html'"></ng-include>
-                </div>
-
-                <div class="card mb-3" ng-switch-when = "GEM4K">
-                    <ng-include src="'views/pages/templates/config/show-GEM4K-config.view.client.html'"></ng-include>
-                </div>
-
-                <div class="card mb-3" ng-switch-when = "GWP">
-                    <ng-include src="'views/pages/templates/config/show-GWP-config.view.client.html'"></ng-include>
-                </div>
+        <div ng-switch="selectedInst.instType">
+            <div ng-switch-when = "GEM5K">
+                <ng-include src="'views/pages/templates/config/show-GEM5K-config.view.client.html'"></ng-include>
             </div>
-            <div class="col-5">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fa fa-fw fa-dashboard"></i>
-                        Summary
-                        <button class="btn btn-primary pull-right" ng-click="model.exportData()">
-                            <i class="fa fa-save"></i> Save as PDF</button>
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item"><b>Failure Rate:&nbsp;</b>{{model.failureRate}}%</li>
-                        <li class="list-group-item"><b>Total Number of Errors:&nbsp;</b>{{model.totalCrashCount}}</li>
-                        <li class="list-group-item"><b>Known Errors:&nbsp;</b>{{model.knownCrashCount}}</li>
-                        <li class="list-group-item"><b>Unknown Errors:&nbsp;</b>{{model.unknownCrashCount}}</li>
-                    </ul>
-                </div>
+
+            <div class="card mb-3" ng-switch-when = "GEM4K">
+                <ng-include src="'views/pages/templates/config/show-GEM4K-config.view.client.html'"></ng-include>
+            </div>
+
+            <div class="card mb-3" ng-switch-when = "GWP">
+                <ng-include src="'views/pages/templates/config/show-GWP-config.view.client.html'"></ng-include>
             </div>
         </div>
-
-
-        <div class="card mb-3">
-            <div class="card-header">
-                <i class="fa fa-bar-chart"></i>
-                Failure Rate Trend
-                <select class="form-control pull-right" style="width:auto;" ng-model="model.selOldReportCount"
-                        ng-change="model.updateFailureRateGraph()" ng-options="x for x in model.oldReportCount">
-                </select>
-            </div>
-            <nvd3 options="failureRateGraph" data="failureRateGraphData" class="with-3d-shadow with-transitions"></nvd3>
-        </div>
-
-
-        <div class="card mb-3">
-            <div class="card-header">
-                <i class="fa fa-bar-chart"></i>
-                Number of Crashes per Day
-            </div>
-            <nvd3 options="lineGraph" data="lineGraphData" class="with-3d-shadow with-transitions"></nvd3>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fa fa-pie-chart"></i>
-                        Known Unknown Defect Percentage
-                    </div>
-                    <nvd3 options="pieChart2" data="pieChartData2"></nvd3>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fa fa-pie-chart"></i>
-                        Error Type Pie Chart
-                    </div>
-                    <nvd3 options="pieChart1" data="pieChartData1"></nvd3>
-                </div>
-            </div>
-        </div>
-</div>
+    </div>
 </div>

@@ -1,11 +1,12 @@
-<div class="card-header">
-    <i class="fa fa-fw fa-dashboard"></i>
-    Stress Test Configuration
-</div>
-<div class="table-responsive">
-    <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-fw fa-dashboard"></i>
+        Stress Test Configuration
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
 
-        <thead style="font-weight:bold;">
+            <thead style="font-weight:bold;">
             <tr>
                 <td>Product</td>
                 <td>SBC</td>
@@ -15,9 +16,9 @@
                 <td>Unstable</td>
                 <td>Total</td>
             </tr>
-        </thead>
+            </thead>
 
-        <tbody>
+            <tbody>
             <tr ng-repeat="data in model.config.InstConfig">
                 <td>{{ data.Product}}</td>
                 <td>{{ data.SBC }}</td>
@@ -27,6 +28,34 @@
                 <td>{{ data.Unstable }}</td>
                 <td>{{ data.Total }}</td>
             </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-fw fa-dashboard"></i>
+        Summary
+        <!--<button class="btn btn-primary pull-right" ng-click="model.exportData()">-->
+        <!--<i class="fa fa-save"></i> Save as PDF</button>-->
+    </div>
+    <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+        <thead>
+        <tr>
+            <th>CR Number / Unknown</th>
+            <th>Stable Network</th>
+            <th>Unstable Network</th>
+            <th>Overall</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="data in model.summary">
+            <td>{{data.DefectId}}</td>
+            <td>{{data.StableCount}}</td>
+            <td>{{data.UnstableCount}}</td>
+            <td>{{data.StableCount + data.UnstableCount}}</td>
+        </tr>
         </tbody>
     </table>
 </div>

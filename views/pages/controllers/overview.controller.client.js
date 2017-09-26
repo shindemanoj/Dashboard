@@ -17,7 +17,6 @@
             $scope.selectedInst.instType = 'GEM5K';
         }
         function init(){
-            getSummaryGEM5K();
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
                 .success(function (config) {
@@ -45,7 +44,8 @@
                 .getLatestReport()
                 .success(function (response) {
                     model.jsonReport = DashboardService.processData(response);
-                    getSummaryGEM5K();
+                    findFailureRate();
+                    getSummary();
                     saveReport();
                 })
         }
@@ -74,7 +74,7 @@
             //     })
         }
 
-        function getSummaryGEM5K() {
+        function getSummary() {
             var jsonArray = model.jsonReport;
             var summary = [];
             var defectIds = [];
@@ -114,6 +114,33 @@
                     pdfMake.createPdf(docDefinition).download("StressTestReport.pdf");
                 }
             });
+        }
+
+        function findFailureRate() {
+            var jsonArray = model.jsonReport;
+            var analyserHostnames = [];
+            var stableCrashCount = 0; var unstableCrashCount = 0;
+            for (var i = 0; i < jsonArray.length; i++) {
+                var hostname = jsonArray[i]['hostname'];
+                if(jQuery.inArray(hostname, model.config.Stable) !== -1){
+                    stableCrashCount += 1;
+                }
+                else{
+                    unstableCrashCount += 1;
+                }
+                if (jQuery.inArray(hostname, analyserHostnames) === -1) {
+                    analyserHostnames.push(hostname);
+                }
+            }
+            model.analyserCount = analyserHostnames.length;
+            model.failureRate = (model.totalCrashCount / (model.analyserCount * 14))*100;
+            model.failureRate = model.failureRate.toFixed(2);
+
+            model.stableFailureRate = (stableCrashCount / (model.config.Stable.length * 14))*100;
+            model.stableFailureRate = model.stableFailureRate.toFixed(2);
+
+            model.unstableFailureRate = (unstableCrashCount / (model.config.Unstable.length * 14))*100;
+            model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
         }
     }
 })();

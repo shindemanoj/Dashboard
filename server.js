@@ -26,7 +26,7 @@ mongoose.connect(connectionString);
 var assignment = require("./project-server-code/app.js");
 assignment(app);
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 80;
 
 app.listen(port);
 

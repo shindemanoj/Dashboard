@@ -3,6 +3,7 @@
         <i class="fa fa-fw fa-dashboard"></i>
         Stress Test Configuration
     </div>
+    <br>
     <div class="row">
         <div class="col-4">
             <ul>
@@ -32,6 +33,12 @@
                 <li><b>GWP Server</b></li>
                 <ul ng-repeat="data in model.config.GWPConfig">
                     <li>{{data}}</li>
+                </ul>
+            </ul>
+            <ul>
+                <li><b>Release Version</b></li>
+                <ul>
+                    <li>{{model.releaseVer.Version}}</li>
                 </ul>
             </ul>
         </div>

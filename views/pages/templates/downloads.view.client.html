@@ -32,7 +32,7 @@
             <thead style="font-weight:bold;">
             <tr>
                 <td>
-                    Build Number
+                    Version
                 </td>
                 <td>
                     Name of the Report
@@ -45,7 +45,7 @@
 
             <tbody>
             <tr ng-repeat="data in model.reports">
-                <td>{{data.releaseData.Release}}&nbsp;{{data.releaseData.Build}}</td>
+                <td>{{data.releaseData.Version}}</td>
                 <td><a href="" ng-click="model.exportToCSV(data.reportData, 'Error Report')">ErrorReport &nbsp; {{$index+1}}</a></td>
                 <td>{{ data.dateCreated | date:'medium'}}</td>
             </tr>

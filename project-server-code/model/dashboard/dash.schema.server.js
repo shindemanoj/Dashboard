@@ -2,6 +2,7 @@ module.exports = function() {
     var mongoose = require("mongoose");
     var DashSchema = mongoose.Schema({
         reportData: JSON,
+        build: String,
         instType: String,
         overallFR: Number,
         stableFR: Number,

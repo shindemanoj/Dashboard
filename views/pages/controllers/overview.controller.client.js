@@ -60,12 +60,14 @@
         }
         function saveReport(){
             var newReport = {
+                build: "GWP-5.2-B9 G5K-B29",
                 reportData:model.jsonReport,
-                overallFR: 9.13,
-                stableFR: 11.11,
-                unstableFR: 6.12,
+                overallFR: 0.19,
+                stableFR: 0,
+                unstableFR: 0.62,
                 releaseData: model.releaseVer,
-                instType: "GEM5K"
+                instType: "GEM5K",
+                dateCreated: new Date("09/06/2017")
             };
             // DashboardService
             //     .getSaveReport(newReport)

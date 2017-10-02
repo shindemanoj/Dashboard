@@ -29,15 +29,23 @@
 
 <div class="content-wrapper py-3">
     <div class="container-fluid">
-        <div class="card mb-3">
-            <div class="card-header">
-                <i class="fa fa-bar-chart"></i>
-                Number of Crashes per Day
-            </div>
-            <nvd3 options="lineGraph" data="lineGraphData" class="with-3d-shadow with-transitions"></nvd3>
-        </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-8">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fa fa-bar-chart"></i>
+                        Failure Rate Trend
+                        <div class="pull-right">
+                            Old Reports Count: &nbsp;
+                            <select class="form-control pull-right" style="width:auto;" ng-model="model.selOldReportCount"
+                                    ng-change="model.updateFailureRateGraph()" ng-options="x for x in model.oldReportCount">
+                            </select>
+                        </div>
+                    </div>
+                    <nvd3 options="failureRateGraph" data="failureRateGraphData" class="with-3d-shadow with-transitions"></nvd3>
+                </div>
+            </div>
+            <div class="col-4">
                 <div class="card mb-3">
                     <div class="card-header">
                         <i class="fa fa-pie-chart"></i>
@@ -46,7 +54,9 @@
                     <nvd3 options="pieChart2" data="pieChartData2"></nvd3>
                 </div>
             </div>
-            <div class="col-6">
+        </div>
+        <div class="row">
+            <div class="col-4">
                 <div class="card mb-3">
                     <div class="card-header">
                         <i class="fa fa-pie-chart"></i>
@@ -55,19 +65,15 @@
                     <nvd3 options="pieChart1" data="pieChartData1"></nvd3>
                 </div>
             </div>
-        </div>
-        <div class="card mb-3">
-            <div class="card-header">
-                <i class="fa fa-bar-chart"></i>
-                Failure Rate Trend
-                <div class="pull-right">
-                    Old Reports Count: &nbsp;
-                    <select class="form-control pull-right" style="width:auto;" ng-model="model.selOldReportCount"
-                            ng-change="model.updateFailureRateGraph()" ng-options="x for x in model.oldReportCount">
-                    </select>
+            <div class="col-8">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fa fa-bar-chart"></i>
+                        Number of Crashes per Day
+                    </div>
+                    <nvd3 options="lineGraph" data="lineGraphData" class="with-3d-shadow with-transitions"></nvd3>
                 </div>
             </div>
-            <nvd3 options="failureRateGraph" data="failureRateGraphData" class="with-3d-shadow with-transitions"></nvd3>
         </div>
 </div>
 </div>

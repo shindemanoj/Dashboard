@@ -10,7 +10,6 @@
         var model = this;
         model.updateReportData = updateReportData;
         model.updateFailureRateGraph = updateFailureRateGraph;
-        model.selOldReportCount = 0;
 
         $scope.names = ["GEM5K", "GEM4K", "GWP"];
         $scope.selectedInst = InstrumentDataService;
@@ -55,11 +54,10 @@
         }
 
         function updateFailureRateGraph() {
-            getReportData();
+            createFailureRateGraph();
         }
 
         function updateReportData() {
-            model.selOldReportCount = 0;
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
                 .success(function (response) {
@@ -69,6 +67,7 @@
         }
         function saveReport(){
             var newReport = {
+                build: "",
                 reportData:model.jsonReport,
                 overallFR: 9.13,
                 stableFR: 11.11,
@@ -86,7 +85,14 @@
         function gelHistoricalData() {
             DashboardService.getAllReports($scope.selectedInst.instType)
                 .success(function (response) {
-                    createFailureRateGraph(response);
+                    model.oldReportData = response;
+                    if(response.length > 4){
+                        model.selOldReportCount = 4;
+                    }
+                    else{
+                        model.selOldReportCount = response.length;
+                    }
+                    createFailureRateGraph();
                 })
         }
 
@@ -297,7 +303,7 @@
             model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
         }
 
-        function createFailureRateGraph(oldReports) {
+        function createFailureRateGraph() {
             $scope.failureRateGraph = {
                 chart: {
                     type: 'lineChart',
@@ -335,28 +341,28 @@
                 }
             };
 
-            $scope.failureRateGraphData = computeFailureRateGraphData(oldReports);
+            $scope.failureRateGraphData = computeFailureRateGraphData();
         }
 
-        function computeFailureRateGraphData(oldReports) {
-            instBuild = [];
+        function computeFailureRateGraphData() {
+            oldReports = model.oldReportData;
+            model.instBuild = [];
             model.oldReportCount = [];i=0;while(model.oldReportCount.push(i++)<=oldReports.length);
             totalFailureRate = [];
             stableFailureRate = [];
             unstableFailureRate = [];
-
-            instBuild.push(model.releaseVer.Release+" "+model.releaseVer.Build);
-            model.instBuild = instBuild;
-            totalFailureRate.push({x:0, y:model.failureRate});
-            stableFailureRate.push({x:0, y:model.stableFailureRate});
-            unstableFailureRate.push({x:0, y:model.unstableFailureRate});
-
+            reportIndex = 4-model.selOldReportCount;
             for(var i=0;i<model.selOldReportCount;i++){
-                model.instBuild.push(oldReports[i].releaseData.Release+" "+oldReports[i].releaseData.Build);
-                totalFailureRate.push({x:i+1, y:oldReports[i].overallFR});
-                stableFailureRate.push({x:i+1, y:oldReports[i].stableFR});
-                unstableFailureRate.push({x:i+1, y:oldReports[i].unstableFR});
+                model.instBuild.push(oldReports[reportIndex].releaseData.Release+" "+oldReports[i].build);
+                totalFailureRate.push({x:i, y:oldReports[reportIndex].overallFR});
+                stableFailureRate.push({x:i, y:oldReports[reportIndex].stableFR});
+                unstableFailureRate.push({x:i, y:oldReports[reportIndex].unstableFR});
+                reportIndex += 1;
             }
+            model.instBuild.push(model.releaseVer.Release+" "+model.releaseVer.Build);
+            totalFailureRate.push({x:model.selOldReportCount, y:model.failureRate});
+            stableFailureRate.push({x:model.selOldReportCount, y:model.stableFailureRate});
+            unstableFailureRate.push({x:model.selOldReportCount, y:model.unstableFailureRate});
 
             //Line chart data should be sent as an array of series objects.
             return [

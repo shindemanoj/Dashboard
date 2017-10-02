@@ -351,7 +351,7 @@
             totalFailureRate = [];
             stableFailureRate = [];
             unstableFailureRate = [];
-            reportIndex = 4-model.selOldReportCount;
+            reportIndex = oldReports.length-model.selOldReportCount;
             for(var i=0;i<model.selOldReportCount;i++){
                 model.instBuild.push(oldReports[reportIndex].releaseData.Release+" "+oldReports[i].build);
                 totalFailureRate.push({x:i, y:oldReports[reportIndex].overallFR});

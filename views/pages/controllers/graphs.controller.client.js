@@ -73,7 +73,7 @@
                 stableFR: 11.11,
                 unstableFR: 6.12,
                 releaseData: model.releaseVer,
-                instType: "GEM5K"
+                instType: "GWP"
             };
             // DashboardService
             //     .getSaveReport(newReport)
@@ -346,6 +346,7 @@
 
         function computeFailureRateGraphData() {
             oldReports = model.oldReportData;
+            model.build = "G5K-Latest";
             model.instBuild = [];
             model.oldReportCount = [];i=0;while(model.oldReportCount.push(i++)<=oldReports.length);
             totalFailureRate = [];
@@ -353,13 +354,13 @@
             unstableFailureRate = [];
             reportIndex = oldReports.length-model.selOldReportCount;
             for(var i=0;i<model.selOldReportCount;i++){
-                model.instBuild.push(oldReports[reportIndex].releaseData.Release+" "+oldReports[i].build);
+                model.instBuild.push(oldReports[reportIndex].build);
                 totalFailureRate.push({x:i, y:oldReports[reportIndex].overallFR});
                 stableFailureRate.push({x:i, y:oldReports[reportIndex].stableFR});
                 unstableFailureRate.push({x:i, y:oldReports[reportIndex].unstableFR});
                 reportIndex += 1;
             }
-            model.instBuild.push(model.releaseVer.Release+" "+model.releaseVer.Build);
+            model.instBuild.push(model.build);
             totalFailureRate.push({x:model.selOldReportCount, y:model.failureRate});
             stableFailureRate.push({x:model.selOldReportCount, y:model.stableFailureRate});
             unstableFailureRate.push({x:model.selOldReportCount, y:model.unstableFailureRate});

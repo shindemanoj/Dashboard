@@ -45,22 +45,120 @@
         <!--<button class="btn btn-primary pull-right" ng-click="model.exportData()">-->
         <!--<i class="fa fa-save"></i> Save as PDF</button>-->
     </div>
-    <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
-        <thead>
-        <tr>
-            <th>CR Number / Unknown</th>
-            <th>Stable Network</th>
-            <th>Unstable Network</th>
-            <th>Overall</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="data in model.summary">
-            <td>{{data.DefectId}}</td>
-            <td>{{data.StableCount}}</td>
-            <td>{{data.UnstableCount}}</td>
-            <td>{{data.StableCount + data.UnstableCount}}</td>
-        </tr>
-        </tbody>
-    </table>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <ul>
+                <li><b>GWP 450</b></li>
+            </ul>
+            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>CR#</th>
+                    <th>Type</th>
+                    <th>Summary</th>
+                    <th>Frequency</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>18622</td>
+                    <td>Crash</td>
+                    <td>Multiple 3206 on analyzer before restart..</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>14717</td>
+                    <td>Freeze</td>
+                    <td>lost Critical JMS message</td>
+                    <td>2</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <ul>
+                <li><b>Stable Network</b></li>
+            </ul>
+            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Error Type</th>
+                    <th>New</th>
+                    <th>Kontron</th>
+                    <th>Old</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Crash</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Freeze</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <ul>
+                <li><b>Unstable Network</b></li>
+            </ul>
+            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>Error Type</th>
+                    <th>New</th>
+                    <th>Kontron</th>
+                    <th>Old</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Crash</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Freeze</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <ul>
+                <li><b>Summary</b></li>
+            </ul>
+            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th>CR Number / Unknown</th>
+                    <th>Stable Network</th>
+                    <th>Unstable Network</th>
+                    <th>Overall</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="data in model.summary">
+                    <td>{{data.DefectId}}</td>
+                    <td>{{data.StableCount}}</td>
+                    <td>{{data.UnstableCount}}</td>
+                    <td>{{data.StableCount + data.UnstableCount}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

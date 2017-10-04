@@ -135,13 +135,13 @@
                 }
             }
             model.analyserCount = analyserHostnames.length;
-            model.failureRate = (model.totalCrashCount / (model.analyserCount * 14))*100;
+            model.failureRate = (model.totalCrashCount / (model.analyserCount * 6));
             model.failureRate = model.failureRate.toFixed(2);
 
-            model.stableFailureRate = (stableCrashCount / (model.config.Stable.length * 14))*100;
+            model.stableFailureRate = (stableCrashCount / (model.config.Stable.length * 6));
             model.stableFailureRate = model.stableFailureRate.toFixed(2);
 
-            model.unstableFailureRate = (unstableCrashCount / (model.config.Unstable.length * 14))*100;
+            model.unstableFailureRate = (unstableCrashCount / (model.config.Unstable.length * 6));
             model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
         }
     }

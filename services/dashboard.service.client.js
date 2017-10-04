@@ -63,7 +63,7 @@
             return $http.get('ReleaseVersion');
         }
         function getLatestReport() {
-            return $http.get('errorReport280917.csv');
+            return $http.get('Gem4K/Gem4kErrorReport.csv');
         }
     }
 })();

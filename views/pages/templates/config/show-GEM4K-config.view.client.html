@@ -1,5 +1,5 @@
 <div class="card mb-3">
-    <div class="card-header">
+    <div class="card-header" style="color: red;">
         <i class="fa fa-fw fa-dashboard"></i>
         Stress Test Configuration
     </div>
@@ -11,15 +11,15 @@
         </ul>
         <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
 
-            <thead style="font-weight:bold;">
-            <tr>
-                <td>Product</td>
-                <td>SBC</td>
-                <td>H.W.</td>
-                <td>Version</td>
-                <td>Stable</td>
-                <td>Unstable</td>
-                <td>Total</td>
+            <thead>
+            <tr class="alert-info">
+                <th>Product</th>
+                <th>SBC</th>
+                <th>H.W.</th>
+                <th>Version</th>
+                <th>Stable</th>
+                <th>Unstable</th>
+                <th>Total</th>
             </tr>
             </thead>
 
@@ -39,7 +39,7 @@
 </div>
 
 <div class="card mb-3">
-    <div class="card-header">
+    <div class="card-header" style="color: blue;">
         <i class="fa fa-fw fa-dashboard"></i>
         Summary
         <!--<button class="btn btn-primary pull-right" ng-click="model.exportData()">-->
@@ -47,42 +47,13 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-6">
-            <ul>
-                <li><b>GWP 450</b></li>
-            </ul>
-            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
-                <thead>
-                <tr>
-                    <th>CR#</th>
-                    <th>Type</th>
-                    <th>Summary</th>
-                    <th>Frequency</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>18622</td>
-                    <td>Crash</td>
-                    <td>Multiple 3206 on analyzer before restart..</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>14717</td>
-                    <td>Freeze</td>
-                    <td>lost Critical JMS message</td>
-                    <td>2</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-6">
+        <div class="col">
             <ul>
                 <li><b>Stable Network</b></li>
             </ul>
             <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
                 <thead>
-                <tr>
+                <tr class="alert-warning">
                     <th>Error Type</th>
                     <th>New</th>
                     <th>Kontron</th>
@@ -105,45 +76,13 @@
                 </tbody>
             </table>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-6">
-            <ul>
-                <li><b>Unstable Network</b></li>
-            </ul>
-            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
-                <thead>
-                <tr>
-                    <th>Error Type</th>
-                    <th>New</th>
-                    <th>Kontron</th>
-                    <th>Old</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Crash</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Freeze</td>
-                    <td>2</td>
-                    <td>0</td>
-                    <td>1</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="col-6">
+        <div class="col">
             <ul>
                 <li><b>Summary</b></li>
             </ul>
             <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
                 <thead>
-                <tr>
+                <tr class="alert-success">
                     <th>CR Number / Unknown</th>
                     <th>Stable Network</th>
                     <th>Unstable Network</th>
@@ -159,6 +98,82 @@
                 </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+            <ul>
+                <li><b>Unstable Network</b></li>
+            </ul>
+            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+                <thead>
+                <tr class="alert-danger">
+                    <th>Error Type</th>
+                    <th>New</th>
+                    <th>Kontron</th>
+                    <th>Old</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Crash</td>
+                    <td>0</td>
+                    <td>14</td>
+                    <td>139</td>
+                </tr>
+                <tr>
+                    <td>Freeze</td>
+                    <td>0</td>
+                    <td>18</td>
+                    <td>85</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <!--<div class="cliente">-->
+                <!--<ul>-->
+                    <!--<li><b>GWP 450</b></li>-->
+                <!--</ul>-->
+                <!--<table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">-->
+                    <!--<thead>-->
+                    <!--<tr>-->
+                        <!--<th>CR#</th>-->
+                        <!--<th>Type</th>-->
+                        <!--<th>Summary</th>-->
+                        <!--<th>Frequency</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                    <!--<tbody>-->
+                    <!--<tr>-->
+                        <!--<td>18622</td>-->
+                        <!--<td>Crash</td>-->
+                        <!--<td>Multiple 3206 on analyzer before restart..</td>-->
+                        <!--<td>4</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>14717</td>-->
+                        <!--<td>Freeze</td>-->
+                        <!--<td>lost Critical JMS message</td>-->
+                        <!--<td>2</td>-->
+                    <!--</tr>-->
+                    <!--</tbody>-->
+                <!--</table>-->
+            <!--</div>-->
+        </div>
+        <div class="col-6">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+
+        </div>
+        <div class="col-6">
+
         </div>
     </div>
 </div>

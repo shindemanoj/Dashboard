@@ -1,0 +1,29 @@
+Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 00:00:00-04,See 192.168.226.102_021017_1506916861587.png capture for details.This error is related with CR 17702,Sun Oct  1
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 00:41:31,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 01:00:00-04,See 192.168.226.102_021017_1506920461591.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 01:04:49,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 01:04:49,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 02:00:00-04,See 192.168.226.102_021017_1506924061467.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 01:04:49,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 02:41:47,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 03:00:00-04,See 192.168.226.102_021017_1506927661448.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 02:41:47,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 02:41:47,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 04:00:00-04,See 192.168.226.102_021017_1506931261411.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 02:41:47,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 02:41:47,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 05:00:00-04,See 192.168.226.102_021017_1506934862321.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 05:04:45,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 05:04:45,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 06:00:00-04,See 192.168.226.102_021017_1506938461299.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 05:04:45,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 05:04:45,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 07:00:00-04,See 192.168.226.102_021017_1506942062795.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 07:04:55,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 07:42:37,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 08:00:00-04,See 192.168.226.102_021017_1506945662608.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 07:42:37,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 07:42:37,Unknown error or wrong error pattern.,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-10-02 09:00:00-04,See 192.168.226.102_021017_1506949261523.png capture for details.This error is related with CR 17702,Mon Oct  2
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-10-02 07:42:37,Unknown error or wrong error pattern.,Mon Oct  2

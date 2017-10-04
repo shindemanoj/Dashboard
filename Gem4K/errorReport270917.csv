@@ -1,0 +1,75 @@
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-09-27 08:41:47,Unknown error or wrong error pattern.,Wed Sep 27 10:01
+A.3.2.99.0.32.0.0.6,GEM96 ( 192.168.3.96),3006 Error,2017-09-27 15:25:06,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Wed Sep 27 15:26
+A.3.2.99.0.32.0.0.6,GEM96 ( 192.168.3.96),3206 Error,2017-09-27 07:57:08,Unknown error or wrong error pattern.,Wed Sep 27 15:26
+A.3.2.99.0.32.0.0.6,GEM96 ( 192.168.3.96),3006 Error,2017-09-27 15:25:06,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Wed Sep 27 15:26
+A.3.2.99.0.32.0.0.6,GEM96 ( 192.168.3.96),3206 Error,2017-09-27 07:57:08,Unknown error or wrong error pattern.,Wed Sep 27 15:26
+A.3.2.99.0.32.0.0.6,GEM168 ( 192.168.2.168),3206 Error,2017-09-27 09:41:40,Unknown error or wrong error pattern.,Wed Sep 27 11:01
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 16:02
+A.3.2.99.0.32.0.0.6,GEM153 ( 192.168.207.153),3206 Error,2017-09-27 07:54:18,Unknown error or wrong error pattern.,Wed Sep 27 08:02
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 16:01
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 13:42:06,Unknown error or wrong error pattern.,Wed Sep 27 16:02
+A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 17:00:00-04,See 192.168.207.154_270917_1506546061683.png capture for details.This error is related with CR 17702,Wed Sep 27 16:35
+A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 17:00:00-04,See 192.168.207.150_270917_1506546062255.png capture for details.This error is related with CR 17702,Wed Sep 27 16:27
+A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 17:00:00-04,See 192.168.207.157_270917_1506546061260.png capture for details.This error is related with CR 17702,Wed Sep 27 16:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 16:35
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 16:27
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 13:42:06,Unknown error or wrong error pattern.,Wed Sep 27 16:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 17:01
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 17:02
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 13:42:06,Unknown error or wrong error pattern.,Wed Sep 27 17:02
+A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 18:00:00-04,See 192.168.207.154_270917_1506549661721.png capture for details.This error is related with CR 17702,Wed Sep 27 17:38
+A.3.2.99.0.32.0.0.6,gwp397 (192.168.3.97),Freeze, 2017-09-27 18:00:00-04,See 192.168.3.97_270917_1506549661951.png capture for details.This error is related with CR 17702,Wed Sep 27 16:13
+A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 18:00:00-04,See 192.168.207.150_270917_1506549662264.png capture for details.This error is related with CR 17702,Wed Sep 27 17:39
+A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 18:00:00-04,See 192.168.207.157_270917_1506549661684.png capture for details.This error is related with CR 17702,Wed Sep 27 17:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 17:38
+A.3.2.99.0.32.0.0.6,gwp397 ( 192.168.3.97),3009 Error,2017-09-27 16:31:11,3009 Error is shown in UI.log at  caused by 'SocketTimeoutException'. This error is related to CR 8697,Wed Sep 27 16:13
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 17:39
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 13:42:06,Unknown error or wrong error pattern.,Wed Sep 27 17:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 18:01
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 18:02
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 18:42:24,Unknown error or wrong error pattern.,Wed Sep 27 18:02
+A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 19:00:00-04,See 192.168.207.154_270917_1506553261810.png capture for details.This error is related with CR 17702,Wed Sep 27 18:38
+A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 19:00:00-04,See 192.168.207.150_270917_1506553261304.png capture for details.This error is related with CR 17702,Wed Sep 27 18:39
+A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 19:00:00-04,See 192.168.207.157_270917_1506553261669.png capture for details.This error is related with CR 17702,Wed Sep 27 18:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 18:38
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 18:39
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 19:04:54,Unknown error or wrong error pattern.,Wed Sep 27 18:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 19:01
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 19:02
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 19:04:54,Unknown error or wrong error pattern.,Wed Sep 27 19:02
+A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 20:00:00-04,See 192.168.207.154_270917_1506556861774.png capture for details.This error is related with CR 17702,Wed Sep 27 19:38
+A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 20:00:00-04,See 192.168.207.150_270917_1506556862262.png capture for details.This error is related with CR 17702,Wed Sep 27 19:39
+A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 20:00:00-04,See 192.168.207.157_270917_1506556861805.png capture for details.This error is related with CR 17702,Wed Sep 27 19:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 19:38
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 19:39
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 20:04:57,Unknown error or wrong error pattern.,Wed Sep 27 19:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 20:01
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 20:42:05,Unknown error or wrong error pattern.,Wed Sep 27 20:01
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 20:42:32,Unknown error or wrong error pattern.,Wed Sep 27 20:02
+A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 21:00:00-04,See 192.168.207.154_270917_1506560461569.png capture for details.This error is related with CR 17702,Wed Sep 27 20:38
+A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 21:00:00-04,See 192.168.207.150_270917_1506560461343.png capture for details.This error is related with CR 17702,Wed Sep 27 20:39
+A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 21:00:00-04,See 192.168.207.157_270917_1506560461969.png capture for details.This error is related with CR 17702,Wed Sep 27 20:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 20:38
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 20:42:05,Unknown error or wrong error pattern.,Wed Sep 27 20:39
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 20:42:32,Unknown error or wrong error pattern.,Wed Sep 27 20:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 21:01
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 20:42:05,Unknown error or wrong error pattern.,Wed Sep 27 21:01
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 20:42:32,Unknown error or wrong error pattern.,Wed Sep 27 21:02
+A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 22:00:00-04,See 192.168.207.154_270917_1506564061466.png capture for details.This error is related with CR 17702,Wed Sep 27 21:38
+A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 22:00:00-04,See 192.168.207.150_270917_1506564062249.png capture for details.This error is related with CR 17702,Wed Sep 27 21:39
+A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 22:00:00-04,See 192.168.207.157_270917_1506564061744.png capture for details.This error is related with CR 17702,Wed Sep 27 21:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 21:38
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 20:42:05,Unknown error or wrong error pattern.,Wed Sep 27 21:39
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 22:04:58,Unknown error or wrong error pattern.,Wed Sep 27 21:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 22:01
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 20:42:05,Unknown error or wrong error pattern.,Wed Sep 27 22:01
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 22:04:58,Unknown error or wrong error pattern.,Wed Sep 27 22:02
+A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 23:00:00-04,See 192.168.207.154_270917_1506567661529.png capture for details.This error is related with CR 17702,Wed Sep 27 22:38
+A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 23:00:00-04,See 192.168.207.150_270917_1506567661348.png capture for details.This error is related with CR 17702,Wed Sep 27 22:39
+A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 23:00:00-04,See 192.168.207.157_270917_1506567661729.png capture for details.This error is related with CR 17702,Wed Sep 27 22:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 22:38
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 20:42:05,Unknown error or wrong error pattern.,Wed Sep 27 22:39
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 22:04:58,Unknown error or wrong error pattern.,Wed Sep 27 22:39
+A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 23:01
+A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 20:42:05,Unknown error or wrong error pattern.,Wed Sep 27 23:02
+A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 23:42:34,Unknown error or wrong error pattern.,Wed Sep 27 23:02

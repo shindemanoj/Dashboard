@@ -1,0 +1,14 @@
+Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-30 17:00:00-04,See 192.168.226.102_300917_1506805261198.png capture for details.This error is related with CR 17702,Fri Sep 29 10:55
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-30 18:00:00-04,See 192.168.226.102_300917_1506808861458.png capture for details.This error is related with CR 17702,Sat Sep 30 17:39
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-30 19:00:00-04,See 192.168.226.102_300917_1506812461515.png capture for details.This error is related with CR 17702,Sat Sep 30 18:38
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-30 20:00:00-04,See 192.168.226.102_300917_1506816062517.png capture for details.This error is related with CR 17702,Sat Sep 30 19:39
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-30 21:00:00-04,See 192.168.226.102_300917_1506819661515.png capture for details.This error is related with CR 17702,Sat Sep 30 20:39
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-09-30 21:04:28,Unknown error or wrong error pattern.,Sat Sep 30 20:39
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-09-30 21:04:28,Unknown error or wrong error pattern.,Sat Sep 30 21:01
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-30 22:00:00-04,See 192.168.226.102_300917_1506823261673.png capture for details.This error is related with CR 17702,Sat Sep 30 21:39
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-09-30 21:04:28,Unknown error or wrong error pattern.,Sat Sep 30 21:39
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-09-30 21:04:28,Unknown error or wrong error pattern.,Sat Sep 30 22:01
+A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-30 23:00:00-04,See 192.168.226.102_300917_1506826861482.png capture for details.This error is related with CR 17702,Sat Sep 30 22:39
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-09-30 21:04:28,Unknown error or wrong error pattern.,Sat Sep 30 22:39
+A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-09-30 23:42:32,Unknown error or wrong error pattern.,Sat Sep 30 23:02

@@ -6,7 +6,7 @@
         .module('Dashboard')
         .controller('OverviewController', overviewController);
 
-    function overviewController($scope, DashboardService, InstrumentDataService) {
+    function overviewController($scope, DashboardService, InstrumentDataService, $http) {
         var model = this;
         model.exportData = exportData;
         model.updateReportData = updateReportData;
@@ -17,6 +17,12 @@
             $scope.selectedInst.instType = 'GEM5K';
         }
         function init(){
+            // DashboardService
+            //     .getFileNames()
+            //     .success(function (response) {
+            //         console.log(response);
+            //     });
+
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
                 .success(function (config) {
@@ -40,14 +46,22 @@
         init();
 
         function getReportData() {
-            DashboardService
-                .getLatestReport()
-                .success(function (response) {
-                    model.jsonReport = DashboardService.processData(response);
-                    findFailureRate();
-                    getSummary();
-                    saveReport();
-                })
+            var reportData = "";
+            DashboardService.getFileNames()
+                .success(function (fileNames) {
+                    for(i in fileNames){
+                        if(fileNames[i].includes(".csv")){
+                            $http.get('Gem4K/'+fileNames[i])
+                                .success(function (response) {
+                                    reportData += response;
+                                    model.jsonReport = DashboardService.processData(reportData);
+                                    findFailureRate();
+                                    getSummary();
+                                    saveReport();
+                                })
+                        }
+                    }
+                });
         }
 
         function updateReportData() {

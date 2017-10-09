@@ -116,7 +116,7 @@
                                 <td>{{ data.errorType }}</td>
                                 <td>{{ data.errorDate | date:'medium'}}</td>
                                 <td>{{ data.defectId }}</td>
-                                <td ng-if="data['Screenshot'] != 'NA'"><a href="#"> {{ data["Screenshot"] }}</a></td>
+                                <td ng-if="data['Screenshot'] != 'NA'"><a ng-href="Gem4K/{{ data.Screenshot }}"> {{ data["Screenshot"] }}</a></td>
                                 <td ng-if="data['Screenshot'] == 'NA'">{{ data["Screenshot"] }}</td>
                                 <td>{{ data.lastReboot | date:'medium'}}</td>
                             </tr>

@@ -6,6 +6,7 @@
     function dashboardService($http, fCsv) {
 
         var api = {
+            getFileNames: getFileNames,
             getLatestReport: getLatestReport,
             getConfiguration: getConfiguration,
             getReleaseVersion: getReleaseVersion,
@@ -14,6 +15,10 @@
             getAllReports: getAllReports
         };
         return api;
+
+        function getFileNames() {
+            return $http.get('/api/getfilenames')
+        }
 
         function getAllReports(instType) {
             return $http.get('/api/dashboard/'+instType);

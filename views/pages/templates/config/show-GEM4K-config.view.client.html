@@ -24,14 +24,32 @@
             </thead>
 
             <tbody>
-            <tr ng-repeat="data in model.config.InstConfig">
-                <td>{{ data.Product}}</td>
-                <td>{{ data.SBC }}</td>
-                <td>{{ data.hw }}</td>
-                <td>{{ data.Version }}</td>
-                <td>{{ data.Stable }}</td>
-                <td>{{ data.Unstable }}</td>
-                <td>{{ data.Total }}</td>
+            <tr>
+                <td>G4K</td>
+                <td>New Seco</td>
+                <td>Product</td>
+                <td>{{model.releaseVer.Version}}</td>
+                <td>{{ model.newSecoStableCount }}</td>
+                <td>{{ model.newSecoUnstableCount }}</td>
+                <td>{{ (model.newSecoStableCount + model.newSecoUnstableCount) }}</td>
+            </tr>
+            <tr>
+                <td>G4K</td>
+                <td>Old Seco</td>
+                <td>Product</td>
+                <td>{{model.releaseVer.Version}}</td>
+                <td>{{ model.oldSecoStableCount }}</td>
+                <td>{{ model.oldSecoUnstableCount }}</td>
+                <td>{{ (model.oldSecoStableCount + model.oldSecoUnstableCount) }}</td>
+            </tr>
+            <tr>
+                <td>G4K</td>
+                <td>Kontron</td>
+                <td>Product</td>
+                <td>{{model.releaseVer.Version}}</td>
+                <td>{{ model.kontronStableCount }}</td>
+                <td>{{ model.kontronUnstableCount }}</td>
+                <td>{{ (model.kontronStableCount + model.kontronUnstableCount) }}</td>
             </tr>
             </tbody>
         </table>
@@ -63,15 +81,15 @@
                 <tbody>
                 <tr>
                     <td>Crash</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{model.stableNewSecoCrash}}</td>
+                    <td>{{model.stableKontronCrash}}</td>
+                    <td>{{model.stableOldSecoCrash}}</td>
                 </tr>
                 <tr>
                     <td>Freeze</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{model.stableNewSecoFreeze}}</td>
+                    <td>{{model.stableKontronFreeze}}</td>
+                    <td>{{model.stableOldSecoFreeze}}</td>
                 </tr>
                 </tbody>
             </table>
@@ -116,64 +134,20 @@
                 <tbody>
                 <tr>
                     <td>Crash</td>
-                    <td>15</td>
-                    <td>0</td>
-                    <td>141</td>
+                    <td>{{model.unStableNewSecoCrash}}</td>
+                    <td>{{model.unStableKontronCrash}}</td>
+                    <td>{{model.unStableOldSecoCrash}}</td>
                 </tr>
                 <tr>
                     <td>Freeze</td>
-                    <td>19</td>
-                    <td>0</td>
-                    <td>88</td>
+                    <td>{{model.unStableNewSecoFreeze}}</td>
+                    <td>{{model.unStableKontronFreeze}}</td>
+                    <td>{{model.unStableOldSecoFreeze}}</td>
                 </tr>
                 </tbody>
             </table>
         </div>
         <div class="col"></div>
     </div>
-    <div class="row">
-        <div class="col-6">
-            <!--<div class="cliente">-->
-                <!--<ul>-->
-                    <!--<li><b>GWP 450</b></li>-->
-                <!--</ul>-->
-                <!--<table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th>CR#</th>-->
-                        <!--<th>Type</th>-->
-                        <!--<th>Summary</th>-->
-                        <!--<th>Frequency</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
-                    <!--<tbody>-->
-                    <!--<tr>-->
-                        <!--<td>18622</td>-->
-                        <!--<td>Crash</td>-->
-                        <!--<td>Multiple 3206 on analyzer before restart..</td>-->
-                        <!--<td>4</td>-->
-                    <!--</tr>-->
-                    <!--<tr>-->
-                        <!--<td>14717</td>-->
-                        <!--<td>Freeze</td>-->
-                        <!--<td>lost Critical JMS message</td>-->
-                        <!--<td>2</td>-->
-                    <!--</tr>-->
-                    <!--</tbody>-->
-                <!--</table>-->
-            <!--</div>-->
-        </div>
-        <div class="col-6">
 
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-6">
-
-        </div>
-        <div class="col-6">
-
-        </div>
-    </div>
 </div>

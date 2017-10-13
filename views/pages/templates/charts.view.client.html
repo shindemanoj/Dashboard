@@ -116,7 +116,7 @@
                                 <td>{{ data.errorType }}</td>
                                 <td>{{ data.errorDate | date:'medium'}}</td>
                                 <td>{{ data.defectId }}</td>
-                                <td ng-if="data['Screenshot'] != 'NA'"><a ng-href="Gem4K/{{ data.Screenshot }}"> {{ data["Screenshot"] }}</a></td>
+                                <td ng-if="data['Screenshot'] != 'NA'"><a data-toggle="modal" href="" ng-click="model.setImageURL(data.Screenshot)" data-target="#myModal"> {{ data["Screenshot"] }}</a></td>
                                 <td ng-if="data['Screenshot'] == 'NA'">{{ data["Screenshot"] }}</td>
                                 <td>{{ data.lastReboot | date:'medium'}}</td>
                             </tr>
@@ -126,4 +126,13 @@
             </div>
         </div>
     </div>
+</div>
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-dialog">
+        <img ng-src="{{model.imageURL}}">
+     </div>
 </div>

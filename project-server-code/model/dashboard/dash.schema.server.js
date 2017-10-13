@@ -8,7 +8,8 @@ module.exports = function() {
         stableFR: Number,
         unstableFR: Number,
         releaseData: JSON,
-        dateCreated: {type:Date, default: Date.now()}
+        startDate: Date,
+        endDate: Date
     }, {collection: "dashboard.reports"});
     return DashSchema;
 };

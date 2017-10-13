@@ -6,6 +6,7 @@
     function chartsController($scope, DashboardService, InstrumentDataService) {
         var model = this;
         model.updateReportData = updateReportData;
+        model.setImageURL = setImageURL;
 
         $scope.names = ["GEM5K", "GEM4K", "GWP"];
         $scope.selectedInst = InstrumentDataService;
@@ -17,25 +18,32 @@
         $scope.searchTable   = '';     // set the default search/filter term
 
         function init(){
-            DashboardService
-                .getConfiguration($scope.selectedInst.instType)
-                .success(function (response) {
-                    console.log(response);
-                });
-            DashboardService
-                .getLatestReport()
-                .success(function (response) {
-                    $scope.tableData = DashboardService.processData(response);
-                });
+            getReportData();
         }
         init();
 
-        function updateReportData() {
-            DashboardService
-                .getConfiguration($scope.selectedInst.instType)
-                .success(function (response) {
-                    console.log(response);
+        function getReportData() {
+            var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
+            DashboardService.getFileNames()
+                .success(function (fileNames) {
+                    for(i in fileNames){
+                        if(fileNames[i].includes(".csv")){
+                            DashboardService.readFile($scope.selectedInst.instType + '/' + fileNames[i])
+                                .success(function (response) {
+                                    reportData += response;
+                                    $scope.tableData = DashboardService.processData(reportData);
+                                })
+                        }
+                    }
                 });
+        }
+
+        function updateReportData() {
+            getReportData();
+        }
+
+        function setImageURL(imageURL) {
+            model.imageURL = $scope.selectedInst.instType + "/" + imageURL;
         }
     }
 })();

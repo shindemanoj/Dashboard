@@ -7,41 +7,21 @@
     var api = {
         "saveFile": saveReport,
         "findReports":findReports,
-        "findUserbyUsername":findUserbyUsername,
-        "findUserByCredentials":findUserByCredentials,
         "deleteUser":deleteUser,
-        "updateUser":updateUser,
-        "findAllUsers": findAllUsers,
         "setModel":setModel,
-        "findUserByGoogleId":findUserByGoogleId,
-        "findUserByFacebookId": findUserByFacebookId
-
     };
 
     return api;
 
-        function findUserByFacebookId(facebookId) {
-            return DashboardModel.findOne({'facebook.id': facebookId});
-        }
-        function findUserByGoogleId(googleId) {
-            return DashboardModel.findOne({'google.id': googleId});
-        }
-
-    function findAllUsers() {
-        return DashboardModel.find().sort({dateCreated:-1});
-    }
-
     function saveReport(report) {
-        return DashboardModel.create(report);
+        return DashboardModel.update(
+            { startDate: report.startDate,  endDate: report.endDate},
+            report,
+            { upsert: true }
+        );
     }
     function findReports(instType) {
         return DashboardModel.find({instType:instType});
-    }
-    function findUserbyUsername(username) {
-        return DashboardModel.findOne({"username":username});
-    }
-    function findUserByCredentials(_username, _password) {
-        return DashboardModel.find({username:_username, password: _password});
     }
 
     function deleteUser(userId) {
@@ -105,9 +85,6 @@
             });
     }
 
-    function updateUser(userId, updatedUser) {
-        return DashboardModel.update({_id:userId},{$set:updatedUser});
-    }
     function setModel(_model) {
         model = _model;
     }

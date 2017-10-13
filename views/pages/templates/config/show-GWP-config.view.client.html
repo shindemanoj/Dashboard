@@ -9,27 +9,45 @@
             <li><b>Release Version:</b>&nbsp;{{model.releaseVer.Version}}</li>
         </ul>
         <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
-            <thead style="font-weight:bold;">
-            <tr>
-                <td>Product</td>
-                <td>SBC</td>
-                <td>H.W.</td>
-                <td>Version</td>
-                <td>Stable</td>
-                <td>Unstable</td>
-                <td>Total</td>
+            <thead>
+            <tr class="alert-info">
+                <th>Product</th>
+                <th>SBC</th>
+                <th>H.W.</th>
+                <th>Version</th>
+                <th>Stable</th>
+                <th>Unstable</th>
+                <th>Total</th>
             </tr>
             </thead>
 
             <tbody>
-            <tr ng-repeat="data in model.config.InstConfig">
-                <td>{{ data.Product}}</td>
-                <td>{{ data.SBC }}</td>
-                <td>{{ data.hw }}</td>
-                <td>{{ data.Version }}</td>
-                <td>{{ data.Stable }}</td>
-                <td>{{ data.Unstable }}</td>
-                <td>{{ data.Total }}</td>
+            <tr>
+                <td>G4K</td>
+                <td>VM New</td>
+                <td>Virtual</td>
+                <td>{{model.releaseVer.Version}}</td>
+                <td>{{ model.vmNewStableCount }}</td>
+                <td>{{ model.vmNewUnstableCount }}</td>
+                <td>{{ (model.vmNewStableCount + model.vmNewUnstableCount) }}</td>
+            </tr>
+            <tr>
+                <td>G4K</td>
+                <td>VM Old</td>
+                <td>Virtual</td>
+                <td>{{model.releaseVer.Version}}</td>
+                <td>{{ model.vmOldStableCount }}</td>
+                <td>{{ model.vmOldUnstableCount }}</td>
+                <td>{{ (model.vmOldStableCount + model.vmOldUnstableCount) }}</td>
+            </tr>
+            <tr>
+                <td>G4K</td>
+                <td>VM</td>
+                <td>Virtual</td>
+                <td>{{model.releaseVer.Version}}</td>
+                <td>{{ model.vmStableCount }}</td>
+                <td>{{ model.vmUnstableCount }}</td>
+                <td>{{ (model.vmStableCount + model.vmUnstableCount) }}</td>
             </tr>
             </tbody>
         </table>

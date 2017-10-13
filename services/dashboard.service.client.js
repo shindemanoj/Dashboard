@@ -7,7 +7,7 @@
 
         var api = {
             getFileNames: getFileNames,
-            getLatestReport: getLatestReport,
+            readFile: readFile,
             getConfiguration: getConfiguration,
             getReleaseVersion: getReleaseVersion,
             getSaveReport: getSaveReport,
@@ -62,13 +62,13 @@
                 url = "Gem4K.properties";
             else
                 url = "GWP.properties";
-            return $http.get(url);
+            return $http.get("Properties/"+url);
         }
         function getReleaseVersion() {
             return $http.get('ReleaseVersion');
         }
-        function getLatestReport() {
-            return $http.get('Gem4K/Gem4kErrorReport.csv');
+        function readFile(fileName) {
+            return $http.get(fileName);
         }
     }
 })();

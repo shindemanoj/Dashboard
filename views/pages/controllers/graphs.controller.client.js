@@ -40,17 +40,25 @@
         init();
 
         function getReportData() {
-            DashboardService
-                .getLatestReport()
-                .success(function (response) {
-                    model.jsonReport = DashboardService.processData(response);
-                    createLineGraph();
-                    createCrashCountPieChart();
-                    createCrashPerPieChart();
-                    findFailureRate();
-                    saveReport();
-                    gelHistoricalData();
-                })
+            var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
+            DashboardService.getFileNames()
+                .success(function (fileNames) {
+                    for(i in fileNames){
+                        if(fileNames[i].includes(".csv")){
+                            DashboardService.readFile($scope.selectedInst.instType + '/' + fileNames[i])
+                                .success(function (response) {
+                                    reportData += response;
+                                    model.jsonReport = DashboardService.processData(reportData);
+                                    createLineGraph();
+                                    createCrashCountPieChart();
+                                    createCrashPerPieChart();
+                                    findFailureRate();
+                                    saveReport();
+                                    gelHistoricalData();
+                                })
+                        }
+                    }
+                });
         }
 
         function updateFailureRateGraph() {
@@ -86,12 +94,8 @@
             DashboardService.getAllReports($scope.selectedInst.instType)
                 .success(function (response) {
                     model.oldReportData = response;
-                    if(response.length > 4){
-                        model.selOldReportCount = 4;
-                    }
-                    else{
-                        model.selOldReportCount = response.length;
-                    }
+                    startDate = new Date("10/11/2017");
+                    model.selOldReportCount = startDate.toLocaleDateString();
                     createFailureRateGraph();
                 })
         }
@@ -271,35 +275,45 @@
             knownCrashCount = totalCrashCount - unknownCrashCount;
             unknownCrashPer = (unknownCrashCount / totalCrashCount) * 100;
 
-            model.totalCrashCount = totalCrashCount;
-            model.knownCrashCount = knownCrashCount;
-            model.unknownCrashCount = unknownCrashCount;
             return defectValues;
         }
 
         function findFailureRate() {
-            var analyserHostnames = [];
+            var jsonArray = model.jsonReport;
             var stableCrashCount = 0; var unstableCrashCount = 0;
+            var analyserStableCount = 0; var analyserUnstableCount = 0;
             for (var i = 0; i < jsonArray.length; i++) {
                 var hostname = jsonArray[i]['hostname'];
-                if(jQuery.inArray(hostname, model.config.Stable) !== -1){
-                    stableCrashCount += 1;
-                }
-                else{
-                    unstableCrashCount += 1;
-                }
-                if (jQuery.inArray(hostname, analyserHostnames) === -1) {
-                    analyserHostnames.push(hostname);
+                var instConfig = model.config.InstConfig;
+                for(k in instConfig){
+                    if(instConfig[k].Hostname === hostname){
+                        if(instConfig[k].Network === "Stable"){
+                            stableCrashCount += 1;
+                        }
+                        else{
+                            unstableCrashCount += 1;
+                        }
+                    }
                 }
             }
-            model.analyserCount = analyserHostnames.length;
-            model.failureRate = (model.totalCrashCount / (model.analyserCount * 6));
+
+            for(k in instConfig) {
+                if (instConfig[k].Network === "Stable") {
+                    analyserStableCount += 1;
+                }
+                else {
+                    analyserUnstableCount += 1;
+                }
+            }
+
+            model.analyserCount = instConfig.length;
+            model.failureRate = ((stableCrashCount + unstableCrashCount) / (model.analyserCount * 6))*100;
             model.failureRate = model.failureRate.toFixed(2);
 
-            model.stableFailureRate = (stableCrashCount / (model.config.Stable.length * 6));
+            model.stableFailureRate = (stableCrashCount / (analyserStableCount * 6))*100;
             model.stableFailureRate = model.stableFailureRate.toFixed(2);
 
-            model.unstableFailureRate = (unstableCrashCount / (model.config.Unstable.length * 6));
+            model.unstableFailureRate = (unstableCrashCount / (analyserUnstableCount * 6))*100;
             model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
         }
 
@@ -346,14 +360,21 @@
 
         function computeFailureRateGraphData() {
             oldReports = model.oldReportData;
+            //TODO:
             model.build = "G5K-Latest";
             model.instBuild = [];
-            model.oldReportCount = [];i=0;while(model.oldReportCount.push(i++)<=oldReports.length);
+            model.oldReportCount = [];
+            startDate = new Date("10/11/2017");
+            model.oldReportCount.push(startDate.toLocaleDateString());
+            for(var i=oldReports.length-1;i>=0;i--){
+                model.oldReportCount.push(new Date(oldReports[i].startDate).toLocaleDateString());
+            }
             totalFailureRate = [];
             stableFailureRate = [];
             unstableFailureRate = [];
-            reportIndex = oldReports.length-model.selOldReportCount;
-            for(var i=0;i<model.selOldReportCount;i++){
+            selOldReportIndex = model.oldReportCount.indexOf(model.selOldReportCount);
+            reportIndex = oldReports.length-selOldReportIndex;
+            for(var i=0;i<selOldReportIndex;i++){
                 model.instBuild.push(oldReports[reportIndex].build);
                 totalFailureRate.push({x:i, y:oldReports[reportIndex].overallFR});
                 stableFailureRate.push({x:i, y:oldReports[reportIndex].stableFR});
@@ -361,9 +382,9 @@
                 reportIndex += 1;
             }
             model.instBuild.push(model.build);
-            totalFailureRate.push({x:model.selOldReportCount, y:model.failureRate});
-            stableFailureRate.push({x:model.selOldReportCount, y:model.stableFailureRate});
-            unstableFailureRate.push({x:model.selOldReportCount, y:model.unstableFailureRate});
+            totalFailureRate.push({x:selOldReportIndex, y:model.failureRate});
+            stableFailureRate.push({x:selOldReportIndex, y:model.stableFailureRate});
+            unstableFailureRate.push({x:selOldReportIndex, y:model.unstableFailureRate});
 
             //Line chart data should be sent as an array of series objects.
             return [

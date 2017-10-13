@@ -6,7 +6,7 @@
         .module('Dashboard')
         .controller('OverviewController', overviewController);
 
-    function overviewController($scope, DashboardService, InstrumentDataService, $http) {
+    function overviewController($scope, DashboardService, InstrumentDataService) {
         var model = this;
         model.exportData = exportData;
         model.updateReportData = updateReportData;
@@ -28,6 +28,12 @@
                 .success(function (config) {
                     model.config = config;
                     getReportData();
+                    if($scope.selectedInst.instType === "GEM4K"){
+                        processConfigFileForGEM4K(config);
+                    }
+                    if($scope.selectedInst.instType === "GWP"){
+                        processConfigFileForGWP(config);
+                    }
                 });
 
             DashboardService
@@ -45,13 +51,234 @@
         }
         init();
 
+        function updateReportData() {
+            DashboardService
+                .getConfiguration($scope.selectedInst.instType)
+                .success(function (config) {
+                    model.config = config;
+                    getReportData();
+                    if($scope.selectedInst.instType === "GEM4K"){
+                        processConfigFileForGEM4K(config);
+                    }
+                    if($scope.selectedInst.instType === "GWP"){
+                        processConfigFileForGWP(config);
+                    }
+                })
+        }
+
+        function processConfigFileForGEM4K(config){
+            model.newSecoStableCount = 0;
+            model.newSecoUnstableCount = 0;
+            model.oldSecoStableCount = 0;
+            model.oldSecoUnstableCount = 0;
+            model.kontronStableCount = 0;
+            model.kontronUnstableCount = 0;
+            var instConfig = config.InstConfig;
+            for(i in instConfig){
+                if(instConfig[i].Network === "Stable" && instConfig[i].SBC === "New Seco"){
+                    model.newSecoStableCount += 1;
+                }
+                else if(instConfig[i].Network === "Unstable" && instConfig[i].SBC === "New Seco"){
+                    model.newSecoUnstableCount += 1;
+                }
+                else if(instConfig[i].Network === "Stable" && instConfig[i].SBC === "Old Seco"){
+                    model.oldSecoStableCount += 1;
+                }
+                else if(instConfig[i].Network === "Unstable" && instConfig[i].SBC === "Old Seco"){
+                    model.oldSecoUnstableCount += 1;
+                }
+                else if(instConfig[i].Network === "Stable" && instConfig[i].SBC === "Kontron"){
+                    model.kontronStableCount += 1;
+                }
+                else if(instConfig[i].Network === "Unstable" && instConfig[i].SBC === "Kontron"){
+                    model.kontronUnstableCount += 1;
+                }
+            }
+            var jsonArray = model.jsonReport;
+
+            model.stableNewSecoCrash = 0;
+            model.unStableNewSecoCrash = 0;
+            model.stableNewSecoFreeze = 0;
+            model.unStableNewSecoFreeze = 0;
+
+            model.stableOldSecoCrash = 0;
+            model.unStableOldSecoCrash = 0;
+            model.stableOldSecoFreeze = 0;
+            model.unStableOldSecoFreeze = 0;
+
+            model.stableKontronCrash = 0;
+            model.unStableKontronCrash = 0;
+            model.stableKontronFreeze = 0;
+            model.unStableKontronFreeze = 0;
+
+            for(i in jsonArray){
+                var hostname = jsonArray[i].hostname;
+                var errorType = jsonArray[i].errorType;
+                for(j in instConfig){
+                    if(instConfig[j].Hostname === hostname){
+                        if(instConfig[j].Network === "Stable"){
+                            if(errorType.includes("Freeze")){
+                                if(instConfig[j].SBC === "New Seco"){
+                                    model.stableNewSecoFreeze += 1;
+                                }
+                                if(instConfig[j].SBC === "Old Seco"){
+                                    model.stableOldSecoFreeze += 1;
+                                }
+                                if(instConfig[j].SBC === "Kontron"){
+                                    model.stableKontronFreeze += 1;
+                                }
+                            }
+                            else{
+                                if(instConfig[j].SBC === "New Seco"){
+                                    model.stableNewSecoCrash += 1;
+                                }
+                                if(instConfig[j].SBC === "Old Seco"){
+                                    model.stableOldSecoCrash += 1;
+                                }
+                                if(instConfig[j].SBC === "Kontron"){
+                                    model.stableKontronCrash += 1;
+                                }
+                            }
+                        }
+                        else{
+                            if(errorType.includes("Freeze")){
+                                if(instConfig[j].SBC === "New Seco"){
+                                    model.unStableNewSecoFreeze += 1;
+                                }
+                                if(instConfig[j].SBC === "Old Seco"){
+                                    model.unStableOldSecoFreeze += 1;
+                                }
+                                if(instConfig[j].SBC === "Kontron"){
+                                    model.unStableKontronFreeze += 1;
+                                }
+                            }
+                            else{
+                                if(instConfig[j].SBC === "New Seco"){
+                                    model.unStableNewSecoCrash += 1;
+                                }
+                                if(instConfig[j].SBC === "Old Seco"){
+                                    model.unStableOldSecoCrash += 1;
+                                }
+                                if(instConfig[j].SBC === "Kontron"){
+                                    model.unStableKontronCrash += 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        function processConfigFileForGWP(config){
+            model.vmNewStableCount = 0;
+            model.vmNewUnstableCount = 0;
+            model.vmOldStableCount = 0;
+            model.vmOldUnstableCount = 0;
+            model.vmStableCount = 0;
+            model.vmUnstableCount = 0;
+            var instConfig = config.InstConfig;
+            for(i in instConfig){
+                if(instConfig[i].Network === "Stable" && instConfig[i].SBC === "VM New"){
+                    model.vmNewStableCount += 1;
+                }
+                else if(instConfig[i].Network === "Unstable" && instConfig[i].SBC === "VM New"){
+                    model.vmNewUnstableCount += 1;
+                }
+                else if(instConfig[i].Network === "Stable" && instConfig[i].SBC === "VM Old"){
+                    model.vmOldStableCount += 1;
+                }
+                else if(instConfig[i].Network === "Unstable" && instConfig[i].SBC === "VM Old"){
+                    model.vmOldUnstableCount += 1;
+                }
+                else if(instConfig[i].Network === "Stable" && instConfig[i].SBC === "VM"){
+                    model.vmStableCount += 1;
+                }
+                else if(instConfig[i].Network === "Unstable" && instConfig[i].SBC === "VM"){
+                    model.vmUnstableCount += 1;
+                }
+            }
+            // var jsonArray = model.jsonReport;
+            //
+            // model.stableNewSecoCrash = 0;
+            // model.unStableNewSecoCrash = 0;
+            // model.stableNewSecoFreeze = 0;
+            // model.unStableNewSecoFreeze = 0;
+            //
+            // model.stableOldSecoCrash = 0;
+            // model.unStableOldSecoCrash = 0;
+            // model.stableOldSecoFreeze = 0;
+            // model.unStableOldSecoFreeze = 0;
+            //
+            // model.stableKontronCrash = 0;
+            // model.unStableKontronCrash = 0;
+            // model.stableKontronFreeze = 0;
+            // model.unStableKontronFreeze = 0;
+            //
+            // for(i in jsonArray){
+            //     var hostname = jsonArray[i].hostname;
+            //     var errorType = jsonArray[i].errorType;
+            //     for(j in instConfig){
+            //         if(instConfig[j].Hostname === hostname){
+            //             if(instConfig[j].Network === "Stable"){
+            //                 if(errorType.includes("Freeze")){
+            //                     if(instConfig[j].SBC === "New Seco"){
+            //                         model.stableNewSecoFreeze += 1;
+            //                     }
+            //                     if(instConfig[j].SBC === "Old Seco"){
+            //                         model.stableOldSecoFreeze += 1;
+            //                     }
+            //                     if(instConfig[j].SBC === "Kontron"){
+            //                         model.stableKontronFreeze += 1;
+            //                     }
+            //                 }
+            //                 else{
+            //                     if(instConfig[j].SBC === "New Seco"){
+            //                         model.stableNewSecoCrash += 1;
+            //                     }
+            //                     if(instConfig[j].SBC === "Old Seco"){
+            //                         model.stableOldSecoCrash += 1;
+            //                     }
+            //                     if(instConfig[j].SBC === "Kontron"){
+            //                         model.stableKontronCrash += 1;
+            //                     }
+            //                 }
+            //             }
+            //             else{
+            //                 if(errorType.includes("Freeze")){
+            //                     if(instConfig[j].SBC === "New Seco"){
+            //                         model.unStableNewSecoFreeze += 1;
+            //                     }
+            //                     if(instConfig[j].SBC === "Old Seco"){
+            //                         model.unStableOldSecoFreeze += 1;
+            //                     }
+            //                     if(instConfig[j].SBC === "Kontron"){
+            //                         model.unStableKontronFreeze += 1;
+            //                     }
+            //                 }
+            //                 else{
+            //                     if(instConfig[j].SBC === "New Seco"){
+            //                         model.unStableNewSecoCrash += 1;
+            //                     }
+            //                     if(instConfig[j].SBC === "Old Seco"){
+            //                         model.unStableOldSecoCrash += 1;
+            //                     }
+            //                     if(instConfig[j].SBC === "Kontron"){
+            //                         model.unStableKontronCrash += 1;
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+        }
+
         function getReportData() {
-            var reportData = "";
+            var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
             DashboardService.getFileNames()
                 .success(function (fileNames) {
                     for(i in fileNames){
                         if(fileNames[i].includes(".csv")){
-                            $http.get('Gem4K/'+fileNames[i])
+                            DashboardService.readFile($scope.selectedInst.instType + '/' + fileNames[i])
                                 .success(function (response) {
                                     reportData += response;
                                     model.jsonReport = DashboardService.processData(reportData);
@@ -64,14 +291,7 @@
                 });
         }
 
-        function updateReportData() {
-            DashboardService
-                .getConfiguration($scope.selectedInst.instType)
-                .success(function (response) {
-                    model.config = response;
-                    getReportData();
-                })
-        }
+
         function saveReport(){
             var newReport = {
                 build: "GWP-5.2-B9 G5K-B29",
@@ -80,14 +300,15 @@
                 stableFR: 0,
                 unstableFR: 0.62,
                 releaseData: model.releaseVer,
-                instType: "GEM5K",
-                dateCreated: new Date("09/06/2017")
+                instType: "GEM4K",
+                startDate: new Date("09/15/2017"),
+                endDate: new Date("09/20/2017")
             };
-            // DashboardService
-            //     .getSaveReport(newReport)
-            //     .success(function (response) {
-            //         console.log(response);
-            //     })
+            DashboardService
+                .getSaveReport(newReport)
+                .success(function (response) {
+                    console.log(response);
+                })
         }
 
         function getSummary() {
@@ -105,11 +326,16 @@
                 for(j in summary){
                     if(jsonArray[i].defectId === summary[j].DefectId){
                         var hostname = jsonArray[i]['hostname'];
-                        if(jQuery.inArray(hostname, model.config.Stable) !== -1){
-                            summary[j].StableCount += 1;
-                        }
-                        else{
-                            summary[j].UnstableCount += 1;
+                        var instConfig = model.config.InstConfig;
+                        for(k in instConfig){
+                            if(instConfig[k].Hostname === hostname){
+                                if(instConfig[k].Network == "Stable"){
+                                    summary[j].StableCount += 1;
+                                }
+                                else{
+                                    summary[j].UnstableCount += 1;
+                                }
+                            }
                         }
                     }
                 }
@@ -134,28 +360,40 @@
 
         function findFailureRate() {
             var jsonArray = model.jsonReport;
-            var analyserHostnames = [];
             var stableCrashCount = 0; var unstableCrashCount = 0;
+            var analyserStableCount = 0; var analyserUnstableCount = 0;
             for (var i = 0; i < jsonArray.length; i++) {
                 var hostname = jsonArray[i]['hostname'];
-                if(jQuery.inArray(hostname, model.config.Stable) !== -1){
-                    stableCrashCount += 1;
-                }
-                else{
-                    unstableCrashCount += 1;
-                }
-                if (jQuery.inArray(hostname, analyserHostnames) === -1) {
-                    analyserHostnames.push(hostname);
+                var instConfig = model.config.InstConfig;
+                for(k in instConfig){
+                    if(instConfig[k].Hostname === hostname){
+                        if(instConfig[k].Network === "Stable"){
+                            stableCrashCount += 1;
+                        }
+                        else{
+                            unstableCrashCount += 1;
+                        }
+                    }
                 }
             }
-            model.analyserCount = analyserHostnames.length;
-            model.failureRate = (model.totalCrashCount / (model.analyserCount * 6));
+
+            for(k in instConfig) {
+                if (instConfig[k].Network === "Stable") {
+                    analyserStableCount += 1;
+                }
+                else {
+                    analyserUnstableCount += 1;
+                }
+            }
+
+            model.analyserCount = instConfig.length;
+            model.failureRate = ((stableCrashCount + unstableCrashCount) / (model.analyserCount * 6))*100;
             model.failureRate = model.failureRate.toFixed(2);
 
-            model.stableFailureRate = (stableCrashCount / (model.config.Stable.length * 6));
+            model.stableFailureRate = (stableCrashCount / (analyserStableCount * 6))*100;
             model.stableFailureRate = model.stableFailureRate.toFixed(2);
 
-            model.unstableFailureRate = (unstableCrashCount / (model.config.Unstable.length * 6));
+            model.unstableFailureRate = (unstableCrashCount / (analyserUnstableCount * 6))*100;
             model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
         }
     }

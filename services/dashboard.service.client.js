@@ -16,8 +16,8 @@
         };
         return api;
 
-        function getFileNames() {
-            return $http.get('/api/getfilenames')
+        function getFileNames(path) {
+            return $http.get('/api/getfilenames/'+path)
         }
 
         function getAllReports(instType) {

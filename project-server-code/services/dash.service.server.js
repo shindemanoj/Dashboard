@@ -2,12 +2,12 @@ module.exports = function (app,dashModel) {
 
     app.get("/api/dashboard/:instType", findReports);
     app.post("/api/dashboard", saveReport);
-    app.get("/api/getfilenames", getfilenames);
+    app.get("/api/getfilenames/:path", getfilenames);
 
     var fs = require('fs');
 
     function getfilenames(req, res){
-        var path = 'Gem4K';
+        var path = req.params.path;
 
         fs.readdir(path, function(err, items) {
             res.json(items);

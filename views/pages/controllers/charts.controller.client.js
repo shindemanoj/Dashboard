@@ -24,7 +24,7 @@
 
         function getReportData() {
             var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
-            DashboardService.getFileNames()
+            DashboardService.getFileNames($scope.selectedInst.instType)
                 .success(function (fileNames) {
                     for(i in fileNames){
                         if(fileNames[i].includes(".csv")){

@@ -20,7 +20,6 @@ A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 13:42:06,Unk
 A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 18:00:00-04,See 192.168.207.154_270917_1506549661721.png capture for details.This error is related with CR 17702,Wed Sep 27 17:38
 A.3.2.99.0.32.0.0.6,gwp397 (192.168.3.97),Freeze, 2017-09-27 18:00:00-04,See 192.168.3.97_270917_1506549661951.png capture for details.This error is related with CR 17702,Wed Sep 27 16:13
 A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 18:00:00-04,See 192.168.207.150_270917_1506549662264.png capture for details.This error is related with CR 17702,Wed Sep 27 17:39
-A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 18:00:00-04,See 192.168.207.157_270917_1506549661684.png capture for details.This error is related with CR 17702,Wed Sep 27 17:39
 A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 17:38
 A.3.2.99.0.32.0.0.6,gwp397 ( 192.168.3.97),3009 Error,2017-09-27 16:31:11,3009 Error is shown in UI.log at  caused by 'SocketTimeoutException'. This error is related to CR 8697,Wed Sep 27 16:13
 A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 17:39
@@ -30,7 +29,6 @@ A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unk
 A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 18:42:24,Unknown error or wrong error pattern.,Wed Sep 27 18:02
 A.3.2.99.0.32.0.0.6,GEM154 (192.168.207.154),Freeze, 2017-09-27 19:00:00-04,See 192.168.207.154_270917_1506553261810.png capture for details.This error is related with CR 17702,Wed Sep 27 18:38
 A.3.2.99.0.32.0.0.6,gem150 (192.168.207.150),Freeze, 2017-09-27 19:00:00-04,See 192.168.207.150_270917_1506553261304.png capture for details.This error is related with CR 17702,Wed Sep 27 18:39
-A.3.2.99.0.32.0.0.5,GEM157 (192.168.207.157),Freeze, 2017-09-27 19:00:00-04,See 192.168.207.157_270917_1506553261669.png capture for details.This error is related with CR 17702,Wed Sep 27 18:39
 A.3.2.99.0.32.0.0.6,GEM154 ( 192.168.207.154),3206 Error,2017-09-27 13:03:03,Unknown error or wrong error pattern.,Wed Sep 27 18:38
 A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-27 14:04:40,Unknown error or wrong error pattern.,Wed Sep 27 18:39
 A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-27 19:04:54,Unknown error or wrong error pattern.,Wed Sep 27 18:39

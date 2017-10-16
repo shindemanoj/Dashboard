@@ -39,7 +39,6 @@ A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-28 07:04:43,Unk
 A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-28 06:42:19,Unknown error or wrong error pattern.,Thu Sep 28 06:39
 A.3.2.99.0.32.0.0.6,gem150 ( 192.168.207.150),3206 Error,2017-09-28 07:04:43,Unknown error or wrong error pattern.,Thu Sep 28 07:02
 A.3.2.99.0.32.0.0.5,GEM157 ( 192.168.207.157),3206 Error,2017-09-28 06:42:19,Unknown error or wrong error pattern.,Thu Sep 28 07:02
-A.3.2.99.0.32.0.0.6,GEM168 (192.168.2.168),Freeze, 2017-09-28 12:00:00-04,See 192.168.2.168_280917_1506614461981.png capture for details.This error is related with CR 17702,Wed Sep 27 16:26
 A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-28 17:00:00-04,See 192.168.226.102_280917_1506632461640.png capture for details.This error is related with CR 17702,Wed Sep 27 16:10
 A.3.2.99.0.32.0.0.6,gwp102 (192.168.226.102),Freeze, 2017-09-28 19:00:00-04,See 192.168.226.102_280917_1506639661247.png capture for details.This error is related with CR 17702,Thu Sep 28 17:02
 A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3206 Error,2017-09-28 19:42:19,Unknown error or wrong error pattern.,Thu Sep 28 19:02

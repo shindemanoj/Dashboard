@@ -10,6 +10,57 @@
         var model = this;
         model.exportData = exportData;
         model.updateReportData = updateReportData;
+        model.failureRateView = failureRateView;
+
+        function hslToRgb(h, s, l){
+            var r, g, b;
+
+            if(s == 0){
+                r = g = b = l; // achromatic
+            }else{
+                function hue2rgb(p, q, t){
+                    if(t < 0) t += 1;
+                    if(t > 1) t -= 1;
+                    if(t < 1/6) return p + (q - p) * 6 * t;
+                    if(t < 1/2) return q;
+                    if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                    return p;
+                }
+
+                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+                var p = 2 * l - q;
+                r = hue2rgb(p, q, h + 1/3);
+                g = hue2rgb(p, q, h);
+                b = hue2rgb(p, q, h - 1/3);
+            }
+
+            return [Math.floor(r * 255), Math.floor(g * 255), Math.floor(b * 255)];
+        }
+
+        // convert a number to a color using hsl
+        function numberToColorHsl(i) {
+            // as the function expects a value between 0 and 1, and red = 0° and green = 120°
+            // we convert the input to the appropriate hue value
+            var hue = i * 1.2 / 360;
+            // we convert hsl to rgb (saturation 100%, lightness 50%)
+            var rgb = hslToRgb(hue, 1, .5);
+            // we format to css value and return
+            return 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+        }
+
+        $scope.colors = [numberToColorHsl(70)];
+
+        var colorVal = 50;
+        for (var i = 0; i <100; i++) {
+            if(colorVal === 0){
+                var nc = numberToColorHsl(0);
+            }
+            else{
+                var nc = numberToColorHsl(colorVal);
+                colorVal -= 5;
+            }
+           $scope.colors.push(nc);
+        }
 
         $scope.names = ["GEM5K", "GEM4K", "GWP"];
         $scope.selectedInst = InstrumentDataService;
@@ -17,23 +68,11 @@
             $scope.selectedInst.instType = 'GEM5K';
         }
         function init(){
-            // DashboardService
-            //     .getFileNames()
-            //     .success(function (response) {
-            //         console.log(response);
-            //     });
-
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
                 .success(function (config) {
                     model.config = config;
                     getReportData();
-                    if($scope.selectedInst.instType === "GEM4K"){
-                        processConfigFileForGEM4K(config);
-                    }
-                    if($scope.selectedInst.instType === "GWP"){
-                        processConfigFileForGWP(config);
-                    }
                 });
 
             DashboardService
@@ -57,13 +96,46 @@
                 .success(function (config) {
                     model.config = config;
                     getReportData();
-                    if($scope.selectedInst.instType === "GEM4K"){
-                        processConfigFileForGEM4K(config);
-                    }
-                    if($scope.selectedInst.instType === "GWP"){
-                        processConfigFileForGWP(config);
-                    }
                 })
+        }
+
+        function failureRateView() {
+            var jsonArray = model.jsonReport;
+            var config = model.config.InstConfig;
+            var dateArray = [];
+            var failureRateData = [];
+            for(i in config){
+                failureRateData.push({"hostname":config[i].Hostname, "name":config[i].Name, "frArray":[], "total":0});
+            }
+
+            startDate = new Date("09/27/2017");
+            endDate = new Date("10/02/2017");
+            endDate.setDate(endDate.getDate() + 1);
+            var index = 0;
+            while(startDate.toLocaleDateString() !== endDate.toLocaleDateString()){
+                dateArray.push(startDate.toLocaleDateString());
+                for(i in failureRateData){
+                    failureRateData[i].frArray[index] = 0;
+                }
+                startDate.setDate(startDate.getDate() + 1);
+                index += 1;
+            }
+            model.dateArray = dateArray;
+
+            for(i in dateArray){
+                for(j in jsonArray){
+                    var errorDate = jsonArray[j]['errorDate'].toLocaleDateString();
+                    if(dateArray[i] === errorDate){
+                        for(k in failureRateData){
+                            if(jsonArray[j].hostname === failureRateData[k].hostname){
+                                failureRateData[k].total += 1;
+                                failureRateData[k].frArray[i] += 1;
+                            }
+                        }
+                    }
+                }
+            }
+            model.failureRateData = failureRateData;
         }
 
         function processConfigFileForGEM4K(config){
@@ -197,79 +269,6 @@
                     model.vmUnstableCount += 1;
                 }
             }
-            // var jsonArray = model.jsonReport;
-            //
-            // model.stableNewSecoCrash = 0;
-            // model.unStableNewSecoCrash = 0;
-            // model.stableNewSecoFreeze = 0;
-            // model.unStableNewSecoFreeze = 0;
-            //
-            // model.stableOldSecoCrash = 0;
-            // model.unStableOldSecoCrash = 0;
-            // model.stableOldSecoFreeze = 0;
-            // model.unStableOldSecoFreeze = 0;
-            //
-            // model.stableKontronCrash = 0;
-            // model.unStableKontronCrash = 0;
-            // model.stableKontronFreeze = 0;
-            // model.unStableKontronFreeze = 0;
-            //
-            // for(i in jsonArray){
-            //     var hostname = jsonArray[i].hostname;
-            //     var errorType = jsonArray[i].errorType;
-            //     for(j in instConfig){
-            //         if(instConfig[j].Hostname === hostname){
-            //             if(instConfig[j].Network === "Stable"){
-            //                 if(errorType.includes("Freeze")){
-            //                     if(instConfig[j].SBC === "New Seco"){
-            //                         model.stableNewSecoFreeze += 1;
-            //                     }
-            //                     if(instConfig[j].SBC === "Old Seco"){
-            //                         model.stableOldSecoFreeze += 1;
-            //                     }
-            //                     if(instConfig[j].SBC === "Kontron"){
-            //                         model.stableKontronFreeze += 1;
-            //                     }
-            //                 }
-            //                 else{
-            //                     if(instConfig[j].SBC === "New Seco"){
-            //                         model.stableNewSecoCrash += 1;
-            //                     }
-            //                     if(instConfig[j].SBC === "Old Seco"){
-            //                         model.stableOldSecoCrash += 1;
-            //                     }
-            //                     if(instConfig[j].SBC === "Kontron"){
-            //                         model.stableKontronCrash += 1;
-            //                     }
-            //                 }
-            //             }
-            //             else{
-            //                 if(errorType.includes("Freeze")){
-            //                     if(instConfig[j].SBC === "New Seco"){
-            //                         model.unStableNewSecoFreeze += 1;
-            //                     }
-            //                     if(instConfig[j].SBC === "Old Seco"){
-            //                         model.unStableOldSecoFreeze += 1;
-            //                     }
-            //                     if(instConfig[j].SBC === "Kontron"){
-            //                         model.unStableKontronFreeze += 1;
-            //                     }
-            //                 }
-            //                 else{
-            //                     if(instConfig[j].SBC === "New Seco"){
-            //                         model.unStableNewSecoCrash += 1;
-            //                     }
-            //                     if(instConfig[j].SBC === "Old Seco"){
-            //                         model.unStableOldSecoCrash += 1;
-            //                     }
-            //                     if(instConfig[j].SBC === "Kontron"){
-            //                         model.unStableKontronCrash += 1;
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
         }
 
         function getReportData() {
@@ -282,6 +281,13 @@
                                 .success(function (response) {
                                     reportData += response;
                                     model.jsonReport = DashboardService.processData(reportData);
+                                    if($scope.selectedInst.instType === "GEM4K"){
+                                        processConfigFileForGEM4K(model.config);
+                                    }
+                                    if($scope.selectedInst.instType === "GWP"){
+                                        processConfigFileForGWP(model.config);
+                                    }
+                                    failureRateView();
                                     findFailureRate();
                                     getSummary();
                                     saveReport();
@@ -307,7 +313,6 @@
             DashboardService
                 .getSaveReport(newReport)
                 .success(function (response) {
-                    console.log(response);
                 })
         }
 

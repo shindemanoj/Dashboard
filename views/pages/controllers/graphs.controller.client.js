@@ -18,14 +18,7 @@
         }
         function init(){
             DashboardService
-                .getConfiguration($scope.selectedInst.instType)
-                .success(function (config) {
-                    model.config = config;
-                    getReportData();
-                });
-
-            DashboardService
-                .getReleaseVersion()
+                .getReleaseVersion($scope.selectedInst.instType)
                 .success(function (releaseVerData) {
                     releaseVerArr = releaseVerData.trim().split("\n");
                     buildData = {};
@@ -34,7 +27,19 @@
                         buildData[dataArr[0]] = dataArr[1];
                     }
                     model.releaseVer = buildData;
-                    console.log(buildData);
+                });
+
+            DashboardService
+                .getCommonConfig()
+                .success(function (response) {
+                    model.startDate = response.startDate;
+                    model.endDate = response.endDate;
+                    DashboardService
+                        .getConfiguration($scope.selectedInst.instType)
+                        .success(function (config) {
+                            model.config = config;
+                            getReportData();
+                        });
                 });
         }
         init();
@@ -67,34 +72,47 @@
 
         function updateReportData() {
             DashboardService
+                .getReleaseVersion($scope.selectedInst.instType)
+                .success(function (releaseVerData) {
+                    releaseVerArr = releaseVerData.trim().split("\n");
+                    buildData = {};
+                    for(i in releaseVerArr){
+                        dataArr = releaseVerArr[i].split("=");
+                        buildData[dataArr[0]] = dataArr[1];
+                    }
+                    model.releaseVer = buildData;
+                });
+            DashboardService
                 .getConfiguration($scope.selectedInst.instType)
                 .success(function (response) {
                     model.config = response;
                     getReportData();
-                })
+                });
         }
+
         function saveReport(){
             var newReport = {
-                build: "",
+                build: model.releaseVer.Version,
                 reportData:model.jsonReport,
-                overallFR: 9.13,
-                stableFR: 11.11,
-                unstableFR: 6.12,
+                overallFR: model.failureRate,
+                stableFR: model.stableFailureRate,
+                unstableFR: model.unstableFailureRateble,
                 releaseData: model.releaseVer,
-                instType: "GWP"
+                instType: $scope.selectedInst.instType,
+                startDate: model.startDate,
+                endDate: model.endDate
             };
-            // DashboardService
-            //     .getSaveReport(newReport)
-            //     .success(function (response) {
-            //         console.log(response);
-            //     })
+            DashboardService
+                .getSaveReport(newReport)
+                .success(function (response) {
+                })
         }
 
         function gelHistoricalData() {
             DashboardService.getAllReports($scope.selectedInst.instType)
                 .success(function (response) {
                     model.oldReportData = response;
-                    startDate = new Date("10/11/2017");
+                    startDate = new Date(model.startDate);
                     model.selOldReportCount = startDate.toLocaleDateString();
                     createFailureRateGraph();
                 })
@@ -360,11 +378,10 @@
 
         function computeFailureRateGraphData() {
             oldReports = model.oldReportData;
-            //TODO:
-            model.build = "G5K-Latest";
+            model.build = model.releaseVer.Version;
             model.instBuild = [];
             model.oldReportCount = [];
-            startDate = new Date("10/11/2017");
+            startDate = new Date(model.startDate);
             model.oldReportCount.push(startDate.toLocaleDateString());
             for(var i=oldReports.length-1;i>=0;i--){
                 model.oldReportCount.push(new Date(oldReports[i].startDate).toLocaleDateString());

@@ -8,14 +8,14 @@
         "saveFile": saveReport,
         "findReports":findReports,
         "deleteUser":deleteUser,
-        "setModel":setModel,
+        "setModel":setModel
     };
 
     return api;
 
     function saveReport(report) {
         return DashboardModel.update(
-            { startDate: report.startDate,  endDate: report.endDate},
+            { startDate: report.startDate,  endDate: report.endDate, instType: report.instType},
             report,
             { upsert: true }
         );

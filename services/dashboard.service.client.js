@@ -12,7 +12,8 @@
             getReleaseVersion: getReleaseVersion,
             getSaveReport: getSaveReport,
             processData: processData,
-            getAllReports: getAllReports
+            getAllReports: getAllReports,
+            getCommonConfig: getCommonConfig
         };
         return api;
 
@@ -64,8 +65,11 @@
                 url = "GWP.properties";
             return $http.get("Properties/"+url);
         }
-        function getReleaseVersion() {
-            return $http.get('ReleaseVersion');
+        function getCommonConfig() {
+            return $http.get("Properties/CommonConfig.properties");
+        }
+        function getReleaseVersion(instType) {
+            return $http.get(instType+'/ReleaseVersion');
         }
         function readFile(fileName) {
             return $http.get(fileName);

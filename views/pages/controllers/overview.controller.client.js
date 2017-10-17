@@ -12,56 +12,6 @@
         model.updateReportData = updateReportData;
         model.failureRateView = failureRateView;
 
-        function hslToRgb(h, s, l){
-            var r, g, b;
-
-            if(s == 0){
-                r = g = b = l; // achromatic
-            }else{
-                function hue2rgb(p, q, t){
-                    if(t < 0) t += 1;
-                    if(t > 1) t -= 1;
-                    if(t < 1/6) return p + (q - p) * 6 * t;
-                    if(t < 1/2) return q;
-                    if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-                    return p;
-                }
-
-                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-                var p = 2 * l - q;
-                r = hue2rgb(p, q, h + 1/3);
-                g = hue2rgb(p, q, h);
-                b = hue2rgb(p, q, h - 1/3);
-            }
-
-            return [Math.floor(r * 255), Math.floor(g * 255), Math.floor(b * 255)];
-        }
-
-        // convert a number to a color using hsl
-        function numberToColorHsl(i) {
-            // as the function expects a value between 0 and 1, and red = 0° and green = 120°
-            // we convert the input to the appropriate hue value
-            var hue = i * 1.2 / 360;
-            // we convert hsl to rgb (saturation 100%, lightness 50%)
-            var rgb = hslToRgb(hue, 1, .5);
-            // we format to css value and return
-            return 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
-        }
-
-        $scope.colors = [numberToColorHsl(70)];
-
-        var colorVal = 50;
-        for (var i = 0; i <100; i++) {
-            if(colorVal === 0){
-                var nc = numberToColorHsl(0);
-            }
-            else{
-                var nc = numberToColorHsl(colorVal);
-                colorVal -= 5;
-            }
-           $scope.colors.push(nc);
-        }
-
         $scope.names = ["GEM5K", "GEM4K", "GWP"];
         $scope.selectedInst = InstrumentDataService;
         if($scope.selectedInst.instType === ""){
@@ -69,14 +19,7 @@
         }
         function init(){
             DashboardService
-                .getConfiguration($scope.selectedInst.instType)
-                .success(function (config) {
-                    model.config = config;
-                    getReportData();
-                });
-
-            DashboardService
-                .getReleaseVersion()
+                .getReleaseVersion($scope.selectedInst.instType)
                 .success(function (releaseVerData) {
                     releaseVerArr = releaseVerData.trim().split("\n");
                     buildData = {};
@@ -85,17 +28,59 @@
                         buildData[dataArr[0]] = dataArr[1];
                     }
                     model.releaseVer = buildData;
-                    console.log(buildData);
+                });
+
+            DashboardService
+                .getCommonConfig()
+                .success(function (response) {
+                    model.startDate = response.startDate;
+                    model.endDate = response.endDate;
+                    DashboardService
+                        .getConfiguration($scope.selectedInst.instType)
+                        .success(function (config) {
+                            model.config = config;
+                            getReportData();
+                        });
                 });
         }
         init();
 
         function updateReportData() {
             DashboardService
+                .getReleaseVersion($scope.selectedInst.instType)
+                .success(function (releaseVerData) {
+                    releaseVerArr = releaseVerData.trim().split("\n");
+                    buildData = {};
+                    for(i in releaseVerArr){
+                        dataArr = releaseVerArr[i].split("=");
+                        buildData[dataArr[0]] = dataArr[1];
+                    }
+                    model.releaseVer = buildData;
+                });
+
+            DashboardService
                 .getConfiguration($scope.selectedInst.instType)
                 .success(function (config) {
                     model.config = config;
                     getReportData();
+                })
+        }
+
+        function saveReport(){
+            var newReport = {
+                build: model.releaseVer.Version,
+                reportData:model.jsonReport,
+                overallFR: model.failureRate,
+                stableFR: model.stableFailureRate,
+                unstableFR: model.unstableFailureRateble,
+                releaseData: model.releaseVer,
+                instType: $scope.selectedInst.instType,
+                startDate: model.startDate,
+                endDate: model.endDate
+            };
+            DashboardService
+                .getSaveReport(newReport)
+                .success(function (response) {
                 })
         }
 
@@ -108,8 +93,8 @@
                 failureRateData.push({"hostname":config[i].Hostname, "name":config[i].Name, "frArray":[], "total":0});
             }
 
-            startDate = new Date("09/27/2017");
-            endDate = new Date("10/02/2017");
+            startDate = new Date(model.startDate);
+            endDate = new Date(model.endDate);
             endDate.setDate(endDate.getDate() + 1);
             var index = 0;
             while(startDate.toLocaleDateString() !== endDate.toLocaleDateString()){
@@ -298,24 +283,6 @@
         }
 
 
-        function saveReport(){
-            var newReport = {
-                build: "GWP-5.2-B9 G5K-B29",
-                reportData:model.jsonReport,
-                overallFR: 0.19,
-                stableFR: 0,
-                unstableFR: 0.62,
-                releaseData: model.releaseVer,
-                instType: "GEM4K",
-                startDate: new Date("09/15/2017"),
-                endDate: new Date("09/20/2017")
-            };
-            DashboardService
-                .getSaveReport(newReport)
-                .success(function (response) {
-                })
-        }
-
         function getSummary() {
             var jsonArray = model.jsonReport;
             var summary = [];
@@ -400,6 +367,56 @@
 
             model.unstableFailureRate = (unstableCrashCount / (analyserUnstableCount * 6))*100;
             model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
+        }
+
+        function hslToRgb(h, s, l){
+            var r, g, b;
+
+            if(s == 0){
+                r = g = b = l; // achromatic
+            }else{
+                function hue2rgb(p, q, t){
+                    if(t < 0) t += 1;
+                    if(t > 1) t -= 1;
+                    if(t < 1/6) return p + (q - p) * 6 * t;
+                    if(t < 1/2) return q;
+                    if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                    return p;
+                }
+
+                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+                var p = 2 * l - q;
+                r = hue2rgb(p, q, h + 1/3);
+                g = hue2rgb(p, q, h);
+                b = hue2rgb(p, q, h - 1/3);
+            }
+
+            return [Math.floor(r * 255), Math.floor(g * 255), Math.floor(b * 255)];
+        }
+
+        // convert a number to a color using hsl
+        function numberToColorHsl(i) {
+            // as the function expects a value between 0 and 1, and red = 0° and green = 120°
+            // we convert the input to the appropriate hue value
+            var hue = i * 1.2 / 360;
+            // we convert hsl to rgb (saturation 100%, lightness 50%)
+            var rgb = hslToRgb(hue, 1, .5);
+            // we format to css value and return
+            return 'rgb(' + rgb[0] + ',' + rgb[1] + ',' + rgb[2] + ')';
+        }
+
+        $scope.colors = [numberToColorHsl(70)];
+
+        var colorVal = 50;
+        for (var i = 0; i <100; i++) {
+            if(colorVal === 0){
+                var nc = numberToColorHsl(0);
+            }
+            else{
+                var nc = numberToColorHsl(colorVal);
+                colorVal -= 5;
+            }
+            $scope.colors.push(nc);
         }
     }
 })();

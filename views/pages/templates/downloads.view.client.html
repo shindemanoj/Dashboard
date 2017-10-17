@@ -46,8 +46,8 @@
             <tbody>
             <tr ng-repeat="data in model.reports">
                 <td>{{data.build}}</td>
-                <td><a href="" ng-click="model.exportToCSV(data.reportData, 'Error Report')">ErrorReport-{{data.dateCreated | date:'yyyy-MM-dd'}}</a></td>
-                <td>{{ data.dateCreated | date:'medium'}}</td>
+                <td><a href="" ng-click="model.exportToCSV(data.reportData, 'Error Report')">ErrorReport-{{data.startDate | date:'yyyy-MM-dd'}}</a></td>
+                <td>{{ data.startDate | date}}&nbsp;-&nbsp;{{ data.endDate | date}} </td>
             </tr>
             </tbody>
         </table>

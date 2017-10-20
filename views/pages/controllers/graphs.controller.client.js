@@ -96,7 +96,7 @@
                 reportData:model.jsonReport,
                 overallFR: model.failureRate,
                 stableFR: model.stableFailureRate,
-                unstableFR: model.unstableFailureRateble,
+                unstableFR: model.unstableFailureRate,
                 releaseData: model.releaseVer,
                 instType: $scope.selectedInst.instType,
                 startDate: model.startDate,
@@ -378,30 +378,51 @@
 
         function computeFailureRateGraphData() {
             oldReports = model.oldReportData;
+
+            function GetSortOrderReverse(prop) {
+                return function(a, b) {
+                    if (a[prop] > b[prop]) {
+                        return -1;
+                    } else if (a[prop] < b[prop]) {
+                        return 1;
+                    }
+                    return 0;
+                }
+            }
+            oldReports.sort(GetSortOrderReverse("startDate"));
             model.build = model.releaseVer.Version;
             model.instBuild = [];
             model.oldReportCount = [];
             startDate = new Date(model.startDate);
-            model.oldReportCount.push(startDate.toLocaleDateString());
-            for(var i=oldReports.length-1;i>=0;i--){
+            for(var i=0;i<oldReports.length;i++){
                 model.oldReportCount.push(new Date(oldReports[i].startDate).toLocaleDateString());
             }
             totalFailureRate = [];
             stableFailureRate = [];
             unstableFailureRate = [];
-            selOldReportIndex = model.oldReportCount.indexOf(model.selOldReportCount);
-            reportIndex = oldReports.length-selOldReportIndex;
-            for(var i=0;i<selOldReportIndex;i++){
-                model.instBuild.push(oldReports[reportIndex].build);
-                totalFailureRate.push({x:i, y:oldReports[reportIndex].overallFR});
-                stableFailureRate.push({x:i, y:oldReports[reportIndex].stableFR});
-                unstableFailureRate.push({x:i, y:oldReports[reportIndex].unstableFR});
-                reportIndex += 1;
+
+            if(model.config.Baseline){
+                model.instBuild.push("BaseLine");
+                totalFailureRate.push({x:0, y:model.config.Baseline.Overall});
+                stableFailureRate.push({x:0, y:model.config.Baseline.Stable});
+                unstableFailureRate.push({x:0, y:model.config.Baseline.Unstable});
             }
-            model.instBuild.push(model.build);
-            totalFailureRate.push({x:selOldReportIndex, y:model.failureRate});
-            stableFailureRate.push({x:selOldReportIndex, y:model.stableFailureRate});
-            unstableFailureRate.push({x:selOldReportIndex, y:model.unstableFailureRate});
+
+            selOldReportIndex = model.oldReportCount.indexOf(model.selOldReportCount);
+            for(var i=0;i<=selOldReportIndex;i++){
+                if(model.config.Baseline){
+                    model.instBuild.push(oldReports[i].build);
+                    totalFailureRate.push({x:i+1, y:oldReports[i].overallFR});
+                    stableFailureRate.push({x:i+1, y:oldReports[i].stableFR});
+                    unstableFailureRate.push({x:i+1, y:oldReports[i].unstableFR});
+                }
+                else{
+                    model.instBuild.push(oldReports[i].build);
+                    totalFailureRate.push({x:i, y:oldReports[i].overallFR});
+                    stableFailureRate.push({x:i, y:oldReports[i].stableFR});
+                    unstableFailureRate.push({x:i, y:oldReports[i].unstableFR});
+                }
+            }
 
             //Line chart data should be sent as an array of series objects.
             return [

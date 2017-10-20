@@ -5,7 +5,7 @@
     <a class="navbar-brand" href="#">Dashboard</a>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Overview</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Config and Summary</a>
@@ -19,7 +19,7 @@
                 <a class="nav-link" href="#/charts">Charts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#/downloads">Downloads</a>
+                <a class="nav-link" href="#/downloads">Downloads</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#/help">Help</a>
@@ -30,30 +30,34 @@
             ng-change="model.updateReportData()" ng-options="x for x in names">
     </select>
 </nav>
-<div class="container-fluid">
-    <div class="table-responsive">
-        <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
-            <thead style="font-weight:bold;">
-            <tr>
-                <td>
-                    Version
-                </td>
-                <td>
-                    Name of the Report
-                </td>
-                <td>
-                    Date
-                </td>
-            </tr>
-            </thead>
 
-            <tbody>
-            <tr ng-repeat="data in model.reports">
-                <td>{{data.build}}</td>
-                <td><a href="" ng-click="model.exportToCSV(data.reportData, 'Error Report')">ErrorReport-{{data.startDate | date:'yyyy-MM-dd'}}</a></td>
-                <td>{{ data.startDate | date}}&nbsp;-&nbsp;{{ data.endDate | date}} </td>
-            </tr>
-            </tbody>
-        </table>
+<div class="container-fluid">
+    <div class="card mb-3">
+        <div style="color: blue;">
+            <div class="card-header">
+                <i class="fa fa-table"></i>
+                Failure Rate View Per Instrument
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered bordered table-condensed" width="100%" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th class="alert-success" rowspan="2">Analyzer Name</th>
+                    <th class="alert-info" colspan="{{model.dateArray.length}}">Number of Days Running</th>
+                    <th class="alert-warning" rowspan="2">Total Failures</th>
+                </tr>
+                <tr>
+                    <td ng-repeat="data in model.dateArray">{{data}}</td>
+                </tr>
+                <tr ng-repeat="analyser in model.failureRateData">
+                    <td>{{analyser.name}}</td>
+                    <td ng-style="{'background-color': colors[count]}" ng-repeat="count in analyser.frArray track by $index">
+                        <span ng-if="count != 0">{{count}}</span></td>
+                    <td>{{analyser.total}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

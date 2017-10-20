@@ -17,6 +17,11 @@
                 controller: "OverviewController",
                 controllerAs: "model"
             })
+            .when("/failureview", {
+                templateUrl: "views/pages/templates/failure.rate.view.client.html",
+                controller: "FailureRateController",
+                controllerAs: "model"
+            })
             .when("/graphs", {
                 templateUrl: "views/pages/templates/graphs.view.client.html",
                 controller: "GraphsController",

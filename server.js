@@ -29,39 +29,3 @@ assignment(app);
 var port = process.env.PORT || 80;
 
 app.listen(port);
-
-// var SFTP = require("sftp-ws");
-//
-// // url, credentials and options
-// var url = "ftp://root@192.168.2.134";
-// var options = { username: "root", password: "n0bridge" };
-//
-// // connect to the server
-// var client = new SFTP.Client();
-// client.connect(url, options, function (err) {
-//     if (err) {
-//         // handle error
-//         console.log("Error: %s", err.message);
-//         return;
-//     }
-//
-//     // display a message
-//     console.log("Connected to the server.");
-//
-//     // retrieve directory listing
-//     client.list(".", function (err, list) {
-//         if (err) {
-//             // handle error
-//             console.log("Error: %s", err.message);
-//             return;
-//         }
-//
-//         // display the listing
-//         list.forEach(function (item) {
-//             console.log(item.longname);
-//         });
-//
-//         // disconnect
-//         client.end();
-//     });
-// });

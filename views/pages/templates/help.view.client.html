@@ -34,5 +34,39 @@
     <br>
     <h3>Introduction</h3>
     <p>Dashboard is a interactive reporting tool for visualization of stress test report data. </p>
-    <p>User can select instrument type from the dropdown which is located at rightmost corner. Dashboard consists of four main tabs. Overview, Graphs, Charts and Downloads.</p>
+    <p>It automatically updates the instrument errors in real time.</p>
+    <p>Dashboard is lightweight MEAN stack(MongoDB, Express.js, AngularJS,Node.js) dynamic web application</p>
+    <p>User can select instrument type(GEM5K, GEM4K or GWP) from the dropdown. Dashboard consists of four main tabs, Overview, Graphs, Charts and Downloads.</p>
+
+    <h3>Configuration</h3>
+    <p>Dashboard contains properties file for each of three instruments in a Properties folder.</p>
+    <img src="/images/properties.JPG">
+    <p>Properties file of an instrument looks similar to above image. It's in JSON format. User can add instrument details(Hostname/Network/SBC/Name) in InstConfig. User can add start date and end date in CommonConfig.properties file.</p>
+
+    <h3>Code Structure</h3>
+    <p>Dashboard follows MVC(Model View Controller) architecture. </p>
+    <img src="/images/ClientSideCode.JPG">
+    <p>Client side services are under services folder. Controller and HTML template for each page is under views folder.</p>
+    <img src="/images/ServerSideCode.JPG">
+    <p>Server side implementation is under project-server-code folder. Folder contains Server side APIs, database schema and database queries code.</p>
+
+    <h3>API Documentation</h3>
+    <ul>
+        <li>app.get("/api/dashboard/:instType", findReports):</li>
+        <ul>
+            <li>Get request to get all reports for a selected instrument.</li>
+        </ul>
+    </ul>
+    <ul>
+        <li>app.get("/api/getfilenames/:path", getfilenames):</li>
+        <ul>
+            <li>Get request to get all filenames from a instrument folder.</li>
+        </ul>
+    </ul>
+    <ul>
+        <li>app.post("/api/dashboard", saveReport):</li>
+        <ul>
+            <li>Post request save or update stress test report.</li>
+        </ul>
+    </ul>
 </div>

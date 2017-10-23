@@ -1,0 +1,5 @@
+A.3.2.99.0.32.0.0.6,gwp388 ( 192.168.3.88),3006 Error,10/10/2017 3:18,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Tue Oct  3
+A.3.2.99.0.32.0.0.6,gwp394 ( 192.168.3.94),3206 Error,10/10/2017 9:41,Unknown error or wrong error pattern.,Mon Oct  9
+A.3.2.99.0.32.0.0.6,gwp394 (192.168.3.94),Freeze, 2017-10-10 10:00:00-04,See 192.168.3.94_101017_1507644062769.png capture for details.This error is related with CR 17702,Tue Oct 10 09:56,
+A.3.2.99.0.32.0.0.6,gwp394 ( 192.168.3.94),3206 Error,10/10/2017 9:41,Unknown error or wrong error pattern.,Tue Oct 10 09:56
+A.3.2.99.0.32.0.0.6,gwp394 ( 192.168.3.94),3206 Error,10/10/2017 9:41,Unknown error or wrong error pattern.,Tue Oct 10 10:02

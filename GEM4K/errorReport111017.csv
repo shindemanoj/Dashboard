@@ -1,0 +1,4 @@
+A.3.2.99.0.32.0.0.6,GEM155 ( 192.168.207.155),3206 Error,10/11/2017 7:06,Unknown error or wrong error pattern.,Wed Oct 11 07:07
+A.3.2.99.0.32.0.0.6,gwp397 (192.168.3.97),Freeze, 2017-10-11 10:00:00-04,See 192.168.3.97_111017_1507730461759.png capture for details.This error is related with CR 17702,Sat Oct  7,
+A.3.2.99.0.32.0.0.6,gwp397 ( 192.168.3.97),3206 Error,10/11/2017 8:54,3206 Error is shown in UI.log at  caused by 'SocketException: Broken pipe'. This error is related to CR 17954,Sat Oct  7
+A.3.2.99.0.32.0.0.6,gwp386 (192.168.3.86),Freeze, 2017-10-11 19:00:00-04,See 192.168.3.86_111017_1507762861692.png capture for details.This error is related with CR 17702,Tue Oct  3,

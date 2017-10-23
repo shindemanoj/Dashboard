@@ -33,7 +33,7 @@
 <div class="container-fluid">
     <br>
     <h3>Introduction</h3>
-    <p>Dashboard is a interactive reporting tool for visualization of stress test report data. </p>
+    <p>Dashboard is an interactive reporting tool for visualization of stress test report data. </p>
     <p>It automatically updates the instrument errors in real time.</p>
     <p>Dashboard is lightweight MEAN stack(MongoDB, Express.js, AngularJS,Node.js) dynamic web application</p>
     <p>User can select instrument type(GEM5K, GEM4K or GWP) from the dropdown. Dashboard consists of four main tabs, Overview, Graphs, Charts and Downloads.</p>
@@ -52,21 +52,45 @@
 
     <h3>API Documentation</h3>
     <ul>
-        <li>app.get("/api/dashboard/:instType", findReports):</li>
+        <li>Get All Reports</li>
         <ul>
-            <li>Get request to get all reports for a selected instrument.</li>
+            <li>URL: "/api/dashboard/:instType"</li>
+            <li>Method: GET</li>
+            <li>URL Params : Required: instType=[String]</li>
+            <li>Response Codes: Success (200 OK), Bad Request (400)</li>
         </ul>
     </ul>
     <ul>
-        <li>app.get("/api/getfilenames/:path", getfilenames):</li>
+        <li>Get all filenames of folder</li>
         <ul>
-            <li>Get request to get all filenames from a instrument folder.</li>
+            <li>URL: "/api/getfilenames/:path"</li>
+            <li>Method: GET</li>
+            <li>URL Params : Required: path=[String]</li>
+            <li>Response Codes: Success (200 OK), Bad Request (400)</li>
         </ul>
     </ul>
     <ul>
-        <li>app.post("/api/dashboard", saveReport):</li>
+        <li>Save or update the report</li>
         <ul>
-            <li>Post request save or update stress test report.</li>
+            <li>URL: "/api/dashboard"</li>
+            <li>Method: POST</li>
+            <li>Data Params : <pre>
+                {
+                  u : {
+                    reportData: [JSON],
+                    build: [String],
+                    instType: [String],
+                    overallFR: [Number],
+                    stableFR: [Number],
+                    unstableFR: [Number],
+                    releaseData: [JSON],
+                    startDate: [Date],
+                    endDate: [Date]
+                  }
+                }
+                </pre>
+            </li>
+            <li>Response Codes: Success (200 OK), Bad Request (400)</li>
         </ul>
     </ul>
 </div>

@@ -1,0 +1,3 @@
+A.3.2.99.0.32.0.0.6,gwp380 ( 192.168.3.80),3006 Error,10/7/2017 2:24,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Tue Oct  3
+A.3.2.99.0.32.0.0.6,gwp397 (192.168.3.97),Freeze, 2017-10-07 06:00:00-04,See 192.168.3.97_071017_1507370461825.png capture for details.This error is related with CR 17702,,
+A.3.2.99.0.32.0.0.6,GEM157 (192.168.207.157),Freeze, 2017-10-07 12:00:00-04,See 192.168.207.157_071017_1507392061338.png capture for details.This error is related with CR 17702,Mon Oct  2,

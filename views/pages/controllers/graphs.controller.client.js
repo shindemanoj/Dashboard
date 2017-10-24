@@ -58,6 +58,15 @@
                                 })
                         }
                     }
+                    if(model.jsonReport === undefined){
+                        model.jsonReport - [];
+                        createLineGraph();
+                        createCrashCountPieChart();
+                        createCrashPerPieChart();
+                        findFailureRate();
+                        saveReport();
+                        gelHistoricalData();
+                    }
                 });
         }
 
@@ -171,17 +180,19 @@
                     return 0;
                 }
             }
-            jsonArray.sort(GetSortOrder("errorDate"));
-
             var crashData = {};
-            for (var i = 0; i < jsonArray.length; i++) {
-                var date = jsonArray[i]['errorDate'].toDateString();
-                if (date in crashData) {
-                    var count = crashData[date];
-                    crashData[date] = count + 1;
-                }
-                else {
-                    crashData[date] = 1;
+            if(jsonArray){
+                jsonArray.sort(GetSortOrder("errorDate"));
+
+                for (var i = 0; i < jsonArray.length; i++) {
+                    var date = jsonArray[i]['errorDate'].toDateString();
+                    if (date in crashData) {
+                        var count = crashData[date];
+                        crashData[date] = count + 1;
+                    }
+                    else {
+                        crashData[date] = 1;
+                    }
                 }
             }
 
@@ -228,14 +239,16 @@
         function computeCrashCountData() {
             jsonArray = model.jsonReport;
             var errorTypeCountData = {};
-            for (var i = 0; i < jsonArray.length; i++) {
-                var errorType = jsonArray[i]['errorType'];
-                if (errorType in errorTypeCountData) {
-                    var count = errorTypeCountData[errorType];
-                    errorTypeCountData[errorType] = count + 1;
-                }
-                else {
-                    errorTypeCountData[errorType] = 1;
+            if(jsonArray){
+                for (var i = 0; i < jsonArray.length; i++) {
+                    var errorType = jsonArray[i]['errorType'];
+                    if (errorType in errorTypeCountData) {
+                        var count = errorTypeCountData[errorType];
+                        errorTypeCountData[errorType] = count + 1;
+                    }
+                    else {
+                        errorTypeCountData[errorType] = 1;
+                    }
                 }
             }
 
@@ -275,18 +288,22 @@
 
         function computeCrashPerData() {
             var defectCountData = {};
-            for (var i = 0; i < jsonArray.length; i++) {
-                var defectId = jsonArray[i]['defectId'];
-                if (defectId in defectCountData) {
-                    var count = defectCountData[defectId];
-                    defectCountData[defectId] = count + 1;
+            var totalCrashCount = 0;
+            if(jsonArray){
+                for (var i = 0; i < jsonArray.length; i++) {
+                    var defectId = jsonArray[i]['defectId'];
+                    if (defectId in defectCountData) {
+                        var count = defectCountData[defectId];
+                        defectCountData[defectId] = count + 1;
+                    }
+                    else {
+                        defectCountData[defectId] = 1;
+                    }
                 }
-                else {
-                    defectCountData[defectId] = 1;
-                }
+                var totalCrashCount = jsonArray.length;
             }
 
-            defectValues = []; totalCrashCount = jsonArray.length;
+            defectValues = [];
             for(var defectId in defectCountData){
                 defectPer = (defectCountData[defectId]/totalCrashCount) * 100;
                 defectValues.push({key : defectId + " ("+ defectPer.toFixed(2) +"%)" , y : defectCountData[defectId]});
@@ -307,16 +324,18 @@
             var jsonArray = model.jsonReport;
             var stableCrashCount = 0; var unstableCrashCount = 0;
             var analyserStableCount = 0; var analyserUnstableCount = 0;
-            for (var i = 0; i < jsonArray.length; i++) {
-                var hostname = jsonArray[i]['hostname'];
-                var instConfig = model.config.InstConfig;
-                for(k in instConfig){
-                    if(instConfig[k].Hostname.replace(/\s/g, '') === hostname){
-                        if(instConfig[k].Network === "Stable"){
-                            stableCrashCount += 1;
-                        }
-                        else{
-                            unstableCrashCount += 1;
+            var instConfig = model.config.InstConfig;
+            if(jsonArray){
+                for (var i = 0; i < jsonArray.length; i++) {
+                    var hostname = jsonArray[i]['hostname'];
+                    for(k in instConfig){
+                        if(instConfig[k].Hostname.replace(/\s/g, '') === hostname){
+                            if(instConfig[k].Network === "Stable"){
+                                stableCrashCount += 1;
+                            }
+                            else{
+                                unstableCrashCount += 1;
+                            }
                         }
                     }
                 }
@@ -389,9 +408,9 @@
             function GetSortOrderReverse(prop) {
                 return function(a, b) {
                     if (a[prop] > b[prop]) {
-                        return -1;
-                    } else if (a[prop] < b[prop]) {
                         return 1;
+                    } else if (a[prop] < b[prop]) {
+                        return -1;
                     }
                     return 0;
                 }

@@ -35,6 +35,9 @@
                                 })
                         }
                     }
+                    if(reportData.length === 65){
+                        $scope.tableData = DashboardService.processData(reportData);
+                    }
                 });
         }
 

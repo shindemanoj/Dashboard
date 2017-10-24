@@ -10,7 +10,6 @@
         var model = this;
         model.exportData = exportData;
         model.updateReportData = updateReportData;
-        model.failureRateView = failureRateView;
 
         $scope.names = ["GEM5K", "GEM4K", "GWP"];
         $scope.selectedInst = InstrumentDataService;
@@ -84,45 +83,6 @@
                 })
         }
 
-        function failureRateView() {
-            var jsonArray = model.jsonReport;
-            var config = model.config.InstConfig;
-            var dateArray = [];
-            var failureRateData = [];
-            for(i in config){
-                failureRateData.push({"hostname":config[i].Hostname, "name":config[i].Name, "frArray":[], "total":0});
-            }
-
-            startDate = new Date(model.startDate);
-            endDate = new Date(model.endDate);
-            endDate.setDate(endDate.getDate() + 1);
-            var index = 0;
-            while(startDate.toLocaleDateString() !== endDate.toLocaleDateString()){
-                dateArray.push(startDate.toLocaleDateString());
-                for(i in failureRateData){
-                    failureRateData[i].frArray[index] = 0;
-                }
-                startDate.setDate(startDate.getDate() + 1);
-                index += 1;
-            }
-            model.dateArray = dateArray;
-
-            for(i in dateArray){
-                for(j in jsonArray){
-                    var errorDate = jsonArray[j]['errorDate'].toLocaleDateString();
-                    if(dateArray[i] === errorDate){
-                        for(k in failureRateData){
-                            if(jsonArray[j].hostname === failureRateData[k].hostname){
-                                failureRateData[k].total += 1;
-                                failureRateData[k].frArray[i] += 1;
-                            }
-                        }
-                    }
-                }
-            }
-            model.failureRateData = failureRateData;
-        }
-
         function processConfigFileForGEM4K(config){
             model.newSecoStableCount = 0;
             model.newSecoUnstableCount = 0;
@@ -172,7 +132,7 @@
                 var hostname = jsonArray[i].hostname;
                 var errorType = jsonArray[i].errorType;
                 for(j in instConfig){
-                    if(instConfig[j].Hostname === hostname){
+                    if(instConfig[j].Hostname.replace(/\s/g, '') === hostname){
                         if(instConfig[j].Network === "Stable"){
                             if(errorType.includes("Freeze")){
                                 if(instConfig[j].SBC === "New Seco"){
@@ -272,7 +232,6 @@
                                     if($scope.selectedInst.instType === "GWP"){
                                         processConfigFileForGWP(model.config);
                                     }
-                                    failureRateView();
                                     findFailureRate();
                                     getSummary();
                                     saveReport();
@@ -300,7 +259,7 @@
                         var hostname = jsonArray[i]['hostname'];
                         var instConfig = model.config.InstConfig;
                         for(k in instConfig){
-                            if(instConfig[k].Hostname === hostname){
+                            if(instConfig[k].Hostname.replace(/\s/g, '') === hostname){
                                 if(instConfig[k].Network == "Stable"){
                                     summary[j].StableCount += 1;
                                 }
@@ -331,6 +290,11 @@
         }
 
         function findFailureRate() {
+            var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+            var firstDate = new Date(model.startDate);
+            var secondDate = new Date(model.endDate);
+
+            var runDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
             var jsonArray = model.jsonReport;
             var stableCrashCount = 0; var unstableCrashCount = 0;
             var analyserStableCount = 0; var analyserUnstableCount = 0;
@@ -338,7 +302,7 @@
                 var hostname = jsonArray[i]['hostname'];
                 var instConfig = model.config.InstConfig;
                 for(k in instConfig){
-                    if(instConfig[k].Hostname === hostname){
+                    if(instConfig[k].Hostname.replace(/\s/g, '') === hostname){
                         if(instConfig[k].Network === "Stable"){
                             stableCrashCount += 1;
                         }
@@ -359,13 +323,13 @@
             }
 
             model.analyserCount = instConfig.length;
-            model.failureRate = ((stableCrashCount + unstableCrashCount) / (model.analyserCount * 6))*100;
+            model.failureRate = ((stableCrashCount + unstableCrashCount) / (model.analyserCount * runDays))*100;
             model.failureRate = model.failureRate.toFixed(2);
 
-            model.stableFailureRate = (stableCrashCount / (analyserStableCount * 6))*100;
+            model.stableFailureRate = (stableCrashCount / (analyserStableCount * runDays))*100;
             model.stableFailureRate = model.stableFailureRate.toFixed(2);
 
-            model.unstableFailureRate = (unstableCrashCount / (analyserUnstableCount * 6))*100;
+            model.unstableFailureRate = (unstableCrashCount / (analyserUnstableCount * runDays))*100;
             model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
         }
 

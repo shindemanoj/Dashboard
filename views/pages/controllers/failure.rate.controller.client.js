@@ -89,7 +89,7 @@
             var dateArray = [];
             var failureRateData = [];
             for(i in config){
-                failureRateData.push({"hostname":config[i].Hostname, "name":config[i].Name, "frArray":[], "total":0});
+                failureRateData.push({"hostname":config[i].Hostname.replace(/\s/g, ''), "name":config[i].Name, "frArray":[], "total":0});
             }
 
             startDate = new Date(model.startDate);
@@ -142,6 +142,11 @@
         }
 
         function findFailureRate() {
+            var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+            var firstDate = new Date(model.startDate);
+            var secondDate = new Date(model.endDate);
+
+            var runDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
             var jsonArray = model.jsonReport;
             var stableCrashCount = 0; var unstableCrashCount = 0;
             var analyserStableCount = 0; var analyserUnstableCount = 0;
@@ -149,7 +154,7 @@
                 var hostname = jsonArray[i]['hostname'];
                 var instConfig = model.config.InstConfig;
                 for(k in instConfig){
-                    if(instConfig[k].Hostname === hostname){
+                    if(instConfig[k].Hostname.replace(/\s/g, '') === hostname){
                         if(instConfig[k].Network === "Stable"){
                             stableCrashCount += 1;
                         }
@@ -170,13 +175,13 @@
             }
 
             model.analyserCount = instConfig.length;
-            model.failureRate = ((stableCrashCount + unstableCrashCount) / (model.analyserCount * 6))*100;
+            model.failureRate = ((stableCrashCount + unstableCrashCount) / (model.analyserCount * runDays))*100;
             model.failureRate = model.failureRate.toFixed(2);
 
-            model.stableFailureRate = (stableCrashCount / (analyserStableCount * 6))*100;
+            model.stableFailureRate = (stableCrashCount / (analyserStableCount * runDays))*100;
             model.stableFailureRate = model.stableFailureRate.toFixed(2);
 
-            model.unstableFailureRate = (unstableCrashCount / (analyserUnstableCount * 6))*100;
+            model.unstableFailureRate = (unstableCrashCount / (analyserUnstableCount * runDays))*100;
             model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
         }
 

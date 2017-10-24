@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/ClientSideCode.JPG" afterPath="$PROJECT_DIR$/images/ClientSideCode.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/help.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/help.view.client.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/CommonConfig.properties" afterPath="$PROJECT_DIR$/Properties/CommonConfig.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/Gem4K.properties" afterPath="$PROJECT_DIR$/Properties/Gem4K.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/dashboard.service.client.js" afterPath="$PROJECT_DIR$/services/dashboard.service.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="overview.controller.client.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="overview.controller.client.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state relative-caret-position="178">
+              <caret line="134" column="64" lean-forward="false" selection-start-line="134" selection-start-column="64" selection-end-line="134" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -37,18 +42,48 @@
       <file leaf-file-name="dashboard.service.client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/dashboard.service.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="65" column="40" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="40" />
+            <state relative-caret-position="119">
+              <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.view.client.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="failure.rate.controller.client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="113" column="84" lean-forward="true" selection-start-line="113" selection-start-column="84" selection-end-line="113" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/templates/help.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
               <caret line="63" column="59" lean-forward="false" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="help.controller.client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/controllers/help.controller.client.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphs.controller.client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="311" column="64" lean-forward="false" selection-start-line="311" selection-start-column="45" selection-end-line="311" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -94,42 +129,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show-GEM4K-config.view.client.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show-GEM5K-config.view.client.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="72" lean-forward="false" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -143,10 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>createFailureRateGraph</find>
-      <find>gelHistoricalData</find>
-      <find>model.config.Stable.length</find>
-      <find>model.summary</find>
       <find>model.config.Stable</find>
       <find>analyserHostnames</find>
       <find>model.config</find>
@@ -169,10 +164,14 @@
       <find>reportIndex</find>
       <find>sort</find>
       <find>unstableFR</find>
-      <find>failureRateView</find>
       <find>exportData</find>
       <find>model.releaseVer.Version</find>
+      <find>diffDays</find>
       <find>model.releaseVer</find>
+      <find>model.failureRateData</find>
+      <find>failureRateView</find>
+      <find>instConfig[j].Hostname</find>
+      <find>model.config.InstConfig</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -209,11 +208,9 @@
         <option value="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/controllers/help.controller.client.js" />
-        <option value="$PROJECT_DIR$/services/dashboard.service.client.js" />
         <option value="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/css/font-awesome.min.css" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -222,12 +219,14 @@
         <option value="$PROJECT_DIR$/views/pages/templates/downloads.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/charts.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
         <option value="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/pages/templates/help.view.client.html" />
+        <option value="$PROJECT_DIR$/services/dashboard.service.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
       </list>
     </option>
   </component>
@@ -249,7 +248,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="94" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -535,12 +534,12 @@
       <workItem from="1508003951856" duration="1527000" />
       <workItem from="1508161233443" duration="22384000" />
       <workItem from="1508330566679" duration="20548000" />
-      <workItem from="1508765353744" duration="12988000" />
+      <workItem from="1508765353744" duration="15199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275290000" />
+    <option name="totallyTimeSpent" value="277501000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -552,7 +551,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27380952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -703,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/help.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/controllers/downloads.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -797,14 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="98" column="53" lean-forward="true" selection-start-line="98" selection-start-column="53" selection-end-line="98" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -812,14 +796,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="17" lean-forward="false" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,8 +838,8 @@
         <state relative-caret-position="119">
           <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -873,17 +849,9 @@
         <state relative-caret-position="17">
           <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -899,14 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/dashboard.service.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="65" column="40" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -931,6 +891,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="63" column="59" lean-forward="false" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/help.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="113" column="84" lean-forward="true" selection-start-line="113" selection-start-column="84" selection-end-line="113" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/dashboard.service.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="31" column="47" lean-forward="true" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="311" column="64" lean-forward="false" selection-start-line="311" selection-start-column="45" selection-end-line="311" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="134" column="64" lean-forward="false" selection-start-line="134" selection-start-column="64" selection-end-line="134" selection-end-column="64" />
           <folding />
         </state>
       </provider>

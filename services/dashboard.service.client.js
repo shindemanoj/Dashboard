@@ -32,7 +32,7 @@
             var jsonStr = fCsv.toJson(allText);
             var jsonArr = JSON.parse(jsonStr);
             for(var i=0; i < jsonArr.length; i++){
-                jsonArr[i]["hostname"] = jsonArr[i]["Hostname (IP)"];
+                jsonArr[i]["hostname"] = jsonArr[i]["Hostname (IP)"].replace(/\s/g, '');
                 delete jsonArr[i]["Hostname (IP)"];
                 jsonArr[i]["errorType"] = jsonArr[i]["Error Type"];
                 delete jsonArr[i]["Error Type"];

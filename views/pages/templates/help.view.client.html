@@ -36,18 +36,87 @@
     <p>Dashboard is an interactive reporting tool for visualization of stress test report data. </p>
     <p>It automatically updates the instrument errors in real time.</p>
     <p>Dashboard is lightweight MEAN stack(MongoDB, Express.js, AngularJS,Node.js) dynamic web application</p>
-    <p>User can select instrument type(GEM5K, GEM4K or GWP) from the dropdown. Dashboard consists of four main tabs, Overview, Graphs, Charts and Downloads.</p>
+    <p>User can select instrument type(GEM5K, GEM4K or GWP) from the dropdown which is located at rightmost corner. Dashboard consists of four main tabs, Overview, Graphs, Charts and Downloads.</p>
+
+    <h3>Architecture</h3>
+    <div align="center">
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td align="center"><img src="/images/mean-arch.png" width="832" height="605"></td>
+            </tr>
+            <tr>
+                <td align="center" class="font-weight-bold">MEAN Architecture</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+    <div align="center">
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td align="center"><img src="/images/Dashboard-arch.JPG"></td>
+            </tr>
+            <tr>
+                <td align="center" class="font-weight-bold">Dashboard Architecture</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
 
     <h3>Configuration</h3>
     <p>Dashboard contains properties file for each of three instruments in a Properties folder.</p>
-    <img src="/images/properties.JPG">
-    <p>Properties file of an instrument looks similar to above image. It's in JSON format. User can add instrument details(Hostname/Network/SBC/Name) in InstConfig. User can add start date and end date in CommonConfig.properties file.</p>
+    <div align="center">
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td align="center"><img src="/images/properties.JPG"></td>
+            </tr>
+            <tr>
+                <td class="fighead">Figure A: Properties file structure</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+    <p>Properties file of an instrument looks similar to Figure A. It's in JSON format. User can add instrument details(Hostname/Network/SBC/Name) in InstConfig. User can add start date and end date in CommonConfig.properties file.</p>
 
     <h3>Code Structure</h3>
     <p>Dashboard follows MVC(Model View Controller) architecture. </p>
-    <img src="/images/ClientSideCode.JPG">
+    <div align="center">
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td align="center"><img src="/images/ClientSideCode.JPG"></td>
+            </tr>
+            <tr>
+                <td class="fighead">Figure B: Client side code structure</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
     <p>Client side services are under services folder. Controller and HTML template for each page is under views folder.</p>
-    <img src="/images/ServerSideCode.JPG">
+    <div align="center">
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td align="center"><img src="/images/ServerSideCode.JPG"></td>
+            </tr>
+            <tr>
+                <td class="fighead">Figure C: Server side code structure</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
     <p>Server side implementation is under project-server-code folder. Folder contains Server side APIs, database schema and database queries code.</p>
 
     <h3>API Documentation</h3>

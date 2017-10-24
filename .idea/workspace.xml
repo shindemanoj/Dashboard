@@ -2,124 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.2.168_280917_1506614461981.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_270917_1506546062255.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_270917_1506549662264.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_270917_1506553261304.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_270917_1506556862262.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_270917_1506560461343.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_270917_1506564062249.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_270917_1506567661348.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_280917_1506571262099.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_280917_1506574862180.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_280917_1506578462119.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_280917_1506582061226.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_280917_1506585662196.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_280917_1506589262243.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_280917_1506592862178.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.150_280917_1506596462253.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_270917_1506546061683.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_270917_1506549661721.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_270917_1506553261810.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_270917_1506556861774.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_270917_1506560461569.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_270917_1506564061466.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_270917_1506567661529.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_280917_1506571261551.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_280917_1506574861806.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_280917_1506578461603.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_280917_1506582061649.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_280917_1506585661763.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_280917_1506589261667.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_280917_1506592861890.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_280917_1506596461518.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_290917_1506700861257.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_290917_1506704462014.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_290917_1506708061862.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.154_290917_1506711661934.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_270917_1506546061260.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_270917_1506549661684.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_270917_1506553261669.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_270917_1506556861805.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_270917_1506560461969.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_270917_1506564061744.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_270917_1506567661729.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_280917_1506571261988.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_280917_1506574861841.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_280917_1506578461756.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_280917_1506582061712.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_280917_1506585661812.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_280917_1506589261801.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_280917_1506592861630.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.207.157_280917_1506596461851.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506830462449.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506834061384.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506837661347.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506841261381.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506844861390.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506848461446.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506852061501.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506855662323.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506859261436.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506862861438.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506866462390.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506870061641.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506873661463.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506877262324.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506880862638.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506884462539.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506888061513.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506891661502.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506895261441.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506898861497.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506902461372.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506906061387.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506909662383.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_011017_1506913261392.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506916861587.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506920461591.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506924061467.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506927661448.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506931261411.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506934862321.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506938461299.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506942062795.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506945662608.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_021017_1506949261523.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_280917_1506632461640.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_280917_1506639661247.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_280917_1506643262530.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_280917_1506646861565.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_280917_1506650462381.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_280917_1506654061473.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_290917_1506657661407.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_290917_1506661262243.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_290917_1506664861311.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_290917_1506668461445.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_290917_1506672062362.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_290917_1506675661303.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_290917_1506679261375.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_290917_1506682861488.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_300917_1506805261198.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_300917_1506808861458.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_300917_1506812461515.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_300917_1506816062517.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_300917_1506819661515.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_300917_1506823261673.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.226.102_300917_1506826861482.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.3.97_270917_1506549661951.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/192.168.3.97_290917_1506700862156.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/errorReport011017.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/errorReport021017.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/errorReport270917.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/errorReport280917.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/errorReport290917.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/errorReport300917.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/errorReport210717.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/errorReport210717_1.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/errorReport280917.csv" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/ClientSideCode.JPG" afterPath="$PROJECT_DIR$/images/ClientSideCode.JPG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/help.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/help.view.client.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -161,17 +44,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.view.client.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="help.view.client.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/templates/help.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="337">
+              <caret line="63" column="59" lean-forward="false" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-server-code/model/models.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
@@ -232,16 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="72" lean-forward="false" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64974">
-              <caret line="3822" column="15" lean-forward="false" selection-start-line="3822" selection-start-column="15" selection-end-line="3822" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -366,11 +249,11 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1548" />
-    <option name="y" value="-9" />
-    <option name="width" value="983" />
-    <option name="height" value="502" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="94" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -652,12 +535,12 @@
       <workItem from="1508003951856" duration="1527000" />
       <workItem from="1508161233443" duration="22384000" />
       <workItem from="1508330566679" duration="20548000" />
-      <workItem from="1508765353744" duration="5900000" />
+      <workItem from="1508765353744" duration="12988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268202000" />
+    <option name="totallyTimeSpent" value="275290000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -669,11 +552,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1938883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27380952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10892116" sideWeight="0.3482143" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17156863" sideWeight="0.3482143" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17156863" sideWeight="0.65178573" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -841,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-server-code/model/models.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -874,6 +751,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="3" column="968" lean-forward="true" selection-start-line="3" selection-start-column="968" selection-end-line="3" selection-end-column="968" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1033,18 +911,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/help.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="35" column="22" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-server-code/model/models.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/help.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="63" column="59" lean-forward="false" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
           <folding />
         </state>
       </provider>

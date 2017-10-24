@@ -31,6 +31,7 @@
         function processData(allText) {
             var jsonStr = fCsv.toJson(allText);
             var jsonArr = JSON.parse(jsonStr);
+            var result = [];
             for(var i=0; i < jsonArr.length; i++){
                 jsonArr[i]["hostname"] = jsonArr[i]["Hostname (IP)"].replace(/\s/g, '');
                 delete jsonArr[i]["Hostname (IP)"];
@@ -53,7 +54,19 @@
                 jsonArr[i]["errorDate"] = new Date(jsonArr[i]["errorDate"]);
                 jsonArr[i]["lastReboot"] = new Date(jsonArr[i]["lastReboot"]);
             }
-            return jsonArr;
+            for(var i=0; i < jsonArr.length; i++){
+                var duplicate = false;
+                for(var j=i+1; j < jsonArr.length; j++){
+                    if(jsonArr[i].errorDate.getTime() === jsonArr[j].errorDate.getTime() && jsonArr[i].errorType === jsonArr[j].errorType && jsonArr[i].hostname === jsonArr[j].hostname){
+                        duplicate = true;
+                        break;
+                    }
+                }
+                if(!duplicate){
+                    result.push(jsonArr[i]);
+                }
+            }
+            return result;
         }
         function getConfiguration(instType){
             var url = "";

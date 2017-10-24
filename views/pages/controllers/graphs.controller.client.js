@@ -27,17 +27,12 @@
                         buildData[dataArr[0]] = dataArr[1];
                     }
                     model.releaseVer = buildData;
-                });
-
-            DashboardService
-                .getCommonConfig()
-                .success(function (response) {
-                    model.startDate = response.startDate;
-                    model.endDate = response.endDate;
                     DashboardService
                         .getConfiguration($scope.selectedInst.instType)
                         .success(function (config) {
                             model.config = config;
+                            model.startDate = config.startDate;
+                            model.endDate = config.endDate;
                             getReportData();
                         });
                 });
@@ -81,12 +76,14 @@
                         buildData[dataArr[0]] = dataArr[1];
                     }
                     model.releaseVer = buildData;
-                });
-            DashboardService
-                .getConfiguration($scope.selectedInst.instType)
-                .success(function (response) {
-                    model.config = response;
-                    getReportData();
+                    DashboardService
+                        .getConfiguration($scope.selectedInst.instType)
+                        .success(function (config) {
+                            model.config = config;
+                            model.startDate = config.startDate;
+                            model.endDate = config.endDate;
+                            getReportData();
+                        });
                 });
         }
 
@@ -113,7 +110,12 @@
                 .success(function (response) {
                     model.oldReportData = response;
                     startDate = new Date(model.startDate);
-                    model.selOldReportCount = startDate.toLocaleDateString();
+                    if(response.length > 4){
+                        model.selOldReportCount = new Date(response[3].startDate).toLocaleDateString();
+                    }
+                    else{
+                        model.selOldReportCount = new Date(response[response.length-1].startDate).toLocaleDateString();
+                    }
                     createFailureRateGraph();
                 })
         }

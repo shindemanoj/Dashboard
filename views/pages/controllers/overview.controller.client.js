@@ -27,17 +27,12 @@
                         buildData[dataArr[0]] = dataArr[1];
                     }
                     model.releaseVer = buildData;
-                });
-
-            DashboardService
-                .getCommonConfig()
-                .success(function (response) {
-                    model.startDate = response.startDate;
-                    model.endDate = response.endDate;
                     DashboardService
                         .getConfiguration($scope.selectedInst.instType)
                         .success(function (config) {
                             model.config = config;
+                            model.startDate = config.startDate;
+                            model.endDate = config.endDate;
                             getReportData();
                         });
                 });
@@ -55,14 +50,15 @@
                         buildData[dataArr[0]] = dataArr[1];
                     }
                     model.releaseVer = buildData;
+                    DashboardService
+                        .getConfiguration($scope.selectedInst.instType)
+                        .success(function (config) {
+                            model.config = config;
+                            model.startDate = config.startDate;
+                            model.endDate = config.endDate;
+                            getReportData();
+                        })
                 });
-
-            DashboardService
-                .getConfiguration($scope.selectedInst.instType)
-                .success(function (config) {
-                    model.config = config;
-                    getReportData();
-                })
         }
 
         function saveReport(){
@@ -260,7 +256,7 @@
                         var instConfig = model.config.InstConfig;
                         for(k in instConfig){
                             if(instConfig[k].Hostname.replace(/\s/g, '') === hostname){
-                                if(instConfig[k].Network == "Stable"){
+                                if(instConfig[k].Network === "Stable"){
                                     summary[j].StableCount += 1;
                                 }
                                 else{

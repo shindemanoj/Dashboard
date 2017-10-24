@@ -96,30 +96,6 @@
         </div>
         <div class="col">
             <ul>
-                <li><b>Summary</b></li>
-            </ul>
-            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
-                <thead>
-                <tr class="alert-success">
-                    <th>CR Number / Unknown</th>
-                    <th>Stable Network</th>
-                    <th>Unstable Network</th>
-                    <th>Overall</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="data in model.summary">
-                    <td>{{data.DefectId}}</td>
-                    <td>{{data.StableCount}}</td>
-                    <td>{{data.UnstableCount}}</td>
-                    <td>{{data.StableCount + data.UnstableCount}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="w-100"></div>
-        <div class="col">
-            <ul>
                 <li><b>Unstable Network</b></li>
             </ul>
             <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
@@ -143,6 +119,30 @@
                     <td>{{model.unStableNewSecoFreeze}}</td>
                     <td>{{model.unStableKontronFreeze}}</td>
                     <td>{{model.unStableOldSecoFreeze}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+            <ul>
+                <li><b>Summary</b></li>
+            </ul>
+            <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
+                <thead>
+                <tr class="alert-success">
+                    <th>CR Number / Unknown</th>
+                    <th>Stable Network</th>
+                    <th>Unstable Network</th>
+                    <th>Overall</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="data in model.summary">
+                    <td>{{data.DefectId}}</td>
+                    <td>{{data.StableCount}}</td>
+                    <td>{{data.UnstableCount}}</td>
+                    <td>{{data.StableCount + data.UnstableCount}}</td>
                 </tr>
                 </tbody>
             </table>

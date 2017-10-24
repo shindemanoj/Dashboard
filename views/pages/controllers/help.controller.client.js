@@ -3,7 +3,7 @@
         .module('Dashboard')
         .controller('HelpController', helpController);
 
-    function helpController($scope, DashboardService, InstrumentDataService) {
+    function helpController() {
         var model = this;
     }
 })();

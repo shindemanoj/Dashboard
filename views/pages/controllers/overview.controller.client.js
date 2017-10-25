@@ -53,6 +53,7 @@
                     DashboardService
                         .getConfiguration($scope.selectedInst.instType)
                         .success(function (config) {
+                            model.jsonReport = undefined;
                             model.config = config;
                             model.startDate = config.startDate;
                             model.endDate = config.endDate;
@@ -234,6 +235,11 @@
                                 })
                         }
                     }
+                    if(model.jsonReport === undefined){
+                        findFailureRate();
+                        getSummary();
+                        saveReport();
+                    }
                 });
         }
 
@@ -294,16 +300,18 @@
             var jsonArray = model.jsonReport;
             var stableCrashCount = 0; var unstableCrashCount = 0;
             var analyserStableCount = 0; var analyserUnstableCount = 0;
-            for (var i = 0; i < jsonArray.length; i++) {
-                var hostname = jsonArray[i]['hostname'];
-                var instConfig = model.config.InstConfig;
-                for(k in instConfig){
-                    if(instConfig[k].Hostname.replace(/\s/g, '') === hostname){
-                        if(instConfig[k].Network === "Stable"){
-                            stableCrashCount += 1;
-                        }
-                        else{
-                            unstableCrashCount += 1;
+            var instConfig = model.config.InstConfig;
+            if(jsonArray){
+                for (var i = 0; i < jsonArray.length; i++) {
+                    var hostname = jsonArray[i]['hostname'];
+                    for(k in instConfig){
+                        if(instConfig[k].Hostname.replace(/\s/g, '') === hostname){
+                            if(instConfig[k].Network === "Stable"){
+                                stableCrashCount += 1;
+                            }
+                            else{
+                                unstableCrashCount += 1;
+                            }
                         }
                     }
                 }

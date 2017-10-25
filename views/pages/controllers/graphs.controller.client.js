@@ -59,7 +59,7 @@
                         }
                     }
                     if(model.jsonReport === undefined){
-                        model.jsonReport - [];
+                        model.jsonReport = [];
                         createLineGraph();
                         createCrashCountPieChart();
                         createCrashPerPieChart();
@@ -88,6 +88,7 @@
                     DashboardService
                         .getConfiguration($scope.selectedInst.instType)
                         .success(function (config) {
+                            model.jsonReport = undefined;
                             model.config = config;
                             model.startDate = config.startDate;
                             model.endDate = config.endDate;

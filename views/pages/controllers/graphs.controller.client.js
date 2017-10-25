@@ -120,6 +120,17 @@
                 .success(function (response) {
                     model.oldReportData = response;
                     startDate = new Date(model.startDate);
+                    function GetSortOrderReverse(prop) {
+                        return function(a, b) {
+                            if (a[prop] > b[prop]) {
+                                return -1;
+                            } else if (a[prop] < b[prop]) {
+                                return 1;
+                            }
+                            return 0;
+                        }
+                    }
+                    model.oldReportData.sort(GetSortOrderReverse("startDate"));
                     if(response.length > 4){
                         model.selOldReportCount = new Date(response[3].startDate).toLocaleDateString();
                     }
@@ -405,18 +416,6 @@
 
         function computeFailureRateGraphData() {
             oldReports = model.oldReportData;
-
-            function GetSortOrderReverse(prop) {
-                return function(a, b) {
-                    if (a[prop] > b[prop]) {
-                        return -1;
-                    } else if (a[prop] < b[prop]) {
-                        return 1;
-                    }
-                    return 0;
-                }
-            }
-            oldReports.sort(GetSortOrderReverse("startDate"));
             model.build = model.releaseVer.Version;
             model.instBuild = [];
             model.oldReportCount = [];
@@ -436,19 +435,21 @@
             }
 
             selOldReportIndex = model.oldReportCount.indexOf(model.selOldReportCount);
+            reportIndex =selOldReportIndex;
             for(var i=0;i<=selOldReportIndex;i++){
                 if(model.config.Baseline){
-                    model.instBuild.push(oldReports[i].build);
-                    totalFailureRate.push({x:i+1, y:oldReports[i].overallFR});
-                    stableFailureRate.push({x:i+1, y:oldReports[i].stableFR});
-                    unstableFailureRate.push({x:i+1, y:oldReports[i].unstableFR});
+                    model.instBuild.push(oldReports[reportIndex].build);
+                    totalFailureRate.push({x:i+1, y:oldReports[reportIndex].overallFR});
+                    stableFailureRate.push({x:i+1, y:oldReports[reportIndex].stableFR});
+                    unstableFailureRate.push({x:i+1, y:oldReports[reportIndex].unstableFR});
                 }
                 else{
-                    model.instBuild.push(oldReports[i].build);
-                    totalFailureRate.push({x:i, y:oldReports[i].overallFR});
-                    stableFailureRate.push({x:i, y:oldReports[i].stableFR});
-                    unstableFailureRate.push({x:i, y:oldReports[i].unstableFR});
+                    model.instBuild.push(oldReports[reportIndex].build);
+                    totalFailureRate.push({x:i, y:oldReports[reportIndex].overallFR});
+                    stableFailureRate.push({x:i, y:oldReports[reportIndex].stableFR});
+                    unstableFailureRate.push({x:i, y:oldReports[reportIndex].unstableFR});
                 }
+                reportIndex -= 1;
             }
 
             //Line chart data should be sent as an array of series objects.

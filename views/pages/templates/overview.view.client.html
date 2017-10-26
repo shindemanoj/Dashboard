@@ -26,7 +26,7 @@
             </li>
         </ul>
     </div>
-    <select class="form-control pull-right" style="width:auto;" ng-model="selectedInst.instType"
+    <select ng-disabled="selectedInst.disabled" class="form-control pull-right" style="width:auto;" ng-model="selectedInst.instType"
             ng-change="model.updateReportData()" ng-options="x for x in names">
     </select>
 </nav>

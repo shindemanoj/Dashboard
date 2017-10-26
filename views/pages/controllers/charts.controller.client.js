@@ -22,7 +22,38 @@
         }
         init();
 
+        function updateReportData() {
+            getReportData();
+        }
+
         function getReportData() {
+            if($scope.selectedInst.startDate !== ""){
+                reqData = {
+                    startDate: $scope.selectedInst.startDate,
+                    instType: $scope.selectedInst.instType
+                };
+                DashboardService.getReport(reqData)
+                    .success(function (response) {
+                        model.config = response.config;
+                        model.startDate = response.startDate;
+                        model.endDate = response.endDate;
+                        var jsonArr = response.reportData;
+                        model.failureRate =response.overallFR;
+                        model.stableFailureRate = response.stableFR;
+                        model.unstableFailureRate = response.unstableFR;
+                        for(i in jsonArr){
+                            jsonArr[i]["errorDate"] = new Date(jsonArr[i]["errorDate"]);
+                            jsonArr[i]["lastReboot"] = new Date(jsonArr[i]["lastReboot"]);
+                        }
+                        $scope.tableData = jsonArr;
+                    });
+            }
+            else{
+                getDataFromInstrument();
+            }
+        }
+
+        function getDataFromInstrument() {
             var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
             DashboardService.getFileNames($scope.selectedInst.instType)
                 .success(function (fileNames) {
@@ -39,10 +70,6 @@
                         $scope.tableData = DashboardService.processData(reportData);
                     }
                 });
-        }
-
-        function updateReportData() {
-            getReportData();
         }
 
         function setImageURL(imageURL) {

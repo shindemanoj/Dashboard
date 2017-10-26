@@ -4,6 +4,6 @@
         .factory('InstrumentDataService', instrumentDataService);
 
     function instrumentDataService() {
-        return {instType:''}
+        return {instType:'', startDate:'', disabled:''}
     }
 })();

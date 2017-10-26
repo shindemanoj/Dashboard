@@ -12,6 +12,11 @@
 
         $routeProvider
 
+            .when("/overview/:startDate/:instType", {
+                templateUrl: "views/pages/templates/overview.view.client.html",
+                controller: "OverviewController",
+                controllerAs: "model"
+            })
             .when("/overview", {
                 templateUrl: "views/pages/templates/overview.view.client.html",
                 controller: "OverviewController",

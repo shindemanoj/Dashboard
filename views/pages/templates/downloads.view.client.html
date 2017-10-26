@@ -26,7 +26,7 @@
             </li>
         </ul>
     </div>
-    <select class="form-control pull-right" style="width:auto;" ng-model="selectedInst.instType"
+    <select ng-disabled="selectedInst.disabled" class="form-control pull-right" style="width:auto;" ng-model="selectedInst.instType"
             ng-change="model.updateReportData()" ng-options="x for x in names">
     </select>
 </nav>
@@ -52,6 +52,7 @@
                 <td>{{data.build}}</td>
                 <td><a href="" ng-click="model.exportToCSV(data.reportData, 'Error Report')">ErrorReport-{{data.startDate | date:'yyyy-MM-dd'}}</a></td>
                 <td>{{ data.startDate | date}}&nbsp;-&nbsp;{{ data.endDate | date}} </td>
+                <td align="center"><a ng-href="#/overview/{{data.startDate}}/{{selectedInst.instType}}" target="_blank" type="button" class="btn btn-primary">Launch Dashboard</a></td>
             </tr>
             </tbody>
         </table>

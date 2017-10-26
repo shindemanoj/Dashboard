@@ -5,6 +5,7 @@
     var DashboardModel = mongoose.model('DashModel', DashSchema);
 
     var api = {
+        "getReport": getReport,
         "saveFile": saveReport,
         "findReports":findReports,
         "deleteUser":deleteUser,
@@ -12,6 +13,10 @@
     };
 
     return api;
+
+    function getReport(reqData) {
+        return DashboardModel.findOne({instType:reqData.instType, startDate: reqData.startDate});
+    }
 
     function saveReport(report) {
         return DashboardModel.update(

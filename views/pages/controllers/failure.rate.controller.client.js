@@ -18,64 +18,42 @@
         }
         function init(){
             DashboardService
-                .getReleaseVersion($scope.selectedInst.instType)
-                .success(function (releaseVerData) {
-                    releaseVerArr = releaseVerData.trim().split("\n");
-                    buildData = {};
-                    for(i in releaseVerArr){
-                        dataArr = releaseVerArr[i].split("=");
-                        buildData[dataArr[0]] = dataArr[1];
-                    }
-                    model.releaseVer = buildData;
-                    DashboardService
-                        .getConfiguration($scope.selectedInst.instType)
-                        .success(function (config) {
-                            model.config = config;
-                            model.startDate = config.startDate;
-                            model.endDate = config.endDate;
-                            getReportData();
-                        });
+                .getConfiguration($scope.selectedInst.instType)
+                .success(function (config) {
+                    model.config = config;
+                    model.startDate = config.startDate;
+                    model.endDate = config.endDate;
+                    getReportData();
                 });
         }
         init();
 
         function updateReportData() {
             DashboardService
-                .getReleaseVersion($scope.selectedInst.instType)
-                .success(function (releaseVerData) {
-                    releaseVerArr = releaseVerData.trim().split("\n");
-                    buildData = {};
-                    for(i in releaseVerArr){
-                        dataArr = releaseVerArr[i].split("=");
-                        buildData[dataArr[0]] = dataArr[1];
-                    }
-                    model.releaseVer = buildData;
-                    DashboardService
-                        .getConfiguration($scope.selectedInst.instType)
-                        .success(function (config) {
-                            model.jsonReport = undefined;
-                            model.config = config;
-                            model.startDate = config.startDate;
-                            model.endDate = config.endDate;
-                            getReportData();
-                        })
-                });
+                .getConfiguration($scope.selectedInst.instType)
+                .success(function (config) {
+                    model.jsonReport = undefined;
+                    model.config = config;
+                    model.startDate = config.startDate;
+                    model.endDate = config.endDate;
+                    getReportData();
+                })
         }
 
         function saveReport(){
             var newReport = {
-                build: model.releaseVer.Version,
+                build: model.config.Version,
                 reportData:model.jsonReport,
                 overallFR: model.failureRate,
                 stableFR: model.stableFailureRate,
                 unstableFR: model.unstableFailureRate,
-                releaseData: model.releaseVer,
+                config: model.config,
                 instType: $scope.selectedInst.instType,
                 startDate: model.startDate,
                 endDate: model.endDate
             };
             DashboardService
-                .getSaveReport(newReport)
+                .saveReport(newReport)
                 .success(function (response) {
                 })
         }
@@ -120,6 +98,34 @@
         }
 
         function getReportData() {
+            if($scope.selectedInst.startDate !== ""){
+                reqData = {
+                    startDate: $scope.selectedInst.startDate,
+                    instType: $scope.selectedInst.instType
+                };
+                DashboardService.getReport(reqData)
+                    .success(function (response) {
+                        model.config = response.config;
+                        model.startDate = response.startDate;
+                        model.endDate = response.endDate;
+                        var jsonArr = response.reportData;
+                        model.failureRate =response.overallFR;
+                        model.stableFailureRate = response.stableFR;
+                        model.unstableFailureRate = response.unstableFR;
+                        for(i in jsonArr){
+                            jsonArr[i]["errorDate"] = new Date(jsonArr[i]["errorDate"]);
+                            jsonArr[i]["lastReboot"] = new Date(jsonArr[i]["lastReboot"]);
+                        }
+                        model.jsonReport = jsonArr;
+                        failureRateView();
+                    })
+            }
+            else{
+                getDataFromInstrument();
+            }
+        }
+
+        function getDataFromInstrument() {
             var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
             DashboardService.getFileNames($scope.selectedInst.instType)
                 .success(function (fileNames) {

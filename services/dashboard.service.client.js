@@ -6,16 +6,20 @@
     function dashboardService($http, fCsv) {
 
         var api = {
+            getReport: getReport,
             getFileNames: getFileNames,
             readFile: readFile,
             getConfiguration: getConfiguration,
             getReleaseVersion: getReleaseVersion,
-            getSaveReport: getSaveReport,
+            saveReport: saveReport,
             processData: processData,
-            getAllReports: getAllReports,
-            getCommonConfig: getCommonConfig
+            getAllReports: getAllReports
         };
         return api;
+
+        function getReport(reqData) {
+            return $http.get('/api/getReport/'+reqData.startDate+'/'+reqData.instType);
+        }
 
         function getFileNames(path) {
             return $http.get('/api/getfilenames/'+path)
@@ -24,7 +28,7 @@
         function getAllReports(instType) {
             return $http.get('/api/dashboard/'+instType);
         }
-        function getSaveReport(report) {
+        function saveReport(report) {
             return $http.post('/api/dashboard', report);
         }
 
@@ -77,9 +81,6 @@
             else
                 url = "GWP.properties";
             return $http.get("Properties/"+url);
-        }
-        function getCommonConfig() {
-            return $http.get("Properties/CommonConfig.properties");
         }
         function getReleaseVersion(instType) {
             return $http.get(instType+'/ReleaseVersion');

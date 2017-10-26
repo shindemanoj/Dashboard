@@ -6,7 +6,7 @@
     <div class="table-responsive">
         <br>
         <ul>
-            <li><b>Release Version:</b>&nbsp;{{model.releaseVer.Version}}</li>
+            <li><b>Release Version:</b>&nbsp;{{model.config.Version}}</li>
             <li><b>Sampling Rate:</b>&nbsp;{{model.config.SamplingRate}}</li>
         </ul>
         <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
@@ -28,7 +28,7 @@
                 <td>G4K</td>
                 <td>New Seco</td>
                 <td>Product</td>
-                <td>{{model.releaseVer.Version}}</td>
+                <td>{{model.config.Version}}</td>
                 <td>{{ model.newSecoStableCount }}</td>
                 <td>{{ model.newSecoUnstableCount }}</td>
                 <td>{{ (model.newSecoStableCount + model.newSecoUnstableCount) }}</td>
@@ -37,7 +37,7 @@
                 <td>G4K</td>
                 <td>Old Seco</td>
                 <td>Product</td>
-                <td>{{model.releaseVer.Version}}</td>
+                <td>{{model.config.Version}}</td>
                 <td>{{ model.oldSecoStableCount }}</td>
                 <td>{{ model.oldSecoUnstableCount }}</td>
                 <td>{{ (model.oldSecoStableCount + model.oldSecoUnstableCount) }}</td>
@@ -46,7 +46,7 @@
                 <td>G4K</td>
                 <td>Kontron</td>
                 <td>Product</td>
-                <td>{{model.releaseVer.Version}}</td>
+                <td>{{model.config.Version}}</td>
                 <td>{{ model.kontronStableCount }}</td>
                 <td>{{ model.kontronUnstableCount }}</td>
                 <td>{{ (model.kontronStableCount + model.kontronUnstableCount) }}</td>

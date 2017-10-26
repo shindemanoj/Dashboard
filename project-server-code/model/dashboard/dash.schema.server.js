@@ -7,9 +7,9 @@ module.exports = function() {
         overallFR: Number,
         stableFR: Number,
         unstableFR: Number,
-        releaseData: JSON,
         startDate: Date,
-        endDate: Date
+        endDate: Date,
+        config: JSON
     }, {collection: "dashboard.reports"});
     return DashSchema;
 };

@@ -54,7 +54,11 @@
                     <td>{{analyser.name}}</td>
                     <td ng-style="{'background-color': colors[count]}" ng-repeat="count in analyser.frArray track by $index">
                         <span ng-if="count != 0">{{count}}</span></td>
-                    <td>{{analyser.total}}</td>
+                    <td>{{analyser.h_total}}</td>
+                </tr>
+                <tr>
+                    <td>Total each Day</td>
+                    <td ng-repeat="total in model.v_totalArr track by $index">{{total}}</td>
                 </tr>
                 </tbody>
             </table>

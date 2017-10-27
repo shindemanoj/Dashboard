@@ -2,126 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM4K/ReleaseVersion" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GEM5K/ReleaseVersion" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GWP/ReleaseVersion" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Properties/CommonConfig.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/annotation/test_annotation-magFactor.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/annotation/test_annotation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/annotation/test_annotation.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/annotation/test_annotation_2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/basic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/css/bootstrap-responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/css/bootstrap-responsive.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/img/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/canvg_context2d/bar_graph_with_text_and_lines.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/context2d/test_context2d.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/context2d/test_context2d_paths.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/editor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/css/smoothness/jquery-ui-1.8.17.custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/downloadify.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/auto_break.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/examples.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/images/favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/lists.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/page_break.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/pdf.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/pdf2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/showcase.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/showcase_supported_html.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/simple.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/tables.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/html2pdf/total_mess.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/24_bit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/32_bit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/RGBA_16bpc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/RGB_16bpc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/grayscale_16bpc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/grayscale_8bpc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/grayscale_alpha_16_bpc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/grayscale_alpha_8bpc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/jpg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/png8_flat.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/png8_trans.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/images/tiny_png_indexed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/jaxer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/acroforms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/autoprint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/basic.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/circles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/editor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/font-faces.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/font-size.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/from-html.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/html2canvas.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/images.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/images_png.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/jquery/jquery-1.7.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/jquery/jquery-ui-1.8.17.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/kitchen-sink.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/landscape.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/lines.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/rectangles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/string-splitting.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/test_harness.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/text-colors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/theme-ambiance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/triangles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/two-page.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/js/user-input.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/null-logo-trans.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/octocat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/octocat.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/outline/test_outline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/outline/test_outline.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/runner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/test_from_html.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/test_from_html_css_page_breaks.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/test_insert_page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/jsPDF/examples/thinking-monkey.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/GWP.properties" afterPath="$PROJECT_DIR$/Properties/GWP.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/Gem4K.properties" afterPath="$PROJECT_DIR$/Properties/Gem4K.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/Gem5K.properties" afterPath="$PROJECT_DIR$/Properties/Gem5K.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.js" afterPath="$PROJECT_DIR$/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" afterPath="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/model/dashboard/dash.schema.server.js" afterPath="$PROJECT_DIR$/project-server-code/model/dashboard/dash.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/services/dash.service.server.js" afterPath="$PROJECT_DIR$/project-server-code/services/dash.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/dashboard.service.client.js" afterPath="$PROJECT_DIR$/services/dashboard.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/instrument.data.service.client.js" afterPath="$PROJECT_DIR$/services/instrument.data.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/charts.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/charts.view.client.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/downloads.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/downloads.view.client.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/graphs.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/graphs.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/overview.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/overview.view.client.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -142,7 +27,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="overview.controller.client.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="overview.controller.client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
@@ -152,11 +37,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instrument.data.service.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/instrument.data.service.client.js">
+      <file leaf-file-name="failure.rate.controller.client.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+            <state relative-caret-position="-1386">
+              <caret line="109" column="10" lean-forward="false" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show-GEM4K-config.view.client.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="57" column="46" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show-GEM5K-config.view.client.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-204">
+              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -174,16 +79,6 @@
       </file>
       <file leaf-file-name="downloads.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/templates/downloads.view.client.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charts.view.client.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/templates/charts.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
@@ -227,18 +122,8 @@
       <file leaf-file-name="failure.rate.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.service.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/dashboard.service.client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="58" column="78" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="58" selection-end-column="78" />
+            <state relative-caret-position="620">
+              <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -257,7 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selOldReportCount</find>
       <find>start</find>
       <find>model.startDate</find>
       <find>hos</find>
@@ -287,6 +171,7 @@
       <find>model.releaseVer</find>
       <find>model.analyserCount</find>
       <find>selectedInst.instType</find>
+      <find>total</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -328,20 +213,20 @@
         <option value="$PROJECT_DIR$/services/dashboard.service.client.js" />
         <option value="$PROJECT_DIR$/project-server-code/services/dash.service.server.js" />
         <option value="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" />
-        <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" />
         <option value="$PROJECT_DIR$/project-server-code/model/dashboard/dash.schema.server.js" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
         <option value="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
         <option value="$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js" />
         <option value="$PROJECT_DIR$/services/instrument.data.service.client.js" />
         <option value="$PROJECT_DIR$/views/pages/templates/graphs.view.client.html" />
-        <option value="$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/downloads.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/charts.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/overview.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html" />
       </list>
     </option>
   </component>
@@ -658,12 +543,12 @@
       <workItem from="1508765353744" duration="24082000" />
       <workItem from="1508885444896" duration="2249000" />
       <workItem from="1508936404440" duration="1983000" />
-      <workItem from="1509025967950" duration="13652000" />
+      <workItem from="1509025967950" duration="15531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309080000" />
+    <option name="totallyTimeSpent" value="310959000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -681,9 +566,10 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27380952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17156863" sideWeight="0.3482143" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16993465" sideWeight="0.65178573" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16993465" sideWeight="0.65178573" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23202614" sideWeight="0.48809522" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -695,7 +581,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
     </layout>
@@ -943,14 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/controllers/help.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -975,26 +852,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="118" column="51" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="118" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="34" lean-forward="false" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1026,14 +887,6 @@
     <entry file="file://$PROJECT_DIR$/views/pages/templates/downloads.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
           <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
           <folding />
         </state>
@@ -1077,6 +930,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="57" column="46" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1386">
+          <caret line="109" column="10" lean-forward="false" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
           <folding />
         </state>
       </provider>

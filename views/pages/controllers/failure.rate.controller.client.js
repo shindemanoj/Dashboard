@@ -64,7 +64,7 @@
             var dateArray = [];
             var failureRateData = [];
             for(i in config){
-                failureRateData.push({"hostname":config[i].Hostname.replace(/\s/g, ''), "name":config[i].Name, "frArray":[], "total":0});
+                failureRateData.push({"hostname":config[i].Hostname.replace(/\s/g, ''), "name":config[i].Name, "frArray":[], "h_total":0});
             }
 
             startDate = new Date(model.startDate);
@@ -80,19 +80,22 @@
                 index += 1;
             }
             model.dateArray = dateArray;
-
+            model.v_totalArr = [];
             for(i in dateArray){
+                var v_total = 0;
                 for(j in jsonArray){
                     var errorDate = jsonArray[j]['errorDate'].toLocaleDateString();
                     if(dateArray[i] === errorDate){
+                        v_total += 1;
                         for(k in failureRateData){
                             if(jsonArray[j].hostname === failureRateData[k].hostname){
-                                failureRateData[k].total += 1;
+                                failureRateData[k].h_total += 1;
                                 failureRateData[k].frArray[i] += 1;
                             }
                         }
                     }
                 }
+                model.v_totalArr.push(v_total);
             }
             model.failureRateData = failureRateData;
         }

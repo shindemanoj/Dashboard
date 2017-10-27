@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/Gem4K.properties" afterPath="$PROJECT_DIR$/Properties/Gem4K.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/Gem5K.properties" afterPath="$PROJECT_DIR$/Properties/Gem5K.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="failure.rate.controller.client.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="failure.rate.controller.client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1386">
-              <caret line="109" column="10" lean-forward="false" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+            <state relative-caret-position="178">
+              <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -119,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="failure.rate.view.client.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="failure.rate.view.client.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+            <state relative-caret-position="402">
+              <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -543,12 +539,12 @@
       <workItem from="1508765353744" duration="24082000" />
       <workItem from="1508885444896" duration="2249000" />
       <workItem from="1508936404440" duration="1983000" />
-      <workItem from="1509025967950" duration="15531000" />
+      <workItem from="1509025967950" duration="16309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310959000" />
+    <option name="totallyTimeSpent" value="311737000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,18 +946,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html">
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        <state relative-caret-position="178">
+          <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1386">
-          <caret line="109" column="10" lean-forward="false" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
+        <state relative-caret-position="402">
+          <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
           <folding />
         </state>
       </provider>

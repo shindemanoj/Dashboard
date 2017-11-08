@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GEM5K/errorReport021117.csv" afterPath="$PROJECT_DIR$/GEM5K/errorReport021117.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/Gem5K.properties" afterPath="$PROJECT_DIR$/Properties/Gem5K.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graphs.controller.client.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="graphs.controller.client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -124,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show-GEM5K-config.view.client.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show-GEM5K-config.view.client.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="340">
+              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -216,7 +217,6 @@
         <option value="$PROJECT_DIR$/services/dashboard.service.client.js" />
         <option value="$PROJECT_DIR$/project-server-code/services/dash.service.server.js" />
         <option value="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" />
-        <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" />
         <option value="$PROJECT_DIR$/project-server-code/model/dashboard/dash.schema.server.js" />
         <option value="$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js" />
@@ -232,6 +232,7 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
         <option value="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
       </list>
     </option>
   </component>
@@ -546,12 +547,12 @@
       <workItem from="1509025967950" duration="17678000" />
       <workItem from="1509736014311" duration="2939000" />
       <workItem from="1509983033568" duration="3123000" />
-      <workItem from="1510146038612" duration="1222000" />
+      <workItem from="1510146038612" duration="1928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324533000" />
+    <option name="totallyTimeSpent" value="325239000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -947,14 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -967,6 +960,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="112" column="29" lean-forward="true" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
           <folding />
         </state>
       </provider>

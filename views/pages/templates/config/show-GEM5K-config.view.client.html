@@ -41,6 +41,12 @@
                     <li>{{model.config.Version}}</li>
                 </ul>
             </ul>
+            <ul>
+                <li><b>Automation Issue</b></li>
+                <ul>
+                    <li>Minor, it not affecting current sample run but it'll be cleaner to dismiss "the print queue is full" message automatically.</li>
+                </ul>
+            </ul>
         </div>
     </div>
 </div>
@@ -55,6 +61,7 @@
         <thead>
         <tr>
             <th>CR Number / Unknown</th>
+            <th>Description</th>
             <th>Stable Network</th>
             <th>Unstable Network</th>
             <th>Overall</th>
@@ -63,6 +70,7 @@
         <tbody>
         <tr ng-repeat="data in model.summary">
             <td>{{data.DefectId}}</td>
+            <td>UI Freeze clicking on a Test Panel -- NEED CRB</td>
             <td>{{data.StableCount}}</td>
             <td>{{data.UnstableCount}}</td>
             <td>{{data.StableCount + data.UnstableCount}}</td>

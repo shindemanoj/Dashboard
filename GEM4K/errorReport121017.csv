@@ -1,4 +1,0 @@
-A.3.2.99.0.32.0.0.6,gwp397 (192.168.3.97),Freeze, 2017-10-12 08:00:00-04,See 192.168.3.97_121017_1507809661479.png capture for details.This error is related with CR 17702,Wed Oct 11 10:01,
-A.3.2.99.0.32.0.0.6,gwp397 ( 192.168.3.97),3009 Error,10/12/2017 6:50,3009 Error is shown in UI.log at  caused by 'SocketTimeoutException'. This error is related to CR 8697,Wed Oct 11 10:01
-A.3.2.99.0.32.0.0.6,GEM96 (192.168.3.96),Freeze, 2017-10-12 14:00:00-04,See 192.168.3.96_121017_1507831262091.png capture for details.This error is related with CR 17702,Fri Oct  6,
-A.3.2.99.0.32.0.0.6,GEM96 ( 192.168.3.96),3006 Error,10/12/2017 20:47,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Thu Oct 12 14:02

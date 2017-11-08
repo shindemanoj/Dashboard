@@ -1,9 +1,0 @@
-A.3.2.99.0.32.0.0.6,GEM151 (192.168.207.151),Freeze, 2017-10-09 00:00:00-04,See 192.168.207.151_091017_1507521661377.png capture for details.This error is related with CR 17702,Sun Oct  8,
-A.3.2.99.0.32.0.0.6,GEM103 ( 192.168.226.103),3006 Error,10/9/2017 2:19,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Mon Oct  2
-A.3.2.99.0.32.0.0.6,GEM103 ( 192.168.226.103),3206 Error,10/9/2017 2:23,Unknown error or wrong error pattern.,Mon Oct  2
-A.3.2.99.0.32.0.0.6,GEM103 (192.168.226.103),Freeze, 2017-10-09 03:00:00-04,See 192.168.226.103_091017_1507532462401.png capture for details.This error is related with CR 17702,Mon Oct  9,
-A.3.2.99.0.32.0.0.6,GEM103 ( 192.168.226.103),3006 Error,10/9/2017 2:19,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Mon Oct  9
-A.3.2.99.0.32.0.0.6,GEM103 ( 192.168.226.103),3206 Error,10/9/2017 3:00,Unknown error or wrong error pattern.,Mon Oct  9
-A.3.2.99.0.32.0.0.6,gwp394 ( 192.168.3.94),3006 Error,10/9/2017 4:02,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Sun Oct  8
-A.3.2.99.0.32.0.0.6,gwp102 ( 192.168.226.102),3006 Error,10/9/2017 8:24,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,
-A.3.2.99.0.32.0.0.6,gwp394 ( 192.168.3.94),3006 Error,10/9/2017 12:41,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,Mon Oct  9

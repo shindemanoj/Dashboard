@@ -15,12 +15,12 @@
     return api;
 
     function getReport(reqData) {
-        return DashboardModel.findOne({instType:reqData.instType, startDate: reqData.startDate});
+        return DashboardModel.findOne({instType:reqData.instType, build: report.build});
     }
 
     function saveReport(report) {
         return DashboardModel.update(
-            { startDate: report.startDate,  endDate: report.endDate, instType: report.instType},
+            { build: report.build, instType: report.instType},
             report,
             { upsert: true }
         );

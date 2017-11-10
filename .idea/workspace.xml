@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/Gem4K.properties" afterPath="$PROJECT_DIR$/Properties/Gem4K.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" afterPath="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -39,8 +36,8 @@
       <file leaf-file-name="graphs.controller.client.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6766">
-              <caret line="434" column="102" lean-forward="false" selection-start-line="434" selection-start-column="102" selection-end-line="434" selection-end-column="102" />
+            <state relative-caret-position="459">
+              <caret line="432" column="49" lean-forward="true" selection-start-line="432" selection-start-column="49" selection-end-line="432" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -540,12 +537,12 @@
       <workItem from="1509983033568" duration="3123000" />
       <workItem from="1510146038612" duration="2799000" />
       <workItem from="1510254331118" duration="1573000" />
-      <workItem from="1510326455268" duration="472000" />
+      <workItem from="1510326455268" duration="1075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328155000" />
+    <option name="totallyTimeSpent" value="328758000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -946,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6766">
-          <caret line="434" column="102" lean-forward="false" selection-start-line="434" selection-start-column="102" selection-end-line="434" selection-end-column="102" />
+        <state relative-caret-position="459">
+          <caret line="432" column="49" lean-forward="true" selection-start-line="432" selection-start-column="49" selection-end-line="432" selection-end-column="49" />
           <folding />
         </state>
       </provider>

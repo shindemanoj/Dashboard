@@ -1,0 +1,37 @@
+Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot
+A.3.2.99.0.32.0.0.16,GEM92 (192.168.237.163),Freeze, 2017-11-10 00:00:00-05,See 192.168.237.163_101117_1510290061565.png capture for details.This error is related with CR 17702,Wed Nov  8
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 00:39
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 01:16
+A.3.2.99.0.32.0.0.16,gwp226101 (192.168.237.161),Freeze, 2017-11-10 02:00:00-05,See 192.168.237.161_101117_1510297261579.png capture for details.This error is related with CR 17702,Wed Nov  8
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 01:53
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 02:42:07,Unknown error or wrong error pattern.,Fri Nov 10 02:02
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 02:31
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 03:19:29,Unknown error or wrong error pattern.,Fri Nov 10 02:39
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 03:08
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 03:19:29,Unknown error or wrong error pattern.,Fri Nov 10 03:16
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 03:46
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 03:19:29,Unknown error or wrong error pattern.,Fri Nov 10 03:54
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 04:23
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 03:19:29,Unknown error or wrong error pattern.,Fri Nov 10 04:31
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 05:00
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 03:19:29,Unknown error or wrong error pattern.,Fri Nov 10 05:09
+A.3.2.99.0.32.0.0.16,GEM153 (192.168.237.178),Freeze, 2017-11-10 06:00:00-05,See 192.168.237.178_101117_1510311662155.png capture for details.This error is related with CR 17702,Wed Nov  8
+A.3.2.99.0.32.0.0.16,GEM153 ( 192.168.237.178),3206 Error,2017-11-10 06:04:52,Unknown error or wrong error pattern.,Wed Nov  8
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 05:38
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 03:19:29,Unknown error or wrong error pattern.,Fri Nov 10 05:46
+A.3.2.99.0.32.0.0.16,GEM153 ( 192.168.237.178),3206 Error,2017-11-10 06:04:52,Unknown error or wrong error pattern.,Fri Nov 10 06:02
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 06:15
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 03:19:29,Unknown error or wrong error pattern.,Fri Nov 10 06:23
+A.3.2.99.0.32.0.0.16,GEM153 ( 192.168.237.178),3206 Error,2017-11-10 06:04:52,Unknown error or wrong error pattern.,Fri Nov 10 06:39
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 07:33:25,Unknown error or wrong error pattern.,Fri Nov 10 06:52
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 07:41:13,Unknown error or wrong error pattern.,Fri Nov 10 07:01
+A.3.2.99.0.32.0.0.16,GEM153 ( 192.168.237.178),3206 Error,2017-11-10 06:04:52,Unknown error or wrong error pattern.,Fri Nov 10 07:16
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 07:33:25,Unknown error or wrong error pattern.,Fri Nov 10 07:30
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 07:41:13,Unknown error or wrong error pattern.,Fri Nov 10 07:38
+A.3.2.99.0.32.0.0.16,GEM153 ( 192.168.237.178),3206 Error,2017-11-10 06:04:52,Unknown error or wrong error pattern.,Fri Nov 10 07:54
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 07:33:25,Unknown error or wrong error pattern.,Fri Nov 10 08:08
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 07:41:13,Unknown error or wrong error pattern.,Fri Nov 10 08:15
+A.3.2.99.0.32.0.0.16,GEM153 ( 192.168.237.178),3206 Error,2017-11-10 09:11:32,Unknown error or wrong error pattern.,Fri Nov 10 08:31
+A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 07:33:25,Unknown error or wrong error pattern.,Fri Nov 10 08:45
+A.3.2.99.0.32.0.0.16,gwp226101 ( 192.168.237.161),3206 Error,2017-11-10 07:41:13,Unknown error or wrong error pattern.,Fri Nov 10 08:53
+A.3.2.99.0.32.0.0.16,GEM153 ( 192.168.237.178),3206 Error,2017-11-10 09:48:59,Unknown error or wrong error pattern.,Fri Nov 10 09:08

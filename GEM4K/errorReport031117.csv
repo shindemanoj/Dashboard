@@ -1,8 +1,0 @@
-A.3.2.99.0.32.0.0.12,GEM103 ( 192.168.237.171),3006 Error,11/3/2017 8:24,3006 Error is shown in UI.log at  caused by 'com.ilrd.gem.g4k.ui.framework.statemachine.action.G4KStateTimeoutAction'. This error is related to CR 17835,
-A.3.2.99.0.32.0.0.12,gwp383 ( 192.168.237.153),3009 Error,11/3/2017 9:03,3009 Error is shown in UI.log at  caused by 'SocketTimeoutException'. This error is related to CR 8697,
-A.3.2.99.0.32.0.0.12,gwp383 ( 192.168.237.153),3206 Error,11/3/2017 9:47,3206 Error is shown in UI.log at 2017-11-03 09:03:04 caused by 'Socket timed out.  Waited 75000 milliseconds for response while calling on InvokerLocator'. This error is related to CR 17976,Fri Nov  3
-A.3.2.99.0.32.0.0.12,GEM151 (192.168.237.176),Freeze, 2017-11-03 12:00:00-04,See 192.168.237.176_031117_1509724861807.png capture for details.This error is related with CR 17702,Wed Nov  1,
-A.3.2.99.0.32.0.0.12,GEM151 ( 192.168.237.176),3009 Error,11/3/2017 10:48,3009 Error is shown in UI.log at  caused by 'SocketTimeoutException'. This error is related to CR 8697,Wed Nov  1
-A.3.2.99.0.32.0.0.12,gwp393 ( 192.168.237.164),3206 Error,11/3/2017 16:30,Unknown error or wrong error pattern.,
-A.3.2.99.0.32.0.0.12,gfwp390 ( 192.168.237.160),3206 Error,11/3/2017 16:31,Unknown error or wrong error pattern.,
-A.3.2.99.0.32.0.0.12,GEM154 ( 192.168.237.179),3206 Error,11/3/2017 17:03,Unknown error or wrong error pattern.,

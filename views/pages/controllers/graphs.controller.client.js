@@ -431,9 +431,7 @@
             model.oldReportCount = [];
             startDate = new Date(model.startDate);
             for(var i=0;i<oldReports.length;i++){
-                if(startDate.getTime() < new Date(oldReports[i].startDate).getTime()){
-                    model.oldReportCount.push(new Date(oldReports[i].startDate).toLocaleDateString());
-                }
+                model.oldReportCount.push(new Date(oldReports[i].startDate).toLocaleDateString());
             }
             totalFailureRate = [];
             stableFailureRate = [];

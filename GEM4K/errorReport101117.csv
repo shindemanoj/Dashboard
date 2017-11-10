@@ -1,4 +1,3 @@
-Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot
 A.3.2.99.0.32.0.0.16,GEM92 (192.168.237.163),Freeze, 2017-11-10 00:00:00-05,See 192.168.237.163_101117_1510290061565.png capture for details.This error is related with CR 17702,Wed Nov  8
 A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 00:39
 A.3.2.99.0.32.0.0.16,GEM92 ( 192.168.237.163),3206 Error,2017-11-10 01:19:24,Unknown error or wrong error pattern.,Fri Nov 10 01:16

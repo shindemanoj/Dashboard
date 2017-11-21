@@ -15,7 +15,7 @@
     return api;
 
     function getReport(reqData) {
-        return DashboardModel.findOne({instType:reqData.instType, build: report.build});
+        return DashboardModel.findOne({instType:reqData.instType, startDate: reqData.startDate});
     }
 
     function saveReport(report) {

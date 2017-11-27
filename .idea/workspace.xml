@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Properties/Gem5K.properties" afterPath="$PROJECT_DIR$/Properties/Gem5K.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
-    </list>
+    <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -529,12 +525,12 @@
       <workItem from="1510326455268" duration="2869000" />
       <workItem from="1510757193470" duration="599000" />
       <workItem from="1511278849932" duration="748000" />
-      <workItem from="1511796274805" duration="442000" />
+      <workItem from="1511796274805" duration="1369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332967000" />
+    <option name="totallyTimeSpent" value="333894000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

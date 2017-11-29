@@ -25,6 +25,7 @@
             { upsert: true }
         );
     }
+
     function findReports(instType) {
         return DashboardModel.find({instType:instType});
     }

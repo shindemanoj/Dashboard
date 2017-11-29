@@ -32,6 +32,7 @@
                     model.config = config;
                     model.startDate = config.startDate;
                     model.endDate = config.endDate;
+                    initializeBaseline(model.startDate);
                     getReportData();
                 });
         }
@@ -45,7 +46,60 @@
                     model.config = config;
                     model.startDate = config.startDate;
                     model.endDate = config.endDate;
+                    initializeBaseline(model.startDate);
                     getReportData();
+                });
+        }
+
+        function initializeBaseline(startDate) {
+            var date = new Date(startDate).toISOString();
+            DashboardService
+                .getBaseLine()
+                .success(function (response) {
+                    console.log(response);
+                    if($scope.selectedInst.instType === "GEM5K"){
+                        if(response.baseGEM5K){
+                            model.baseline = response.baseGEM5K;
+                        }
+                        else{
+                            DashboardService
+                                .setBaseLine({baseGEM5K:startDate})
+                                .success(function (response) {
+                                    model.baseline = date;
+                                });
+                        }
+                    }
+                    if($scope.selectedInst.instType === "GEM4K"){
+                        if(response.baseGEM4K){
+                            model.baseline = response.baseGEM4K;
+                        }
+                        else{
+                            DashboardService
+                                .setBaseLine({baseGEM4K:startDate})
+                                .success(function (response) {
+                                    model.baseline = date;
+                                });
+                        }
+                    }
+                    if($scope.selectedInst.instType === "GWP"){
+                        if(response.baseGWP){
+                            model.baseline = response.baseGWP;
+                        }
+                        else{
+                            DashboardService
+                                .setBaseLine({baseGWP:startDate})
+                                .success(function (response) {
+                                    model.baseline = date;
+                                });
+                        }
+                    }
+                })
+                .error(function (response) {
+                    DashboardService
+                        .setBaseLine({baseGEM5K:startDate})
+                        .success(function (response) {
+                            model.baseline = date;
+                        });
                 });
         }
 

@@ -36,6 +36,9 @@
             <thead style="font-weight:bold;">
             <tr>
                 <td>
+                    Baseline
+                </td>
+                <td>
                     Version
                 </td>
                 <td>
@@ -49,6 +52,7 @@
 
             <tbody>
             <tr ng-repeat="data in model.reports">
+                <td> <input type="radio" ng-model="model.baseline" ng-value="data.startDate" ng-change="model.changeBaseline()"></td>
                 <td>{{data.build}}</td>
                 <td><a href="" ng-click="model.exportToCSV(data.reportData, 'Error Report')">ErrorReport-{{data.startDate | date:'yyyy-MM-dd'}}</a></td>
                 <td>{{ data.startDate | date}}&nbsp;-&nbsp;{{ data.endDate | date}} </td>

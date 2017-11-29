@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="" />
+    <list default="true" id="e3f9c3af-3a71-40da-8742-fa8bd3b53aa7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project-server-code/model/dashboard/baseline.model.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project-server-code/model/dashboard/baseline.schema.server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project-server-code/services/baseline.service.server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/app.js" afterPath="$PROJECT_DIR$/project-server-code/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" afterPath="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project-server-code/model/models.server.js" afterPath="$PROJECT_DIR$/project-server-code/model/models.server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/dashboard.service.client.js" afterPath="$PROJECT_DIR$/services/dashboard.service.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/downloads.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/downloads.controller.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" afterPath="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/templates/downloads.view.client.html" afterPath="$PROJECT_DIR$/views/pages/templates/downloads.view.client.html" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,87 +36,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="graphs.controller.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
+      <file leaf-file-name="overview.controller.client.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-              <folding>
-                <marker date="1511297065881" expanded="true" signature="1617:1695" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="failure.rate.controller.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-              <folding>
-                <marker date="1511297065879" expanded="true" signature="4037:4115" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dash.schema.server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/dash.schema.server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="313">
+              <caret line="102" column="19" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="102" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dash.model.server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js">
+      <file leaf-file-name="show-GEM4K-config.view.client.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="17" column="71" lean-forward="true" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+            <state relative-caret-position="85">
+              <caret line="5" column="30" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="5" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show-GEM5K-config.view.client.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show-GEM5K-config.view.client.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+            <state relative-caret-position="85">
+              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charts.controller.client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js">
+      <file leaf-file-name="show-GWP-config.view.client.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-              <folding>
-                <marker date="1511297065877" expanded="true" signature="1077:1155" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="downloads.controller.client.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="baseline.schema.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/baseline.schema.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="downloads.controller.client.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/controllers/downloads.controller.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+            <state relative-caret-position="986">
+              <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="failure.rate.view.client.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html">
+      <file leaf-file-name="baseline.model.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/baseline.model.server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+            <state relative-caret-position="238">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baseline.service.server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project-server-code/services/baseline.service.server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -120,8 +129,8 @@
       <file leaf-file-name="dashboard.service.client.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/dashboard.service.client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="64" lean-forward="false" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+            <state relative-caret-position="187">
+              <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -140,7 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hos</find>
       <find>card-header</find>
       <find>getReleaseVersion</find>
       <find>reportIndex</find>
@@ -158,7 +166,6 @@
       <find>model.oldReportCount</find>
       <find>model.config.InstConfig</find>
       <find>relea</find>
-      <find>saveReport</find>
       <find>model.confi</find>
       <find>model.relea</find>
       <find>model.re</find>
@@ -170,6 +177,8 @@
       <find>total</find>
       <find>authUsers</find>
       <find>$scope.selectedInst.startDate</find>
+      <find>startDate</find>
+      <find>saveReport</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,8 +202,6 @@
         <option value="$PROJECT_DIR$/errorReport210717.csv" />
         <option value="$PROJECT_DIR$/db/app.js" />
         <option value="$PROJECT_DIR$/project-server-code/model/dashboard/models.server.js" />
-        <option value="$PROJECT_DIR$/project-server-code/model/models.server.js" />
-        <option value="$PROJECT_DIR$/project-server-code/app.js" />
         <option value="$PROJECT_DIR$/views/pages/templates/show-GEM5K-config.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/show-GEM4K-config.view.client.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
@@ -204,27 +211,32 @@
         <option value="$PROJECT_DIR$/bower_components/jsPDF/examples/bootstrap/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/views/pages/controllers/help.controller.client.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/downloads.controller.client.js" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/project-server-code/services/dash.service.server.js" />
-        <option value="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" />
         <option value="$PROJECT_DIR$/project-server-code/model/dashboard/dash.schema.server.js" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js" />
-        <option value="$PROJECT_DIR$/services/instrument.data.service.client.js" />
         <option value="$PROJECT_DIR$/views/pages/templates/graphs.view.client.html" />
-        <option value="$PROJECT_DIR$/views/pages/templates/downloads.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/charts.view.client.html" />
-        <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
         <option value="$PROJECT_DIR$/views/pages/templates/failure.rate.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/help.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/templates/overview.view.client.html" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/services/instrument.data.service.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/templates/downloads.view.client.html" />
+        <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html" />
         <option value="$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js" />
-        <option value="$PROJECT_DIR$/services/dashboard.service.client.js" />
-        <option value="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js" />
+        <option value="$PROJECT_DIR$/project-server-code/app.js" />
         <option value="$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js" />
+        <option value="$PROJECT_DIR$/project-server-code/model/dashboard/baseline.schema.server.js" />
+        <option value="$PROJECT_DIR$/services/dashboard.service.client.js" />
+        <option value="$PROJECT_DIR$/project-server-code/model/models.server.js" />
+        <option value="$PROJECT_DIR$/project-server-code/model/dashboard/baseline.model.server.js" />
+        <option value="$PROJECT_DIR$/project-server-code/services/baseline.service.server.js" />
         <option value="$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html" />
+        <option value="$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js" />
+        <option value="$PROJECT_DIR$/views/pages/controllers/downloads.controller.client.js" />
       </list>
     </option>
   </component>
@@ -278,6 +290,30 @@
               <item name="Dashboard" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="GEM5K" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="project-server-code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="project-server-code" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="project-server-code" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="project-server-code" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dashboard" type="b2602c69:ProjectViewProjectNode" />
@@ -336,18 +372,18 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\pages\controllers" />
-      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\pages\templates" />
-      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\graphs\templates" />
-      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\graphs\controllers" />
-      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\pages" />
       <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\pages\controllers" />
       <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\pages\templates\config" />
       <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\project-server-code\model\dashboard" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\project-server-code\services" />
+      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\project-server-code\model\dashboard" />
+      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\pages\controllers" />
+      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\pages\templates" />
+      <recent name="C:\Users\mshinde\Documents\GitHub\Dashboard\views\graphs\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -525,12 +561,12 @@
       <workItem from="1510326455268" duration="2869000" />
       <workItem from="1510757193470" duration="599000" />
       <workItem from="1511278849932" duration="748000" />
-      <workItem from="1511796274805" duration="1369000" />
+      <workItem from="1511796274805" duration="16547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333894000" />
+    <option name="totallyTimeSpent" value="349072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -550,7 +586,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17156863" sideWeight="0.3482143" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16993465" sideWeight="0.65178573" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.251634" sideWeight="0.65178573" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23202614" sideWeight="0.48809522" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -609,7 +645,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js</url>
-          <line>76</line>
+          <line>130</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -623,15 +659,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/angular-datatables.min.js" />
-    <entry file="file://$PROJECT_DIR$/errorReport210717.csv" />
-    <entry file="file://$PROJECT_DIR$/js/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/pdfmake/build/pdfmake.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -693,13 +720,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ReleaseVersion" />
-    <entry file="file://$PROJECT_DIR$/project-server-code/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -741,52 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="104" lean-forward="false" selection-start-line="16" selection-start-column="104" selection-end-line="16" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project-server-code/model/models.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project-server-code/services/dash.service.server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="34" lean-forward="false" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/downloads.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="57" column="46" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-          <folding>
-            <marker date="1511297065879" expanded="true" signature="4037:4115" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -840,13 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/templates/overview.view.client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/templates/graphs.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -861,6 +828,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/overview.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/instrument.data.service.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="79" lean-forward="false" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="64" column="97" lean-forward="false" selection-start-line="64" selection-start-column="97" selection-end-line="64" selection-end-column="97" />
+          <folding>
+            <marker date="1511900802233" expanded="true" signature="1077:1155" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-server-code/services/dash.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/dash.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -869,20 +870,196 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/charts.controller.client.js">
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/failure.rate.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state relative-caret-position="323">
+          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding>
-            <marker date="1511297065877" expanded="true" signature="1077:1155" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
+            <marker date="1511900795669" expanded="true" signature="254:10062" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="620:931" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="758:931" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="1468:2077" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="1498:1932" ph="{&quot;build&quot;: model.config.Version...}" />
+            <marker date="1511900795669" expanded="true" signature="2114:3858" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="2310:2465" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="2726:3013" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="2833:2911" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="3121:3795" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="3191:3733" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="3327:3715" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="3416:3693" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="3503:3667" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="3893:5123" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="3947:5040" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="3975:4115" ph="{&quot;startDate&quot;: $scope.selectedInst.startDate...}" />
+            <marker date="1511900795669" expanded="true" signature="4037:4115" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
+            <marker date="1511900795669" expanded="true" signature="4218:5025" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="4701:4908" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="5057:5113" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="5166:6286" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="5385:6274" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="5426:6054" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="5485:6032" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="5653:6005" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="6109:6256" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="6323:8334" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="6879:7482" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="6940:7468" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="7043:7450" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="7127:7428" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="7195:7281" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="7314:7402" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="7517:7743" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="7575:7640" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="7662:7729" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="8370:9156" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="8420:8480" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="8484:9061" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="8527:8822" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="9244:9686" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="9258:9404" ph="//..." />
+            <marker date="1511900795669" expanded="true" signature="9801:10056" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="9833:9894" ph="{...}" />
+            <marker date="1511900795669" expanded="true" signature="9911:10010" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/downloads.controller.client.js">
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state relative-caret-position="110">
+          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <marker date="1511900791092" expanded="true" signature="239:19424" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="619:930" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="757:930" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="1473:2851" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="1527:2767" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="1555:1695" ph="{&quot;startDate&quot;: $scope.selectedInst.startDate...}" />
+            <marker date="1511900791092" expanded="true" signature="1617:1695" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
+            <marker date="1511900791092" expanded="true" signature="1798:2752" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="2281:2488" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="2785:2841" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="2894:4391" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="3113:4379" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="3154:3965" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="3213:3943" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="3381:3916" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="4020:4361" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="4435:4484" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="4515:5067" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="4545:4922" ph="{&quot;build&quot;: model.config.Version...}" />
+            <marker date="1511900791092" expanded="true" signature="5106:6251" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="5226:6240" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="5394:5757" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="5442:5735" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="5495:5569" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="5598:5671" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="5881:6008" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="6033:6176" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="6288:7727" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="6321:7660" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="6346:7646" ph="{&quot;type&quot;: 'lineChart'...}" />
+            <marker date="1511900791092" expanded="true" signature="6449:6609" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="6794:7140" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="7169:7473" ph="{&quot;axisLabel&quot;: 'Date'...}" />
+            <marker date="1511900791092" expanded="true" signature="7262:7364" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="7502:7628" ph="{&quot;axisLabel&quot;: 'Number Of Crashes'...}" />
+            <marker date="1511900791092" expanded="true" signature="7765:9319" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="7880:8171" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="7920:8157" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="7965:8022" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="8051:8109" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="8229:8723" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="8350:8709" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="8468:8597" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="8623:8691" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="8796:8905" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="9002:9308" ph="[...]" />
+            <marker date="1511900791092" expanded="true" signature="9020:9294" ph="{&quot;values&quot;: crashValues...}" />
+            <marker date="1511900791092" expanded="true" signature="9364:10121" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="9397:10049" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="9422:10035" ph="{&quot;type&quot;: 'pieChart'...}" />
+            <marker date="1511900791092" expanded="true" signature="9784:10017" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="9818:9995" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="10164:11075" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="10274:10754" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="10335:10740" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="10457:10614" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="10640:10722" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="10860:11031" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="11118:11873" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="11151:11803" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="11176:11789" ph="{&quot;type&quot;: 'pieChart'...}" />
+            <marker date="1511900791092" expanded="true" signature="11538:11771" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="11572:11749" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="11914:13075" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="12016:12534" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="12077:12464" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="12193:12342" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="12368:12446" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="12615:12829" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="13112:15123" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="13668:14271" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="13729:14257" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="13832:14239" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="13916:14217" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="13984:14070" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="14103:14191" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="14306:14532" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="14364:14429" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="14451:14518" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="15167:16766" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="15207:16681" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="15232:16667" ph="{&quot;type&quot;: 'lineChart'...}" />
+            <marker date="1511900791092" expanded="true" signature="15335:15495" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="15680:16026" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="16055:16362" ph="{&quot;axisLabel&quot;: 'Instrument Release and Build'...}" />
+            <marker date="1511900791092" expanded="true" signature="16172:16253" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="16391:16649" ph="{&quot;axisLabel&quot;: 'Failure Rate'...}" />
+            <marker date="1511900791092" expanded="true" signature="16491:16579" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="16815:19418" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="17083:17197" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="17345:17651" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="17833:18665" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="17876:18239" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="18260:18617" ph="{...}" />
+            <marker date="1511900791092" expanded="true" signature="18762:19407" ph="[...]" />
+            <marker date="1511900791092" expanded="true" signature="18780:18971" ph="{&quot;values&quot;: totalFailureRate...}" />
+            <marker date="1511900791092" expanded="true" signature="18989:19180" ph="{&quot;values&quot;: stableFailureRate...}" />
+            <marker date="1511900791092" expanded="true" signature="19198:19393" ph="{&quot;values&quot;: unstableFailureRate...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-server-code/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-server-code/model/models.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/downloads.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="58" column="178" lean-forward="true" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="178" />
           <folding />
         </state>
       </provider>
@@ -895,51 +1072,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/graphs.controller.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-          <folding>
-            <marker date="1511297065881" expanded="true" signature="1617:1695" ph="{&quot;buildNum&quot;: $scope.selectedInst.buildNum...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/instrument.data.service.client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/dashboard.service.client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="64" lean-forward="false" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+        <state relative-caret-position="187">
+          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
+    <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/baseline.schema.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="51">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/dash.model.server.js">
+    <entry file="file://$PROJECT_DIR$/project-server-code/model/dashboard/baseline.model.server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="71" lean-forward="true" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+        <state relative-caret-position="238">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-server-code/services/baseline.service.server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM4K-config.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="5" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GEM5K-config.view.client.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/templates/config/show-GWP-config.view.client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/overview.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="102" column="19" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="102" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/controllers/downloads.controller.client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
           <folding />
         </state>
       </provider>

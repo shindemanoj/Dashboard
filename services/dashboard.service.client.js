@@ -13,9 +13,19 @@
             getReleaseVersion: getReleaseVersion,
             saveReport: saveReport,
             processData: processData,
-            getAllReports: getAllReports
+            getAllReports: getAllReports,
+            setBaseLine: setBaseLine,
+            getBaseLine: getBaseLine
         };
         return api;
+
+        function setBaseLine(baseData) {
+            return $http.post('/api/baseline', baseData);
+        }
+
+        function getBaseLine() {
+            return $http.get('/api/baseline/');
+        }
 
         function getReport(reqData) {
             return $http.get('/api/getReport/'+reqData.startDate+'/'+reqData.instType);

@@ -7,6 +7,7 @@
         var model = this;
         model.updateReportData = updateReportData;
         model.exportToCSV = exportToCSV;
+        model.changeBaseline = changeBaseline;
 
         $scope.names = ["GEM5K", "GEM4K", "GWP"];
         $scope.selectedInst = InstrumentDataService;
@@ -19,6 +20,7 @@
                 .getAllReports($scope.selectedInst.instType)
                 .success(function (response) {
                     model.reports = response;
+                    initializeBaseline();
                 });
         }
         init();
@@ -28,7 +30,80 @@
                 .getAllReports($scope.selectedInst.instType)
                 .success(function (response) {
                     model.reports = response;
+                    initializeBaseline();
                 });
+        }
+
+        function initializeBaseline() {
+            DashboardService
+                .getBaseLine()
+                .success(function (response) {
+                    console.log(response);
+                    if($scope.selectedInst.instType === "GEM5K"){
+                        if(response.baseGEM5K){
+                            model.baseline = response.baseGEM5K;
+                        }
+                        else{
+                            DashboardService
+                                .setBaseLine({baseGEM5K:model.reports[model.reports.length-1].startDate})
+                                .success(function (response) {
+                                    model.baseline = model.reports[model.reports.length-1].startDate;
+                                });
+                        }
+                    }
+                    if($scope.selectedInst.instType === "GEM4K"){
+                        if(response.baseGEM4K){
+                            model.baseline = response.baseGEM4K;
+                        }
+                        else{
+                            DashboardService
+                                .setBaseLine({baseGEM4K:model.reports[model.reports.length-1].startDate})
+                                .success(function (response) {
+                                    model.baseline = model.reports[model.reports.length-1].startDate;
+                                });
+                        }
+                    }
+                    if($scope.selectedInst.instType === "GWP"){
+                        if(response.baseGWP){
+                            model.baseline = response.baseGWP;
+                        }
+                        else{
+                            DashboardService
+                                .setBaseLine({baseGWP:model.reports[model.reports.length-1].startDate})
+                                .success(function (response) {
+                                    model.baseline = model.reports[model.reports.length-1].startDate;
+                                });
+                        }
+                    }
+                })
+                .error(function (response) {
+                    DashboardService
+                        .setBaseLine({baseGEM5K:model.reports[model.reports.length-1].startDate})
+                        .success(function (response) {
+                            model.baseline = model.reports[model.reports.length-1].startDate;
+                        });
+                });
+        }
+
+        function changeBaseline() {
+            if($scope.selectedInst.instType === "GEM5K"){
+                DashboardService
+                    .setBaseLine({baseGEM5K:model.baseline})
+                    .success(function (response) {
+                    });
+            }
+            else if($scope.selectedInst.instType === "GEM4K"){
+                DashboardService
+                    .setBaseLine({baseGEM4K:model.baseline})
+                    .success(function (response) {
+                    });
+            }
+            else if($scope.selectedInst.instType === "GWP"){
+                DashboardService
+                    .setBaseLine({baseGWP:model.baseline})
+                    .success(function (response) {
+                    });
+            }
         }
 
         function exportToCSV(json, reportName) {

@@ -10,6 +10,7 @@
         var model = this;
         model.exportData = exportData;
         model.updateReportData = updateReportData;
+        model.updateBaseLine = updateBaseLine;
         var startDate = $routeParams['startDate'];
         var selectedInst = $routeParams['instType'];
 
@@ -19,6 +20,7 @@
             $scope.selectedInst.instType = 'GEM5K';
         }
         function init(){
+            model.baseDisabled = false;
             if(selectedInst){
                 $scope.selectedInst.instType = selectedInst;
                 $scope.selectedInst.disabled = true;
@@ -49,6 +51,51 @@
                     initializeBaseline(model.startDate);
                     getReportData();
                 });
+        }
+
+
+        function updateBaseLine() {
+            if(confirm("Are you Sure?")){
+                var date = new Date(startDate).toISOString();
+                model.baseDisabled = true;
+                if($scope.selectedInst.instType === "GEM5K"){
+                    DashboardService
+                        .getBaseLine()
+                        .success(function (response) {
+                            var baseArr = response.baseGEM5K;
+                            baseArr.push(date);
+                            DashboardService
+                                .setBaseLine({baseGEM5K:baseArr})
+                                .success(function (response) {
+                                });
+                        });
+                }
+                else if($scope.selectedInst.instType === "GEM4K"){
+                    DashboardService
+                        .getBaseLine()
+                        .success(function (response) {
+                            var baseArr = response.baseGEM4K;
+                            baseArr.push(date);
+                            DashboardService
+                                .setBaseLine({baseGEM4K:baseArr})
+                                .success(function (response) {
+                                });
+                        });
+                }
+                else if($scope.selectedInst.instType === "GWP"){
+                    DashboardService
+                        .getBaseLine()
+                        .success(function (response) {
+                            var baseArr = response.baseGWP;
+                            baseArr.push(date);
+                            DashboardService
+                                .setBaseLine({baseGWP:baseArr})
+                                .success(function (response) {
+                                });
+                        });
+                }
+                alert("Marked as a BaseLine");
+            }
         }
 
         function initializeBaseline(startDate) {

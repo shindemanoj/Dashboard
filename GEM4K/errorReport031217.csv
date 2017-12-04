@@ -1,0 +1,2 @@
+A.3.1.99.0.31.0.0.24,GEM160 ( 192.168.237.160),3206 Error,12/3/2017 2:04,3206 Error is shown in UI.log at  caused by 'Socket timed out.  Waited 75000 milliseconds for response while calling on InvokerLocator'. This error is related to CR 17976,
+A.3.1.99.0.31.0.0.24,GEM174 ( 127.0.0.1),3206 Error,12/3/2017 8:04,Unknown error or wrong error pattern.,Sun Dec  3

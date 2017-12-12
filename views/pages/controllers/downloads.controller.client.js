@@ -7,13 +7,15 @@
         var model = this;
         model.updateReportData = updateReportData;
         model.exportToCSV = exportToCSV;
-        model.changeBaseline = changeBaseline;
 
         $scope.names = ["GEM5K", "GEM4K", "GWP"];
         $scope.selectedInst = InstrumentDataService;
         if($scope.selectedInst.instType === ""){
             $scope.selectedInst.instType = 'GEM5K';
         }
+        $scope.sortType     = 'startDate'; // set the default sort type
+        $scope.sortReverse  = true;  // set the default sort order
+        $scope.searchTable   = '';     // set the default search/filter term
 
         function init(){
             DashboardService
@@ -38,74 +40,32 @@
             DashboardService
                 .getBaseLine()
                 .success(function (response) {
-                    console.log(response);
                     if($scope.selectedInst.instType === "GEM5K"){
-                        if(response.baseGEM5K){
-                            model.baseline = response.baseGEM5K;
-                        }
-                        else{
-                            DashboardService
-                                .setBaseLine({baseGEM5K:model.reports[model.reports.length-1].startDate})
-                                .success(function (response) {
-                                    model.baseline = model.reports[model.reports.length-1].startDate;
-                                });
-                        }
+                        model.baselineArr = response.baseGEM5K;
+                        addCheckedParam();
                     }
-                    if($scope.selectedInst.instType === "GEM4K"){
-                        if(response.baseGEM4K){
-                            model.baseline = response.baseGEM4K;
-                        }
-                        else{
-                            DashboardService
-                                .setBaseLine({baseGEM4K:model.reports[model.reports.length-1].startDate})
-                                .success(function (response) {
-                                    model.baseline = model.reports[model.reports.length-1].startDate;
-                                });
-                        }
+                    else if($scope.selectedInst.instType === "GEM4K"){
+                        model.baselineArr = response.baseGEM4K;
+                        addCheckedParam();
                     }
-                    if($scope.selectedInst.instType === "GWP"){
-                        if(response.baseGWP){
-                            model.baseline = response.baseGWP;
-                        }
-                        else{
-                            DashboardService
-                                .setBaseLine({baseGWP:model.reports[model.reports.length-1].startDate})
-                                .success(function (response) {
-                                    model.baseline = model.reports[model.reports.length-1].startDate;
-                                });
-                        }
+                    else if($scope.selectedInst.instType === "GWP"){
+                        model.baselineArr = response.baseGWP;
+                        addCheckedParam();
                     }
-                })
-                .error(function (response) {
-                    DashboardService
-                        .setBaseLine({baseGEM5K:model.reports[model.reports.length-1].startDate})
-                        .success(function (response) {
-                            model.baseline = model.reports[model.reports.length-1].startDate;
-                        });
-                });
+            });
         }
-
-        function changeBaseline() {
-            if($scope.selectedInst.instType === "GEM5K"){
-                DashboardService
-                    .setBaseLine({baseGEM5K:model.baseline})
-                    .success(function (response) {
-                    });
-            }
-            else if($scope.selectedInst.instType === "GEM4K"){
-                DashboardService
-                    .setBaseLine({baseGEM4K:model.baseline})
-                    .success(function (response) {
-                    });
-            }
-            else if($scope.selectedInst.instType === "GWP"){
-                DashboardService
-                    .setBaseLine({baseGWP:model.baseline})
-                    .success(function (response) {
-                    });
+        
+        function addCheckedParam() {
+            var jsonArr = model.reports;
+            for(var i=0; i < jsonArr.length; i++) {
+                if(model.baselineArr.indexOf(jsonArr[i].startDate) !== -1){
+                    jsonArr[i].checked = true;
+                }
+                else{
+                    jsonArr[i].checked = false;
+                }
             }
         }
-
         function exportToCSV(json, reportName) {
             JSONToCSVConvertor(json, reportName, true);
         }

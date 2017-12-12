@@ -34,7 +34,7 @@
                     model.config = config;
                     model.startDate = config.startDate;
                     model.endDate = config.endDate;
-                    initializeBaseline(model.startDate);
+                    initializeBaseline();
                     getReportData();
                 });
         }
@@ -48,15 +48,15 @@
                     model.config = config;
                     model.startDate = config.startDate;
                     model.endDate = config.endDate;
-                    initializeBaseline(model.startDate);
+                    initializeBaseline();
                     getReportData();
                 });
         }
 
 
-        function updateBaseLine() {
-            if(confirm("Are you Sure?")){
-                var date = new Date(startDate).toISOString();
+        function updateBaseLine(version) {
+            if(confirm("Do you want to make "+version +" as a baseline?")){
+                var date = new Date(model.startDate).toISOString();
                 model.baseDisabled = true;
                 if($scope.selectedInst.instType === "GEM5K"){
                     DashboardService
@@ -98,55 +98,19 @@
             }
         }
 
-        function initializeBaseline(startDate) {
-            var date = new Date(startDate).toISOString();
+        function initializeBaseline() {
             DashboardService
                 .getBaseLine()
                 .success(function (response) {
-                    console.log(response);
                     if($scope.selectedInst.instType === "GEM5K"){
-                        if(response.baseGEM5K){
-                            model.baseline = response.baseGEM5K;
-                        }
-                        else{
-                            DashboardService
-                                .setBaseLine({baseGEM5K:startDate})
-                                .success(function (response) {
-                                    model.baseline = date;
-                                });
-                        }
+                        model.baseline = response.baseGEM5K[response.baseGEM5K.length-1];
                     }
-                    if($scope.selectedInst.instType === "GEM4K"){
-                        if(response.baseGEM4K){
-                            model.baseline = response.baseGEM4K;
-                        }
-                        else{
-                            DashboardService
-                                .setBaseLine({baseGEM4K:startDate})
-                                .success(function (response) {
-                                    model.baseline = date;
-                                });
-                        }
+                    else if($scope.selectedInst.instType === "GEM4K"){
+                        model.baseline = response.baseGEM4K[response.baseGEM4K.length-1];
                     }
-                    if($scope.selectedInst.instType === "GWP"){
-                        if(response.baseGWP){
-                            model.baseline = response.baseGWP;
-                        }
-                        else{
-                            DashboardService
-                                .setBaseLine({baseGWP:startDate})
-                                .success(function (response) {
-                                    model.baseline = date;
-                                });
-                        }
+                    else if($scope.selectedInst.instType === "GWP"){
+                        model.baseline = response.baseGWP[response.baseGWP.length-1];
                     }
-                })
-                .error(function (response) {
-                    DashboardService
-                        .setBaseLine({baseGEM5K:startDate})
-                        .success(function (response) {
-                            model.baseline = date;
-                        });
                 });
         }
 

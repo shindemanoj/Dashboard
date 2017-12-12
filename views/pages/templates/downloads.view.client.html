@@ -36,7 +36,11 @@
             <thead style="font-weight:bold;">
             <tr>
                 <td>
-                    Baseline
+                    <a href="" ng-click="sortType = 'checked'; sortReverse = !sortReverse">
+                        Baseline
+                        <span ng-show="sortType == 'checked' && !sortReverse" class="fa fa-caret-down"></span>
+                        <span ng-show="sortType == 'checked' && sortReverse" class="fa fa-caret-up"></span>
+                    </a>
                 </td>
                 <td>
                     Version
@@ -51,8 +55,8 @@
             </thead>
 
             <tbody>
-            <tr ng-repeat="data in model.reports">
-                <td> <input type="radio" ng-model="model.baseline" ng-value="data.startDate" ng-change="model.changeBaseline()"></td>
+            <tr ng-repeat="data in model.reports | orderBy:sortType:sortReverse">
+                <td> <input type="checkbox" ng-model="data.checked" disabled/></td>
                 <td>{{data.build}}</td>
                 <td><a href="" ng-click="model.exportToCSV(data.reportData, 'Error Report')">ErrorReport-{{data.startDate | date:'yyyy-MM-dd'}}</a></td>
                 <td>{{ data.startDate | date}}&nbsp;-&nbsp;{{ data.endDate | date}} </td>

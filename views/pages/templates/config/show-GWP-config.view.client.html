@@ -8,7 +8,7 @@
     <div class="table-responsive">
         <br>
         <ul>
-            <li><b>Release Version:</b>&nbsp;{{model.config.Version}}</li>
+            <li><b>Release Version:</b>&nbsp;{{model.config.Version}}&nbsp; <button ng-disabled="model.baseDisabled" ng-click="model.updateBaseLine(model.config.Version)" class="btn btn-info">Mark this as a Baseline</button></li>
         </ul>
         <table class="table table-bordered bordered table-striped table-condensed" width="100%" cellspacing="0">
             <thead>

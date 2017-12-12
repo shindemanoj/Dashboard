@@ -24,6 +24,7 @@
                     model.startDate = config.startDate;
                     model.endDate = config.endDate;
                     getReportData();
+                    initializeBaseline()
                 });
         }
         init();
@@ -37,9 +38,35 @@
                     model.startDate = config.startDate;
                     model.endDate = config.endDate;
                     getReportData();
+                    initializeBaseline()
                 });
         }
 
+        function initializeBaseline() {
+            DashboardService
+                .getBaseLine()
+                .success(function (response) {
+                    if($scope.selectedInst.instType === "GEM5K"){
+                        model.baseline = response.baseGEM5K[response.baseGEM5K.length-1];
+                    }
+                    else if($scope.selectedInst.instType === "GEM4K"){
+                        model.baseline = response.baseGEM4K[response.baseGEM4K.length-1];
+                    }
+                    else if($scope.selectedInst.instType === "GWP"){
+                        model.baseline = response.baseGWP[response.baseGWP.length-1];
+                    }
+                    DashboardService
+                        .getReport({
+                            startDate: model.baseline,
+                            instType: $scope.selectedInst.instType
+                        })
+                        .success(function(response) {
+                            model.baseFailureRate = response.overallFR;
+                            model.baseStableFailureRate = response.stableFR;
+                            model.baseUnstableFailureRate = response.unstableFR;
+                        });
+                });
+        }
 
         function getReportData() {
             if($scope.selectedInst.startDate !== ""){
@@ -396,6 +423,7 @@
                     },
                     x: function(d){ return d.x; },
                     y: function(d){ return d.y; },
+                    average: function(d) { return d.mean; },
                     useInteractiveGuideline: true,
                     dispatch: {
                         stateChange: function(e){ console.log("stateChange"); },
@@ -437,28 +465,13 @@
             stableFailureRate = [];
             unstableFailureRate = [];
 
-            if(model.config.Baseline){
-                model.instBuild.push("BaseLine");
-                totalFailureRate.push({x:0, y:model.config.Baseline.Overall});
-                stableFailureRate.push({x:0, y:model.config.Baseline.Stable});
-                unstableFailureRate.push({x:0, y:model.config.Baseline.Unstable});
-            }
-
             selOldReportIndex = model.oldReportCount.indexOf(model.selOldReportCount);
             reportIndex =selOldReportIndex;
             for(var i=0;i<=selOldReportIndex;i++){
-                if(model.config.Baseline){
-                    model.instBuild.push(oldReports[reportIndex].build);
-                    totalFailureRate.push({x:i+1, y:oldReports[reportIndex].overallFR});
-                    stableFailureRate.push({x:i+1, y:oldReports[reportIndex].stableFR});
-                    unstableFailureRate.push({x:i+1, y:oldReports[reportIndex].unstableFR});
-                }
-                else{
-                    model.instBuild.push(oldReports[reportIndex].build);
-                    totalFailureRate.push({x:i, y:oldReports[reportIndex].overallFR});
-                    stableFailureRate.push({x:i, y:oldReports[reportIndex].stableFR});
-                    unstableFailureRate.push({x:i, y:oldReports[reportIndex].unstableFR});
-                }
+                model.instBuild.push(oldReports[reportIndex].build);
+                totalFailureRate.push({x:i, y:oldReports[reportIndex].overallFR});
+                stableFailureRate.push({x:i, y:oldReports[reportIndex].stableFR});
+                unstableFailureRate.push({x:i, y:oldReports[reportIndex].unstableFR});
                 reportIndex -= 1;
             }
 
@@ -466,15 +479,18 @@
             return [
                 {
                     values: totalFailureRate,      //values - represents the array of {x,y} data points
-                    key: 'Overall' //key  - the name of the series.
+                    key: 'Overall', //key  - the name of the series.
+                    mean: model.baseFailureRate
                 },
                 {
                     values: stableFailureRate,      //values - represents the array of {x,y} data points
-                    key: 'Stable' //key  - the name of the series.
+                    key: 'Stable', //key  - the name of the series.
+                    mean: model.baseStableFailureRate
                 },
                 {
                     values: unstableFailureRate,      //values - represents the array of {x,y} data points
-                    key: 'Unstable' //key  - the name of the series.
+                    key: 'Unstable', //key  - the name of the series.
+                    mean: model.baseUnstableFailureRate
                 }
             ];
         }

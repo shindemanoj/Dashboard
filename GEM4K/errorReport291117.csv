@@ -1,3 +1,0 @@
-A.3.1.99.0.31.0.0.24,GEM165 ( 192.168.237.165),3206 Error,11/29/2017 11:04,Unknown error or wrong error pattern.,Wed Nov 29 11:02
-A.3.1.99.0.31.0.0.24,GEM165 ( 192.168.237.165),3206 Error,11/29/2017 12:37,3206 Error is shown in UI.log at  caused by 'Socket timed out.  Waited 75000 milliseconds for response while calling on InvokerLocator'. This error is related to CR 17976,Wed Nov 29 12:38
-A.3.1.99.0.31.0.0.24,GEM169 ( 192.168.237.169),3009 Error,11/29/2017 10:35,Unknown error or wrong error pattern.,Mon Nov 27 09:18

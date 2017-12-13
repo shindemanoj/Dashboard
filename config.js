@@ -47,6 +47,11 @@
                 controller: "HelpController",
                 controllerAs: "model"
             })
+            .when("/update", {
+                templateUrl: "views/pages/templates/update.view.client.html",
+                controller: "HelpController",
+                controllerAs: "model"
+            })
             .otherwise({
                 redirectTo: "/overview"
             });

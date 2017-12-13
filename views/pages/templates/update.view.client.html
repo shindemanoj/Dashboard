@@ -1,0 +1,105 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Dashboard</a>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Overview</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Config and Summary</a>
+                    <a class="dropdown-item" href="#/failureview">Failure Rate View</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/graphs">Graphs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/charts">Charts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/downloads">History</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Help</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#/help">Documentation</a>
+                    <a class="dropdown-item" href="#/update">How to update Dashboard?</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="container-fluid">
+    <br>
+    <h3>Steps to update Dashboard</h3>
+    <br>
+
+    <h5>1. Update build version in the instrument's properties file (Dashboard/Properties)</h5>
+   <ul>
+        <li>Every report of an instrument is mapped with the Version Number</li>
+        <li>Once you change the version number, Dashboard will automatically  create new report in database</li>
+       <li>So, for every new build change version, start date and end date in properties file</li>
+    </ul>
+    <div align="center">
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td align="center"><img src="/images/UpdateVersion.JPG"></td>
+            </tr>
+            <tr>
+                <td align="center" class="font-weight-bold">Instrument Properties File</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+
+    <h5>2. Update hostnames of instruments if changed.</h5>
+    <ul>
+        <li>Errors of an each instrument is counted with the help of it's hostname</li>
+        <li>If hostname of any instrument is changed update it in properties file</li>
+    </ul>
+    <div align="center">
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td align="center"><img src="/images/UpdateHostname.JPG"></td>
+            </tr>
+            <tr>
+                <td align="center" class="font-weight-bold">Instrument Properties File</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+    </div>
+
+    <h5>3. Replace Error logs in the instrument's folder (Dashboard/instrument_name)</h5>
+    <ul>
+        <li>Replace old error log files with new one.</li>
+        <li>For correct parsing of files check for common errors in files</li>
+        <li>Like Extra commas or semicolons, header at 1st line, etc.</li>
+        <li>Remove those if present in any of the file</li>
+    </ul>
+
+    <h5>4. Go to Dashboard URL</h5>
+    <ul>
+        <li>Dashboard will automatically read all the changes in properties file and new error logs</li>
+    </ul>
+    <br><br>
+    <h3>How to start server of a Dashboard?</h3>
+    <br>
+
+    <ul>
+        <li>Dashboard server needs mongodb connection before it starts</li>
+        <li>Go to terminal and create mongodb connections (using "mongod" command)</li>
+        <li>Through terminal go to Dashboard folder and execute "node server.js" command</li>
+        <li>Access Dashboard url in browser</li>
+    </ul>
+</div>

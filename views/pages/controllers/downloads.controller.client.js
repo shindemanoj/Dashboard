@@ -40,19 +40,21 @@
             DashboardService
                 .getBaseLine()
                 .success(function (response) {
-                    if($scope.selectedInst.instType === "GEM5K"){
-                        model.baselineArr = response.baseGEM5K;
-                        addCheckedParam();
+                    if(response !== "null"){
+                        if($scope.selectedInst.instType === "GEM5K"){
+                            model.baselineArr = response.baseGEM5K;
+                            addCheckedParam();
+                        }
+                        else if($scope.selectedInst.instType === "GEM4K"){
+                            model.baselineArr = response.baseGEM4K;
+                            addCheckedParam();
+                        }
+                        else if($scope.selectedInst.instType === "GWP"){
+                            model.baselineArr = response.baseGWP;
+                            addCheckedParam();
+                        }
                     }
-                    else if($scope.selectedInst.instType === "GEM4K"){
-                        model.baselineArr = response.baseGEM4K;
-                        addCheckedParam();
-                    }
-                    else if($scope.selectedInst.instType === "GWP"){
-                        model.baselineArr = response.baseGWP;
-                        addCheckedParam();
-                    }
-            });
+                });
         }
         
         function addCheckedParam() {

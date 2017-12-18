@@ -26,6 +26,7 @@
             getReportData();
         }
 
+        // Function to Get Report Data from Server or Database
         function getReportData() {
             if($scope.selectedInst.startDate !== ""){
                 reqData = {
@@ -53,6 +54,7 @@
             }
         }
 
+        // Function to get data from Server
         function getDataFromInstrument() {
             var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
             DashboardService.getFileNames($scope.selectedInst.instType)
@@ -72,6 +74,7 @@
                 });
         }
 
+        // Function to set Image URL of an error
         function setImageURL(imageURL) {
             model.imageURL = $scope.selectedInst.instType + "/" + imageURL;
         }

@@ -29,6 +29,8 @@
         }
         init();
 
+
+        // Function to Update Report Data after changing Instrument Selection
         function updateReportData() {
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
@@ -42,32 +44,26 @@
                 });
         }
 
+        // Function to initialize the baseline
         function initializeBaseline() {
             DashboardService
                 .getBaseLine()
                 .success(function (response) {
-                    if($scope.selectedInst.instType === "GEM5K"){
-                        model.baseline = response.baseGEM5K[response.baseGEM5K.length-1];
+                    if(response !== "null"){
+                        if($scope.selectedInst.instType === "GEM5K"){
+                            model.baseline = response.baseGEM5K[response.baseGEM5K.length-1];
+                        }
+                        else if($scope.selectedInst.instType === "GEM4K"){
+                            model.baseline = response.baseGEM4K[response.baseGEM4K.length-1];
+                        }
+                        else if($scope.selectedInst.instType === "GWP"){
+                            model.baseline = response.baseGWP[response.baseGWP.length-1];
+                        }
                     }
-                    else if($scope.selectedInst.instType === "GEM4K"){
-                        model.baseline = response.baseGEM4K[response.baseGEM4K.length-1];
-                    }
-                    else if($scope.selectedInst.instType === "GWP"){
-                        model.baseline = response.baseGWP[response.baseGWP.length-1];
-                    }
-                    DashboardService
-                        .getReport({
-                            startDate: model.baseline,
-                            instType: $scope.selectedInst.instType
-                        })
-                        .success(function(response) {
-                            model.baseFailureRate = response.overallFR;
-                            model.baseStableFailureRate = response.stableFR;
-                            model.baseUnstableFailureRate = response.unstableFR;
-                        });
                 });
         }
 
+        // Funciton to get Report Data from Server or Database
         function getReportData() {
             if($scope.selectedInst.startDate !== ""){
                 reqData = {
@@ -99,6 +95,7 @@
             }
         }
 
+        // Function to get Data from Server
         function getDataFromInstrument() {
             var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
             DashboardService.getFileNames($scope.selectedInst.instType)
@@ -130,10 +127,12 @@
                 });
         }
 
+        // Function to update failure rate Graph based on Date Range
         function updateFailureRateGraph() {
             createFailureRateGraph();
         }
 
+        // Function to Save Report in DB
         function saveReport(){
             var newReport = {
                 build: model.config.Version,
@@ -152,6 +151,7 @@
                 })
         }
 
+        // Funciton to get Historical Reports
         function gelHistoricalData() {
             DashboardService.getAllReports($scope.selectedInst.instType)
                 .success(function (response) {
@@ -178,6 +178,7 @@
                 })
         }
 
+        // Function to create Line Graph
         function createLineGraph() {
             $scope.lineGraph = {
                 chart: {
@@ -216,6 +217,7 @@
             $scope.lineGraphData = computeGraphData();
         }
 
+        // Function to Compute Line Graph Data
         function computeGraphData() {
            jsonArray = model.jsonReport;
             //Comparer Function
@@ -260,6 +262,7 @@
             ];
         }
 
+        // Function to create Pie Chart based on Crash count
         function createCrashCountPieChart(){
             $scope.pieChart1 = {
                 chart: {
@@ -285,6 +288,7 @@
             $scope.pieChartData1 = computeCrashCountData();
         }
 
+        // Function to Compute Crash count Data
         function computeCrashCountData() {
             jsonArray = model.jsonReport;
             var errorTypeCountData = {};
@@ -310,6 +314,7 @@
             return defectValues;
         }
 
+        // Function to Create Piechart based on type of crashes
         function createCrashPerPieChart(){
             $scope.pieChart2 = {
                 chart: {
@@ -335,6 +340,7 @@
             $scope.pieChartData2 = computeCrashPerData();
         }
 
+        // Funciton to compute data based on type of Crash
         function computeCrashPerData() {
             var defectCountData = {};
             var totalCrashCount = 0;
@@ -364,6 +370,7 @@
             return defectValues;
         }
 
+        // Function to Find Failure Rate
         function findFailureRate() {
             var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
             var firstDate = new Date(model.startDate);
@@ -410,6 +417,7 @@
             model.unstableFailureRate = model.unstableFailureRate.toFixed(2);
         }
 
+        // Funciton to create failure rate Graph
         function createFailureRateGraph() {
             $scope.failureRateGraph = {
                 chart: {
@@ -452,6 +460,7 @@
             $scope.failureRateGraphData = computeFailureRateGraphData();
         }
 
+        // Function to compute Failure Rate Graph data
         function computeFailureRateGraphData() {
             oldReports = model.oldReportData;
             model.build = model.config.Version;

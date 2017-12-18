@@ -28,6 +28,7 @@
         }
         init();
 
+        // Function to update Report data based on instrument selection of a user
         function updateReportData() {
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
@@ -40,6 +41,7 @@
                 })
         }
 
+        // Function to Save Report in the Database
         function saveReport(){
             var newReport = {
                 build: model.config.Version,
@@ -58,6 +60,7 @@
                 })
         }
 
+        // Funciton to create Failure Rate View
         function failureRateView() {
             var jsonArray = model.jsonReport;
             var config = model.config.InstConfig;
@@ -100,6 +103,7 @@
             model.failureRateData = failureRateData;
         }
 
+        // Function to get report from server or database
         function getReportData() {
             if($scope.selectedInst.startDate !== ""){
                 reqData = {
@@ -128,6 +132,7 @@
             }
         }
 
+        // Function to get data from Server
         function getDataFromInstrument() {
             var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
             DashboardService.getFileNames($scope.selectedInst.instType)
@@ -152,6 +157,7 @@
                 });
         }
 
+        // Funciton to find Failure Rate
         function findFailureRate() {
             var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
             var firstDate = new Date(model.startDate);

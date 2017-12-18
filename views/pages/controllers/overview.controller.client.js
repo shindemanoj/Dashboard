@@ -20,6 +20,7 @@
             $scope.selectedInst.instType = 'GEM5K';
         }
         function init(){
+            // Initialize variables
             model.baseDisabled = false;
             if(selectedInst){
                 $scope.selectedInst.instType = selectedInst;
@@ -28,6 +29,8 @@
             if(startDate){
                 $scope.selectedInst.startDate = startDate;
             }
+
+            // Get Configuration based on selected instrument
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
                 .success(function (config) {
@@ -40,6 +43,7 @@
         }
         init();
 
+        // Function to update Model when user changes Instrument Type
         function updateReportData() {
             DashboardService
                 .getConfiguration($scope.selectedInst.instType)
@@ -53,7 +57,7 @@
                 });
         }
 
-
+        // Function to add baseline in Database
         function updateBaseLine(version) {
             if(confirm("Do you want to make "+version +" as a baseline?")){
                 var date = new Date(model.startDate).toISOString();
@@ -62,7 +66,10 @@
                     DashboardService
                         .getBaseLine()
                         .success(function (response) {
-                            var baseArr = response.baseGEM5K;
+                            var baseArr = [];
+                            if(response !== "null"){
+                                baseArr = response.baseGEM5K;
+                            }
                             baseArr.push(date);
                             DashboardService
                                 .setBaseLine({baseGEM5K:baseArr})
@@ -74,7 +81,10 @@
                     DashboardService
                         .getBaseLine()
                         .success(function (response) {
-                            var baseArr = response.baseGEM4K;
+                            var baseArr = [];
+                            if(response !== "null"){
+                                baseArr = response.baseGEM4K;
+                            }
                             baseArr.push(date);
                             DashboardService
                                 .setBaseLine({baseGEM4K:baseArr})
@@ -86,7 +96,10 @@
                     DashboardService
                         .getBaseLine()
                         .success(function (response) {
-                            var baseArr = response.baseGWP;
+                            var baseArr = [];
+                            if(response !== "null"){
+                                baseArr = response.baseGWP;
+                            }
                             baseArr.push(date);
                             DashboardService
                                 .setBaseLine({baseGWP:baseArr})
@@ -98,22 +111,26 @@
             }
         }
 
+        // Function to initialize Baseline
         function initializeBaseline() {
             DashboardService
                 .getBaseLine()
                 .success(function (response) {
-                    if($scope.selectedInst.instType === "GEM5K"){
-                        model.baseline = response.baseGEM5K[response.baseGEM5K.length-1];
-                    }
-                    else if($scope.selectedInst.instType === "GEM4K"){
-                        model.baseline = response.baseGEM4K[response.baseGEM4K.length-1];
-                    }
-                    else if($scope.selectedInst.instType === "GWP"){
-                        model.baseline = response.baseGWP[response.baseGWP.length-1];
+                    if(response !== "null"){
+                        if($scope.selectedInst.instType === "GEM5K"){
+                            model.baseline = response.baseGEM5K[response.baseGEM5K.length-1];
+                        }
+                        else if($scope.selectedInst.instType === "GEM4K"){
+                            model.baseline = response.baseGEM4K[response.baseGEM4K.length-1];
+                        }
+                        else if($scope.selectedInst.instType === "GWP"){
+                            model.baseline = response.baseGWP[response.baseGWP.length-1];
+                        }
                     }
                 });
         }
 
+        // Function to Save current Report in the Database
         function saveReport(){
             var newReport = {
                 build: model.config.Version,
@@ -132,6 +149,7 @@
                 })
         }
 
+        // Function to Get Report Data from Server or Database
         function getReportData() {
             if($scope.selectedInst.startDate !== ""){
                 reqData = {
@@ -166,6 +184,7 @@
             }
         }
 
+        // Function to get Data from Instrument
         function getDataFromInstrument() {
             var reportData = "Version,Hostname (IP),Error Type,Error Date,Comments,Last Reboot\n";
             DashboardService.getFileNames($scope.selectedInst.instType)
@@ -202,6 +221,7 @@
                 });
         }
 
+        // Function to calculate configuration for GEM4K
         function processConfigFileForGEM4K(config){
             model.newSecoStableCount = 0;
             model.newSecoUnstableCount = 0;
@@ -305,6 +325,7 @@
             }
         }
 
+        // Function to calculate configuration for GWP
         function processConfigFileForGWP(config){
             model.vmNewStableCount = 0;
             model.vmNewUnstableCount = 0;
@@ -335,6 +356,7 @@
             }
         }
 
+        // Function to calculate Summary from Report
         function getSummary() {
             var jsonArray = model.jsonReport;
             var summary = [];
@@ -367,6 +389,7 @@
             model.summary = summary;
         }
 
+        // Function to export Data in PDF format
         function exportData(){
             html2canvas(document.getElementById('exportthis'), {
                 onrendered: function (canvas) {
@@ -382,6 +405,7 @@
             });
         }
 
+        // Function to calculate failure rate
         function findFailureRate() {
             var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
             var firstDate = new Date(model.startDate);
